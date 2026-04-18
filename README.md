@@ -7,16 +7,12 @@
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  📚 GUIDE STRUCTURE                                      │
+│  📚 GUIDE STRUCTURE                                     │
 ├─────────────────────────────────────────────────────────┤
 │  UNIT 1: INTRODUCTION TO SECURITY              [~18 pp] │
 │  UNIT 2: SECURITY IN OS & DEFENCES             [~18 pp] │
 │  UNIT 3: CYBER SECURITY MANAGEMENT             [~18 pp] │
-├─────────────────────────────────────────────────────────┤
-│  ✅ All CIA1 + CIA2 Questions Integrated as Examples    │
-│  ✅ Step-by-Step Numerical Solutions                    │
-│  ✅ ASCII Diagrams (Only Where Essential)               │
-│  ✅ Exam-Focused: High-Probability Topics Highlighted   │
+├─────────────────────────────────────────────────────────┤  
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -1510,57 +1506,4 @@ Unethical activities include any that:
 
 ---
 
-# 🎯 FINAL EXAM PREPARATION CHECKLIST
-
-## 🔥 High-Probability Numerical Problems (Practice Until Automatic)
-- [ ] RSA key generation, encryption, decryption (p,q,e,M given)
-- [ ] Diffie-Hellman shared key calculation (p,g,a,b given)  
-- [ ] Modular exponentiation (a^b mod n)
-- [ ] Risk analysis: SLE=AV×EF; ALE=SLE×ARO
-- [ ] Caesar/Vigenère encryption/decryption with given keys
-
-## 📚 High-Probability Theory Questions
-- [ ] IDS vs. IPS: placement, action, use cases
-- [ ] Firewall types: stateless vs. stateful vs. application vs. NGFW
-- [ ] ACID properties with failure scenario analysis
-- [ ] Database disclosure types + polyinstantiation defense
-- [ ] PICERL incident response steps with containment cautions
-- [ ] IIoT threats + Purdue Model segmentation
-- [ ] Zero Trust principles + five pillars
-- [ ] SNMPv3 security features vs. v1/v2c vulnerabilities
-
-## 🧠 Conceptual Integration Points
-- [ ] How hybrid cryptosystems combine symmetric/asymmetric strengths
-- [ ] Why OT prioritizes Availability over Confidentiality (AIC vs. CIA)
-- [ ] How rootkits evade detection via API hooking
-- [ ] Why IP blocking fails against DDoS (scale, spoofing, dynamics)
-- [ ] How 4-way handshake in 802.11i enables forward secrecy
-
-## ✍️ Exam Technique Tips
-1. **Show All Steps** in numericals—even if final answer wrong, partial credit for method
-2. **Use Tables** for comparison questions (IDS/IPS, firewall types, ACID properties)
-3. **Draw ASCII Diagrams** only when explicitly helpful (Purdue Model, PICERL, hybrid crypto)
-4. **Link to Real Examples**: Stuxnet for OT attacks, Mirai for DDoS, Sony XCP for rootkits
-5. **Answer the Question Asked**: If question says "explain with example", include one; if "list", use bullet points
-
----
-
-```
-┌─────────────────────────────────────────────────┐
-│  🏆 CENTUM STRATEGY SUMMARY                    │
-├─────────────────────────────────────────────────┤
-│                                                 │
-│  ✅ Master all numericals: RSA, DH, Risk, Ciphers│
-│  ✅ Memorize frameworks: PICERL, ACID, CIA/DAD│
-│  ✅ Understand OT vs. IT priority differences  │
-│  ✅ Practice ASCII diagrams: Purdue, Hybrid Crypto│
-│  ✅ Integrate ethics: RFC 1087 + Ten Commandments│
-│  ✅ Review all CIA1/CIA2 questions as examples│
-│                                                 │
-│  🎯 Target: Answer every question with        │
-│     structured, example-rich, exam-focused    │
-│     responses that demonstrate deep understanding│
-│                                                 │
-└─────────────────────────────────────────────────┘
-```
 
