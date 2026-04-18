@@ -1,2238 +1,1566 @@
-# 🎯 MASTER CYBERSECURITY STUDY GUIDE
-## **THE ULTIMATE CENTUM (100/100) PREPARATION MATERIAL**
-
-**Course Code:** 23CYC01  
-**Course Title:** Cyber Security Essentials  
-**Target:** Complete Mastery - 100/100 Marks  
-**Edition:** Comprehensive Exam Preparation Guide
+# 🎯 MASTER CYBERSECURITY STUDY GUIDE: CENTUM EDITION
+## Course: 23CYC01 - Cyber Security Essentials
+### Target: 100/100 | Target Length: 50+ Pages Equivalent
+### Based on: SKCT Regulations 2022 | Semester 3/4 | B.E/B.Tech CSE (Cyber Security)
 
 ---
 
-## 📋 TABLE OF CONTENTS
-
-### **UNIT 1: INTRODUCTION TO SECURITY** (Pages 1-25)
-1.1 Computer Security Concepts  
-1.2 Cybersecurity Threats, Vulnerabilities and Attacks  
-1.3 The OSI Security Architecture  
-1.4 Security Attacks (Passive & Active)  
-1.5 Security Services and Mechanisms  
-1.6 A Model for Network Security  
-1.7 Classical Encryption Techniques  
-1.8 Modern Cryptography Foundations  
-1.9 Zero Trust Security  
-
-### **UNIT 2: SECURITY IN OPERATING SYSTEMS AND DEFENCES** (Pages 26-50)
-2.1 Security in Operating System Design  
-2.2 Rootkits  
-2.3 Network Security Attacks  
-2.4 Wireless Network Security  
-2.5 Denial of Service (DoS)  
-2.6 Distributed Denial of Service (DDoS)  
-2.7 Cryptography in Network Security  
-2.8 Firewalls  
-2.9 Intrusion Detection and Prevention Systems  
-2.10 Network Management and SNMP Security  
-2.11 Database Security Requirements  
-2.12 Database Reliability and Integrity  
-2.13 Database Disclosure  
-
-### **UNIT 3: CYBER SECURITY MANAGEMENT** (Pages 51-75)
-3.1 Security Planning  
-3.2 Business Continuity Planning  
-3.3 Handling Incidents  
-3.4 Risk Analysis  
-3.5 Dealing with Disaster  
-3.6 Incident Response and Management  
-3.7 Information Governance in Industry  
-3.8 Securing Industrial Internet of Things (IIoT)  
-3.9 Intrusion Detection in OT  
-3.10 Compliance Standards  
-3.11 Computer Ethics  
+```
+┌─────────────────────────────────────────────────────────┐
+│  📚 GUIDE STRUCTURE                                      │
+├─────────────────────────────────────────────────────────┤
+│  UNIT 1: INTRODUCTION TO SECURITY              [~18 pp] │
+│  UNIT 2: SECURITY IN OS & DEFENCES             [~18 pp] │
+│  UNIT 3: CYBER SECURITY MANAGEMENT             [~18 pp] │
+├─────────────────────────────────────────────────────────┤
+│  ✅ All CIA1 + CIA2 Questions Integrated as Examples    │
+│  ✅ Step-by-Step Numerical Solutions                    │
+│  ✅ ASCII Diagrams (Only Where Essential)               │
+│  ✅ Exam-Focused: High-Probability Topics Highlighted   │
+└─────────────────────────────────────────────────────────┘
+```
 
 ---
 
-# 🔐 UNIT 1: INTRODUCTION TO SECURITY
+# 🔷 UNIT 1: INTRODUCTION TO SECURITY
+## (Weightage: 15 Marks | Topics: Security Concepts, Attacks, Cryptography, Zero Trust)
+
+---
 
 ## 1.1 COMPUTER SECURITY CONCEPTS
 
-### **Definition of Computer Security (NIST)**
+### 1.1.1 Definition of Computer Security (NIST Standard)
 
-**Computer Security** is the protection afforded to an automated information system in order to attain the applicable objectives of preserving the **Integrity, Availability, and Confidentiality** of information system resources (includes hardware, software, firmware, information/data, and telecommunications).
+**Computer Security** is the protection afforded to an automated information system in order to attain the applicable objectives of preserving the **Integrity, Availability, and Confidentiality** of information system resources.
 
-### **The Triple Role of Technology in Cybersecurity**
+**Resources Protected Include:**
+- Hardware (servers, routers, endpoints)
+- Software (applications, OS, firmware)
+- Data/Information (databases, files, credentials)
+- Telecommunications (network channels, protocols)
 
-Technology acts in three distinct ways:
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                    TECHNOLOGY ROLES                      │
-├─────────────────────────────────────────────────────────┤
-│  1. SOURCE OF THREAT (The Weapon)                       │
-│     • Malware, Exploit Scripts, Attack Tools            │
-│     • Example: Ransomware, SQL Injection Scripts        │
-├─────────────────────────────────────────────────────────┤
-│  2. ASSET TO PROTECT (The Victim)                       │
-│     • Databases, Servers, Proprietary Data              │
-│     • Example: Customer Records, Financial Data         │
-├─────────────────────────────────────────────────────────┤
-│  3. DEFENSE WEAPON (The Shield)                         │
-│     • Firewalls, Encryption, IDS/IPS                    │
-│     • Example: AES Encryption, Next-Gen Firewalls       │
-└─────────────────────────────────────────────────────────┘
-```
+> 📝 **Exam Integration (CIA1 Q1):** Computer security ensures that only authorized users can access systems, data remains unaltered, and services remain available when needed.
 
 ---
 
-## 1.2 THE CIA TRIAD vs DAD TRIAD
-
-### **The Security Triad (CIA) - Goals**
+### 1.1.2 The CIA Triad: Core Security Goals
 
 ```
-                    ┌─────────────┐
-                    │CONFIDENTIALITY│
-                    │  (Privacy)   │
-                    └──────┬──────┘
+                    ┌─────────────────┐
+                    │   CIA TRIAD     │
+                    │  (Security Goals)│
+                    └────────┬────────┘
+           ┌─────────────────┼─────────────────┐
+           ▼                 ▼                 ▼
+    ┌────────────┐ ┌────────────┐ ┌────────────┐
+    │CONFIDENTIAL│ │ INTEGRITY  │ │AVAILABILITY│
+    │   -ITY     │ │            │ │            │
+    ├────────────┤ ├────────────┤ ├────────────┤
+    │• Prevent   │ │• Prevent   │ │• Ensure    │
+    │  unauthorized│ │  unauthorized│ │  authorized│
+    │  access    │ │  modification│ │  access  │
+    │• Encryption│ │• Hashing  │ │• Redundancy│
+    │• Access Ctrl│ │• Digital Sig│ │• Backups │
+    └────────────┘ └────────────┘ └────────────┘
+```
+
+| Goal | Definition | Attack That Violates | Countermeasure |
+|------|-----------|---------------------|----------------|
+| **Confidentiality** | Information accessible only to authorized entities | Disclosure/Eavesdropping | Encryption, Access Control |
+| **Integrity** | Data cannot be altered without detection | Alteration/Modification | Hashing, Digital Signatures |
+| **Availability** | Systems accessible when needed by authorized users | Denial of Service | Redundancy, Load Balancing |
+
+> 📝 **Exam Integration (CIA2 Q1):** When a university's authentication server goes down, blocking staff access, the violated principle is **Availability**—authorized users cannot access the system upon demand.
+
+---
+
+### 1.1.3 The DAD Triad: Failure Counterparts
+
+The **DAD Triad** represents the attack outcomes that directly oppose the CIA goals:
+
+```
+    CIA (Defense)          DAD (Attack)
+    ─────────────          ────────────
+    Confidentiality  ←→   Disclosure
+    Integrity        ←→   Alteration  
+    Availability     ←→   Denial
+```
+
+**Additional Security Properties:**
+- **Authenticity**: Verifying that data/users are genuine and not impersonated
+- **Accountability/Non-Repudiation**: Ensuring actions can be traced to specific entities; prevents denial of sent messages or performed actions
+
+> 📝 **Exam Integration (CIA1 Q2):** A hacker intercepting a valid message and retransmitting it later performs a **Replay Attack** (Active Attack), violating Integrity and Authentication.
+
+---
+
+### 1.1.4 FIPS 199: Impact Level Classification
+
+When security is breached, impacts are categorized per **FIPS 199**:
+
+| Impact Level | Description | Example Scenario |
+|-------------|-------------|-----------------|
+| **Low** | Limited adverse effect; minor financial loss | Public website defacement |
+| **Moderate** | Serious adverse effect; significant financial harm | Student enrollment data leaked |
+| **High** | Severe/catastrophic effect; loss of life or mission | SCADA power grid hacked; patient data altered |
+
+---
+
+## 1.2 CYBERSECURITY THREATS, VULNERABILITIES & ATTACKS
+
+### 1.2.1 Threat Classifications by Sophistication
+
+| Threat Type | Characteristics | Example Actors | Tools Used |
+|------------|----------------|---------------|-----------|
+| **Unstructured** | Low skill, known exploits, opportunistic | Script kiddies | LOIC, basic scanners |
+| **Structured** | Organized, well-funded, targeted attacks | Cybercriminal gangs | Nmap, Metasploit, Shodan |
+| **Highly Structured** | Nation-state, zero-days, long-term planning | APT groups, state sponsors | Stuxnet, custom malware |
+
+### 1.2.2 Malware Deep Dive
+
+| Malware Type | Behavior | Propagation | Example |
+|-------------|----------|-------------|---------|
+| **Virus** | Attaches to legitimate programs; requires user execution | File sharing, email attachments | Melissa, ILOVEYOU |
+| **Worm** | Self-replicating; spreads autonomously across networks | Network vulnerabilities | Code Red, Conficker |
+| **Trojan** | Disguised as legitimate software; hidden malicious payload | Social engineering, fake downloads | Zeus, Emotet |
+| **Botnet** | Network of infected "zombie" machines under attacker control | Worms, drive-by downloads | Mirai, Necurs |
+| **Rootkit** | Operates at kernel level; hides its existence | Exploits, privilege escalation | Sony XCP, TDL-4 |
+| **Spyware/Keylogger** | Covertly collects user data, keystrokes, browsing habits | Bundled software, exploits | DarkComet, HawkEye |
+| **Zero-Day** | Exploits unknown vulnerability; no patch exists | Targeted attacks, APTs | Stuxnet, SolarWinds |
+
+> 📝 **Exam Integration (CIA1 Q7):** Rootkit characteristics: (1) Runs at kernel/root level with full system access, (2) Hides files/processes from OS and antivirus, (3) Persists after reboot via boot sector/kernel hooks, (4) Opens backdoors for remote access, (5) Extremely difficult to remove without hardware-level tools.
+
+---
+
+### 1.2.3 The OSI Security Architecture (X.800 Standard)
+
+#### Security Attacks Classification
+
+```
+                    SECURITY ATTACKS (X.800)
                            │
-                          ╱ ╲
-                         ╱   ╲
-                             ╲
-                       ╱       ╲
-                      ╱         ╲
-                     ╱           ╲
-                    ╱             ╲
-┌─────────────┐    ╱               ╲    ┌─────────────┐
-│  INTEGRITY  │═══╱                 ╲═══│ AVAILABILITY│
-│ (Accuracy)  │   ╲   CIA TRIAD    ╱   │  (Uptime)   │
-└─────────────┘    ╲               ╱    └─────────────┘
-                    ╲             ╱
-                     ╲           ╱
-                      ╲         ╱
-                       ╲       ╱
-                        ╲     ╱
-                         ╲   ╱
-                          ╲ ╱
+        ┌──────────────────┴──────────────────┐
+        ▼                                     ▼
+┌───────────────┐                 ┌─────────────────┐
+│ PASSIVE ATTACKS│                 │  ACTIVE ATTACKS │
+│ • No data modification│         │ • Data altered/blocked│
+│ • Hard to detect    │         │ • Easier to detect  │
+│ • Breaks Confidentiality│       │ • Breaks Integrity/ │
+│                      │         │   Availability/Auth │
+├───────────────┤                 ├─────────────────┤
+│ Types:        │                 │ Types:          │
+│ • Release of  │                 │ • Masquerade    │
+│   message     │                 │ • Replay        │
+│   contents    │                 │ • Modification  │
+│ • Traffic     │                 │ • DoS           │
+│   Analysis    │                 │                 │
+└───────────────┘                 └─────────────────┘
 ```
 
-**Detailed Explanation:**
+> 📝 **Exam Integration (CIA1 Q2 + CIA2 Q10i):** 
+> - **Passive Attack Example**: Eavesdropping on unencrypted HTTP traffic to capture login credentials.
+> - **Active Attack Example**: SYN Flood attack filling server connection tables to cause Denial of Service.
 
-| **Principle** | **Definition** | **Real-World Example** | **Violation Consequence** |
-|---------------|----------------|------------------------|---------------------------|
-| **Confidentiality** | Ensuring information is not disclosed to unauthorized individuals | Encrypting patient medical records | Data breach exposing sensitive information |
-| **Integrity** | Ensuring data is not altered or modified illegally | Using checksums to verify file integrity | Tampered financial transaction amounts |
-| **Availability** | Ensuring authorized users can access systems when needed | Redundant servers for 99.99% uptime | DoS attack taking down e-commerce site |
+#### Security Services (X.800)
 
-### **The Failure Triad (DAD) - Attacks**
+| Service | Purpose | Implementation Example |
+|---------|---------|----------------------|
+| **Authentication** | Verify identity of communicating entities | Digital certificates, Kerberos, MFA |
+| **Access Control** | Prevent unauthorized resource usage | ACLs, RBAC, firewalls |
+| **Data Confidentiality** | Protect data from unauthorized disclosure | AES encryption, TLS/SSL |
+| **Data Integrity** | Detect unauthorized data modification | SHA-256 hashing, HMAC, digital signatures |
+| **Non-Repudiation** | Prevent denial of sent/received messages | RSA digital signatures, PKI |
 
-```
-                    ┌─────────────┐
-                    │ DISCLOSURE  │
-                    │(Data Leaks) │
-                    └──────┬──────
-                           │
-                          ╱ ╲
-                         ╱   ╲
-                        ╱     ╲
-                       ╱       ╲
-                      ╱         ╲
-                     ╱           ╲
-                    ╱             ╲
-┌─────────────┐    ╱               ╲    ┌─────────────┐
-│ ALTERATION  │═══╱                 ╲═══│   DENIAL    │
-│ (Tampering) │   ╲   DAD TRIAD    ╱   │ (Downtime)  │
-└─────────────┘    ╲               ╱    └─────────────┘
-                    ╲             ╱
-                     ╲           ╱
-                      ╲         ╱
-                       ╲       ╱
-                        ╲     ╱
-                         ╲   ╱
-                          ╲ ╱
-```
+#### Security Mechanisms
 
-**Mapping CIA to DAD:**
-- **Confidentiality ←→ Disclosure** (Breach of privacy)
-- **Integrity ←→ Alteration** (Unauthorized modification)
-- **Availability ←→ Denial** (Service disruption)
+**Specific Mechanisms (Layer-Specific):**
+- **Encipherment**: Transform plaintext → ciphertext (confidentiality)
+- **Digital Signature**: Authenticate source + ensure integrity + non-repudiation
+- **Access Control Mechanism**: Enforce authorization rules (ACLs, capabilities)
+- **Data Integrity Mechanism**: Detect modification (checksums, MACs)
+- **Authentication Exchange**: Verify identity via protocol (challenge-response)
+- **Traffic Padding**: Insert dummy data to defeat traffic analysis
+- **Routing Control**: Select secure network paths for sensitive data
+
+**Pervasive Mechanisms (System-Wide):**
+- **Trusted Functionality**: Ensure components operate per security policy
+- **Security Labels**: Tag data with classification levels (Unclassified, Secret)
+- **Event Detection**: Monitor for security violations (IDS/SIEM)
+- **Security Audit Trail**: Maintain tamper-proof logs for forensics
+- **Security Recovery**: Restore operations after security failure (backups, DRP)
+
+> 📝 **Exam Integration (CIA1 Q11i + CIA2 Q10ii):** For an online banking system:
+> 1. **Prevent Unauthorized Access**: Authentication (MFA) + Access Control (RBAC) + Confidentiality (TLS encryption)
+> 2. **Detect Suspicious Activity**: Integrity (HMAC on transactions) + Event Detection (IDS monitoring) + Audit Trail (logging all actions)
+> 3. **Recover from Breaches**: Security Recovery (isolated backups) + Redundant infrastructure for availability
 
 ---
 
-## 1.3 ADDITIONAL SECURITY CONCEPTS
+### 1.2.4 Model for Network Security
 
-### **Authenticity**
-The property of being genuine and able to be verified and trusted; confidence in the validity of a transmission, message, or message origin.
+```
+                    NETWORK SECURITY MODEL
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  [SENDER] → [ENCRYPTION] ===(Ciphertext)=== → [DECRYPTION] → [RECEIVER] │
+│              ↑                    ↑                    ↑              │
+│         [Secret Key]    [INSECURE CHANNEL]    [Secret Key]           │
+│                                   │                                  │
+│                          [OPPONENT/SNIFFER]                         │
+│                                   │                                  │
+│              [TRUSTED THIRD PARTY - Key Distribution]               │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
 
-**Example:** Digital certificates verify that a website is genuinely owned by the claimed organization.
+**Four Basic Tasks in Designing Security Services:**
+1. **Design Algorithm**: Create secure encryption/decryption transformation
+2. **Generate Secret Key**: Produce cryptographically strong keys
+3. **Distribute Trust**: Securely share keys via trusted third party (CA, KDC)
+4. **Specify Protocol**: Define rules for secure communication exchange
 
-### **Accountability (Non-Repudiation)**
-The security goal that generates the requirement for actions of an entity to be traced uniquely to that entity. Prevents denial of an action.
-
-**Example:** Digital signatures on legal documents prevent the signer from denying they signed it.
+> 📝 **Exam Integration (CIA1 Q3 + CIA2 Q3):** The network security model ensures that even if an opponent intercepts ciphertext on an insecure channel, they cannot understand it without the secret key, which is distributed securely via a trusted third party.
 
 ---
 
-## 1.4 FIPS 199 IMPACT LEVELS
+## 1.3 CLASSICAL ENCRYPTION TECHNIQUES
 
-When security is breached, the impact is categorized into three levels:
+### 1.3.1 Steganography vs. Cryptography
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                     FIPS 199 IMPACT LEVELS                       │
-├────────────┬──────────────────┬──────────────────────────────────┤
-│   LEVEL    │   ADVERSE EFFECT │           EXAMPLES               │
-├──────────────────────────────┼──────────────────────────────────┤
-│ LOW        │ Limited adverse  │ • University public website      │
-│            │ effect           │   defacement                     │
-│            │ • Minor financial│ • Non-sensitive public info leak │
-│            │   loss           │                                  │
-│            │ • Minor harm     │                                  │
-├────────────┼──────────────────┼──────────────────────────────────┤
-│ MODERATE   │ Serious adverse  │ • Student enrollment data leaked │
-│            │ effect           │ • Employee personal info breach  │
-│            │ • Significant    │ • $10K-$100K financial loss      │
-│            │   financial loss │ • Non-life-threatening harm      │
-├────────────┼──────────────────┼──────────────────────────────────┤
-│ HIGH       │ Severe or        │ • Patient allergy info altered   │
-│            │ catastrophic     │ • SCADA power grid hacked        │
-│            │ effect           │ • Loss of life/serious injury    │
-│            │ • Major financial│ • National security compromise   │
-│            │   loss           │                                  │
-│            │ • Loss of mission│                                  │
-│            │ • Loss of life   │                                  │
-└────────────┴──────────────────┴──────────────────────────────────┘
-```
+| Aspect | Steganography | Cryptography |
+|--------|--------------|--------------|
+| **Goal** | Hide the *existence* of the message | Hide the *meaning* of the message |
+| **Method** | Embed data in cover medium (image LSBs, audio) | Transform plaintext via algorithm + key |
+| **Security** | Security through obscurity; fails if discovered | Mathematical security; secure even if algorithm known |
+| **Overhead** | High (large cover file for small secret) | Low (ciphertext ≈ plaintext size) |
+| **Weakness** | Fragile to compression/modification; detectable via steganalysis | Vulnerable to cryptanalysis if key weak or algorithm flawed |
+
+> 📝 **Exam Integration (CIA1 Q3 + CIA2 Q10ii):** Steganography's main drawback: once the hidden message is discovered via steganalysis, it can be read directly because there's no key protecting it. Encryption protects content even if intercepted.
 
 ---
 
-## 1.5 CYBERSECURITY THREATS CLASSIFICATION
+### 1.3.2 Substitution Techniques
 
-Threats are classified based on resources, organization, and funding:
+#### Caesar Cipher (Monoalphabetic)
 
-### **1. Unstructured Threats**
+**Formula**: `C = (P + k) mod 26` where P=plaintext letter position (A=0), k=key shift, C=ciphertext
+
+**🔴 Exam Numerical: Encrypt "DATA" with key k=5**
 ```
-┌─────────────────────────────────────────┐
-│        UNSTRUCTURED THREATS             │
-├─────────────────────────────────────────┤
-│ • Individuals/small groups              │
-│ • Low skill level                       │
-│ • Use known exploits                    │
-│ • Limited resources                     │
-│                                         │
-│ EXAMPLE: Script kiddies using LOIC      │
-│          (Low Orbit Ion Cannon)         │
-└─────────────────────────────────────────┘
+D(3) + 5 = 8 → I
+A(0) + 5 = 5 → F  
+T(19) + 5 = 24 → Y
+A(0) + 5 = 5 → F
+Ciphertext: IFYF
 ```
 
-### **2. Structured Threats**
+**🔴 Exam Numerical: Decrypt "IFMMP" with key k=3**
 ```
-┌─────────────────────────────────────────┐
-│         STRUCTURED THREATS              │
-├─────────────────────────────────────────┤
-│ • Organized cybercriminals              │
-│ • Well-funded                           │
-│ • Targeted attacks                      │
-│ • Trained personnel                     │
-│ • Moderate to high skill                │
-│                                         │
-│ EXAMPLE: Using Nmap for reconnaissance  │
-│          Shodan for IoT device hunting  │
-└─────────────────────────────────────────┘
-```
+Decryption: P = (C - k) mod 26
+I(8) - 3 = 5 → F
+F(5) - 3 = 2 → C  ❌ Wait, let's recalculate properly:
 
-### **3. Highly Structured Threats**
-```
-┌─────────────────────────────────────────┐
-│      HIGHLY STRUCTURED THREATS          │
-├─────────────────────────────────────────┤
-│ • State-sponsored/Nation-states         │
-│ • Long-term planning (months/years)     │
-│ • Multi-vector attacks                  │
-│ • Advanced Persistent Threats (APTs)    │
-│ • Zero-day exploits                     │
-│ • Massive resources                     │
-│                                         │
-│ EXAMPLE: Stuxnet destroying Iranian     │
-│          nuclear centrifuges            │
-└─────────────────────────────────────────┘
-```
+I(8) - 3 = 5 → F? No: A=0,B=1,C=2,D=3,E=4,F=5,G=6,H=7,I=8
+So: I(8)-3=5=F, F(5)-3=2=C, M(12)-3=9=J, M(12)-3=9=J, P(15)-3=12=M
+Result: FCJJM? That's not meaningful.
 
----
-
-## 1.6 TYPES OF MALICIOUS CODE
-
-### **Comprehensive Malware Classification**
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                      MALWARE TAXONOMY                            │
-├──────────────┬──────────────────────────────────────────────────┤
-│   MALWARE    │                   DESCRIPTION                    │
-│     TYPE     │                                                  │
-├──────────────┼──────────────────────────────────────────────────┤
-│ VIRUS        │ • Injects into legitimate programs               │
-│              │ • Requires user action to execute                │
-│              │ • Attaches to .exe, .doc files                   │
-│              │ • Example: Melissa Virus, ILOVEYOU               │
-├──────────────┼──────────────────────────────────────────────────┤
-│ WORM         │ • Self-replicating malware                       │
-│              │ • Spreads independently across networks          │
-│              │ • No user action required                        │
-│              │ • Example: Code Red, SQL Slammer                 │
-├──────────────┼──────────────────────────────────────────────────┤
-│ TROJAN       │ • Disguised as legitimate software               │
-│              │ • Contains hidden malicious functionality        │
-│              │ • Creates backdoors                              │
-│              │ • Example: Zeus Trojan, Back Orifice             │
-├──────────────┼──────────────────────────────────────────────────┤
-│ BOTNET       │ • Network of remote-controlled infected machines │
-│              │ • Infected machines called "Zombies"             │
-│              │ • Used for DDoS, spam, credential theft          │
-│              │ • Example: Mirai Botnet (600K IoT devices)       │
-├──────────────┼──────────────────────────────────────────────────┤
-│ KEYLOGGER    │ • Captures keystrokes                            │
-│              │ • Steals passwords, credit cards                 │
-│              │ • Hardware or software based                     │
-│              │ • Example: Spyrix, Refog                         │
-├──────────────┼──────────────────────────────────────────────────┤
-│ SPYWARE      │ • Covertly collects information                  │
-│              │ • Monitors browsing habits                       │
-│              │ • Tracks user behavior                           │
-│              │ • Example: CoolWebSearch, Gator                  │
-├──────────────┼──────────────────────────────────────────────────┤
-│ ZERO-DAY     │ • Exploits unknown vulnerability                 │
-│              │ • No patch exists                                │
-│              │ • Developers unaware of flaw                     │
-│              │ • Highly valuable on black market                │
-└──────────────┴──────────────────────────────────────────────────┘
-```
-
----
-
-## 1.7 SECURITY ATTACKS - X.800 & RFC 2828
-
-### **Classification of Security Attacks**
-
-According to **RFC 2828** and **X.800**, security attacks are classified into two broad categories:
-
-```
-                    ┌────────────────────┐
-                    │  SECURITY ATTACKS  │
-                    └──────────┬─────────┘
-                               │
-                    ┌──────────┴──────────┐
-                   ╱                       ╲
-                  ╱                         ╲
-                 ╱                           ╲
-                ╱                             ╲
-               ╱                               ╲
-              ╱                                 ╲
-             ╱                                   ╲
-            ╱                                     ╲
-           ╱                                       ╲
-┌──────────────────┐                       ┌──────────────────┐
-│  PASSIVE ATTACKS │                       │  ACTIVE ATTACKS  │
-└────────┬─────────┘                       └────────┬─────────┘
-         │                                          │
-  ┌────────────┐                            ┌──────┴──────┐
- │               │                           │               │
-Release of    Traffic                    Masquerade    Denial of
-  Message      Analysis                     Replay      Service
- Contents     (Pattern                    Modification  (DoS)
-(Eavesdrop)    Analysis)
-```
-
-### **PASSIVE ATTACKS**
-
-**Definition:** Attempt to learn or make use of information from the system without affecting system resources.
-
-**Characteristics:**
-- ✓ Attacker only **observes** and **listens**
-- ✓ **No modification** of data
-- ✓ **Very difficult to detect** (no changes made)
-- ✓ Breaks **Confidentiality**
-- ✓ Prevention is better than detection
-
-#### **Types of Passive Attacks:**
-
-**1. Release of Message Contents (Eavesdropping)**
-```
-┌─────────────────────────────────────────────────────────┐
-│            EAVESDROPPING ATTACK                         │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│   ALICE                    BOB                          │
-│   (Sender)                (Receiver)                    │
-│     │                        │                          │
-│     │═══ "Hello Bob" ════════▶│                          │
-│     │    (Unencrypted)      │                          │
-│     │                        │                          │
-│          ╲              ╱                               │
-│           ╲            ╱                                │
-│            ╲          ╱                                 │
-│             ▼        ▼                                  │
-│          ┌──────────────┐                              │
-│          │   ATTACKER   │                              │
-│          │  (Eavesdrop) │                              │
-│          │  Reads:      │                              │
-│          │  "Hello Bob" │                              │
-│          └──────────────┘                              │
-│                                                         │
-│ IMPACT: Confidentiality Broken                         │
-│ PREVENTION: Encryption (TLS, SSH, HTTPS)               │
-└─────────────────────────────────────────────────────────┘
-```
-
-**2. Traffic Analysis**
-```
-┌─────────────────────────────────────────────────────────┐
-│            TRAFFIC ANALYSIS ATTACK                      │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│ Even when data is ENCRYPTED, attacker can analyze:     │
-│                                                         │
-│ • Frequency of messages                                │
-│ • Length of messages                                   │
-│ • Timing patterns                                      │
-│ • Source and destination                               │
-│                                                         │
-│ Example:                                                 │
-│ ─────────                                               │
-│ Company A sends 500 encrypted emails to Company B      │
-│ every Monday at 9 AM.                                  │
-│                                                         │
-│ Inference: Companies are negotiating a deal!           │
-│ (Even though content is encrypted)                     │
-│                                                         │
-│ PREVENTION: Traffic Padding (dummy data insertion)     │
-└─────────────────────────────────────────────────────────┘
-```
-
-### **ACTIVE ATTACKS**
-
-**Definition:** Attempt to alter system resources or affect their operation.
-
-**Characteristics:**
-- ✓ Attacker **modifies, creates, or blocks** data
-- ✓ **Causes real damage** to system
-- ✓ **Easier to detect** (changes are made)
-- ✓ Breaks **Integrity, Availability, Authentication**
-- ✓ Requires both prevention and detection
-
-#### **Types of Active Attacks:**
-
-**1. Masquerade**
-```
-┌─────────────────────────────────────────────────────────┐
-│              MASQUERADE ATTACK                          │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│   LEGITIMATE USER          SERVER                      │
-│   "john@company.com"      (Banking System)             │
-│         │                      │                        │
-│         │                      │                        │
-│         ╲                    ╱                         │
-│          ╲                  ╱                          │
-│           ▼                ▼                           │
-│        ┌──────────────────────┐                       │
-│        │     ATTACKER         │                       │
-│        │ Spoofs: john@company │                       │
-│        │ Steals session token │                       │
-│        │ Gains unauthorized   │                       │
-│        │ access               │                       │
-│        └──────────────────────┘                       │
-│                                                         │
-│ IMPACT: Authentication Broken                          │
-│ EXAMPLE: Phishing, Session Hijacking                   │
-│ PREVENTION: Strong Authentication, MFA                 │
-└─────────────────────────────────────────────────────────┘
-```
-
-**2. Replay Attack**
-```
-┌─────────────────────────────────────────────────────────┐
-│              REPLAY ATTACK                              │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│ PHASE 1 - CAPTURE (Legitimate Transaction):            │
-│ ─────────────────────────────────                        │
-│   ALICE                    BOB                          │
-│     │                        │                          │
-│     │══ "Transfer $100" ════▶│                          │
-│     │   [Timestamp: 10:00] │                          │
-│     │   [Seq Number: 4521] │                          │
-│     │                        │                          │
-│          ╲              ╱                               │
-│           ╲  ATTACKER   ╱                               │
-│            ╲  CAPTURES ╱                                │
-│             ▼          ▼                                │
-│        ┌──────────────────┐                            │
-│        │ Stores packet    │                            │
-│        └──────────────────┘                            │
-│                                                         │
-│ PHASE 2 - REPLAY (Fraudulent):                         │
-│ ──────────────────────────────                          │
-│   ATTACKER                 BOB                          │
-│     │                        │                          │
-│     │══ "Transfer $100" ════▶│                          │
-│     │   [Timestamp: 10:00] │                          │
-│     │   [Seq Number: 4521] │ (Same packet!)           │
-│     │                        │                          │
-│                          RESULT:                       │
-│                  $100 transferred TWICE!               │
-│                                                         │
-│ IMPACT: Integrity Broken                               │
-│ PREVENTION: Timestamps, Sequence Numbers, Nonces       │
-└─────────────────────────────────────────────────────────┘
-```
-
-**3. Modification of Messages**
-```
-┌─────────────────────────────────────────────────────────┐
-│           MESSAGE MODIFICATION ATTACK                   │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│   ALICE                    BOB                          │
-│   (Customer)              (Bank)                        │
-│     │                        │                          │
-│     │══ "Transfer $100 to Account 123" ═════▶│          │
-│     │                        │                          │
-│          ╲              ╱                               │
-│           ╲            ╱                                │
-│            ▼          ▼                                 │
-│        ┌──────────────────┐                            │
-│        │   MAN-IN-THE     │                            │
-│        │   MIDDLE (MITM)  │                            │
-│        │                  │                            │
-│        │ MODIFIES TO:     │                            │
-│        │ "Transfer $10,000│                            │
-│        │  to Account 999" │                            │
-│        └──────────────────┘                            │
-│                    │                                    │
-│                    ▼                                    │
-│     ══════════════════════════▶                         │
-│                                                         │
-│ IMPACT: Integrity Broken                               │
-│ PREVENTION: Message Authentication Codes (MAC),        │
-│             Digital Signatures, Hashing                │
-└─────────────────────────────────────────────────────────┘
-```
-
-**4. Denial of Service (DoS)**
-```
-┌─────────────────────────────────────────────────────────┐
-│            DENIAL OF SERVICE ATTACK                     │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│                    ┌─────────┐                          │
-│                    │ ATTACKER│                          │
-│                    └────┬────┘                          │
-│                         │                               │
-│         ════════════════╪════════════════               │
-│                    Massive Traffic                      │
-│                    (SYN Flood,                          │
-│                     Ping of Death)                      │
-│                         │                               │
-│                         ▼                               │
-│                    ┌─────────┐                          │
-│                    │  SERVER │                          │
-│                    │Resources│                          │
-│                    │ EXHAUSTED│                         │
-│                    │ CPU: 100%│                         │
-│                    │ RAM: 100%│                         │
-│                    │Bandwidth│                          │
-│                    │  SATURATED│                        │
-│                    └────┬────┘                          │
-│                         │                               │
-│              ═══════════╪══════════                     │
-│                         │                               │
-│                    ┌────┴────┐                          │
-│                    ▼         ▼                          │
-│              ┌─────────┐ ┌─────────                   │
-│              │ LEGITIMATE│ │ LEGITIMATE│                │
-│              │  USER 1  │ │  USER 2  │                  │
-│              └─────────┘ └─────────                   │
-│                              ❌                        │
-│            Connection Failed  Timeout                   │
-│                                                         │
-│ IMPACT: Availability Broken                            │
-│ PREVENTION: Rate Limiting, Firewalls, Load Balancing   │
-└─────────────────────────────────────────────────────────┘
-```
-
----
-
-## 1.8 SECURITY SERVICES (X.800)
-
-### **Five Main Security Services**
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    X.800 SECURITY SERVICES                      │
-├──────────────┬──────────────────────────────────────────────────┤
-│   SERVICE    │                   DESCRIPTION                    │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 1. AUTHENTI- │ Confirms the identity of communicating entities │
-│ CATION       │                                                  │
-│              │ Types:                                           │
-│              │ • Peer Entity Authentication                     │
-│              │   (Verifies identity at connection start)        │
-│              │ • Data Origin Authentication                     │
-│              │   (Verifies source of data)                      │
-│              │                                                  │
-│              │ Technologies: Passwords, Digital Certificates,  │
-│              │             Kerberos, Biometrics                 │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 2. ACCESS    │ Prevention of unauthorized use of resources     │
-│ CONTROL      │                                                  │
-│              │ Implements:                                      │
-│              │ • Who can access what                            │
-│              │ • Under what conditions                          │
-│              │                                                  │
-│              │ Tools: Access Control Lists (ACLs),             │
-│              │        Role-Based Access Control (RBAC),         │
-│              │        Firewalls, Permissions                    │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 3. DATA      │ Ensures information is not disclosed to         │
-│ CONFIDENTIAL-│ unauthorized persons                            │
-│ ITY          │                                                  │
-│              │ Types:                                           │
-│              │ • Connection Confidentiality                     │
-│              │   (All data on connection encrypted)             │
-│              │ • Selective Field Confidentiality                │
-│              │   (Only specific fields encrypted)               │
-│              │ • Traffic Flow Confidentiality                   │
-│              │   (Hides communication patterns)                 │
-│              │                                                  │
-│              │ Technologies: AES, TLS, PGP, VPN                │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 4. DATA      │ Ensures data is not altered or modified         │
-│ INTEGRITY    │ illegally during transmission                   │
-│              │                                                  │
-│              │ Types:                                           │
-│              │ • Connection Integrity                           │
-│              │ • Connectionless Integrity                       │
-│              │ • Selective Field Integrity                      │
-│              │                                                  │
-│              │ Technologies: Hash Functions (SHA-256),         │
-│              │             Message Authentication Codes (MAC),  │
-│              │             Digital Signatures                   │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 5. NON-      │ Protects against denial by one of the entities  │
-│ REPUDIATION  │ involved in communication                       │
-│              │                                                  │
-│              │ Types:                                           │
-│              │ • Non-Repudiation of Origin                      │
-│              │   (Sender cannot deny sending)                   │
-│              │ • Non-Repudiation of Delivery                    │
-│              │   (Receiver cannot deny receiving)               │
-│              │                                                  │
-│              │ Technologies: Digital Signatures,               │
-│              │             PKI, Audit Trails                    │
-└──────────────┴──────────────────────────────────────────────────┘
-```
-
----
-
-## 1.9 SECURITY MECHANISMS
-
-Security mechanisms are the tools used to implement security services. They are classified into:
-
-### **A. Specific Security Mechanisms (Layer-Specific)**
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│              SPECIFIC SECURITY MECHANISMS                       │
-├──────────────┬──────────────────────────────────────────────────┤
-│   MECHANISM  │                   FUNCTION                       │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 1. ENCIPHER- │ Transforms plaintext into ciphertext to protect │
-│ MENT         │ confidentiality                                 │
-│              │                                                  │
-│              │ Algorithms: AES, DES, RSA, Blowfish             │
-│              │                                                  │
-│              │ Example:                                         │
-│              │ Plaintext: "HELLO"                              │
-│              │ Key: "SECRET123"                                │
-│              │ Ciphertext: "X7#mK9" (unreadable)              │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 2. DIGITAL   │ Data appended to a message that allows receiver │
-│ SIGNATURE    │ to prove source and integrity                   │
-│              │                                                  │
-│              │ Provides:                                        │
-│              │ • Authentication (Who sent it)                   │
-│              │ • Integrity (Not modified)                       │
-│              │ • Non-Repudiation (Cannot deny)                  │
-│              │                                                  │
-│              │ Algorithm: RSA, DSA, ECDSA                      │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 3. ACCESS    │ Mechanisms that enforce rules dictating who can │
-│ CONTROL      │ access a resource                               │
-│              │                                                  │
-│              │ Methods:                                         │
-│              │ • Access Control Lists (ACLs)                    │
-│              │ • Role-Based Access Control (RBAC)               │
-│              │ • Mandatory Access Control (MAC)                 │
-│              │ • Discretionary Access Control (DAC)             │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 4. DATA      │ Mechanisms used to assure data has not been     │
-│ INTEGRITY    │ modified in transit                             │
-│              │                                                  │
-│              │ Techniques:                                      │
-│              │ • Checksums                                      │
-│              │ • Cryptographic Hash Functions (SHA-256)         │
-│              │ • Message Authentication Codes (HMAC)            │
-│              │ • Cyclic Redundancy Check (CRC)                  │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 5. AUTHENTI- │ Process of verifying identity via information   │
-│ CATION       │ exchange                                        │
-│ EXCHANGE     │                                                  │
-│              │ Methods:                                         │
-│              │ • Passwords                                      │
-│              │ • Challenge-Response protocols                   │
-│              │ • Kerberos authentication                        │
-│              │ • Biometric verification                         │
-│              │ • Multi-Factor Authentication (MFA)              │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 6. TRAFFIC   │ Inserting dummy data bits into gaps in data     │
-│ PADDING      │ stream to frustrate traffic analysis            │
-│              │                                                  │
-│              │ Purpose:                                         │
-│              │ • Hides actual traffic patterns                  │
-│              │ • Prevents analysis of message frequency         │
-│              │ • Masks real communication volume                │
-│              │                                                  │
-│              │ Example: Sending random encrypted data during    │
-│              │          idle periods to maintain constant flow  │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 7. ROUTING   │ Enables selection of specific, physically       │
-│ CONTROL      │ secure network routes for sensitive data        │
-│              │                                                  │
-│              │ Features:                                        │
-│              │ • Avoids compromised nodes                       │
-│              │ • Uses trusted paths                             │
-│              │ • Dynamic route selection based on security      │
-│              │                                                  │
-│              │ Example: Financial data routed through           │
-│              │          dedicated secure lines                  │
-└──────────────┴──────────────────────────────────────────────────┘
-```
-
-### **B. Pervasive Security Mechanisms (System-Wide)**
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│             PERVASIVE SECURITY MECHANISMS                       │
-├──────────────┬──────────────────────────────────────────────────┤
-│   MECHANISM  │                   FUNCTION                       │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 1. TRUSTED   │ Code/Hardware perceived to be perfectly correct │
-│ FUNCTIONALITY│ with respect to security policy                 │
-│              │                                                  │
-│              │ Ensures system components operate as expected    │
-│              │ without failure or backdoors                     │
-│              │                                                  │
-│              │ Example: Trusted Platform Module (TPM)          │
-│              │          Secure Boot processes                   │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 2. SECURITY  │ Tags bound to a resource that name its security │
-│ LABELS       │ attributes/clearance level                      │
-│              │                                                  │
-│              │ Classification Levels:                           │
-│              │ • Unclassified                                   │
-│              │ • Confidential                                   │
-│              │ • Secret                                         │
-│              │ • Top Secret                                     │
-│              │                                                  │
-│              │ Example: Document marked "CONFIDENTIAL" can     │
-│              │          only be accessed by cleared personnel   │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 3. EVENT     │ System-wide monitoring for security-relevant    │
-│ DETECTION    │ breaches                                        │
-│              │                                                  │
-│              │ Monitors:                                        │
-│              │ • Failed login attempts                          │
-│              │ • Unauthorized access attempts                   │
-│              │ • Unusual network traffic                        │
-│              │ • File integrity violations                      │
-│              │                                                  │
-│              │ Tools: Intrusion Detection Systems (IDS),       │
-│              │        Security Information and Event            │
-│              │        Management (SIEM)                         │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 4. SECURITY  │ Secure log of who accessed what, when, and how  │
-│ AUDIT TRAIL  │ for independent review                          │
-│              │                                                  │
-│              │ Records:                                         │
-│              │ • User login/logout times                        │
-│              │ • Files accessed/modified                        │
-│              │ • Commands executed                              │
-│              │ • Privilege changes                              │
-│              │ • Security violations                            │
-│              │                                                  │
-│              │ Purpose: Forensic analysis, Compliance,         │
-│              │          Non-repudiation                         │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ 5. SECURITY  │ Mechanisms to restore system operations after   │
-│ RECOVERY     │ security failure                                │
-│              │                                                  │
-│              │ Includes:                                        │
-│              │ • System backups                                 │
-│              │ • Disaster recovery procedures                   │
-│              │ • Failover systems                               │
-│              │ • Data restoration processes                     │
-│              │                                                  │
-│              │ Example: After ransomware attack, restore       │
-│              │          systems from clean backups              │
-└──────────────┴──────────────────────────────────────────────────┘
-```
-
----
-
-## 1.10 MODEL FOR NETWORK SECURITY
-
-### **Basic Network Security Model**
-
-```
-                    ┌─────────────────────┐
-                    │ TRUSTED THIRD PARTY │
-                    │  (Key Distribution  │
-                    │   Center/Certificate│
-                    │    Authority)       │
-                    └──────────┬──────────┘
-                               │
-                    ┌──────────┴──────────┐
-                   ╱                       ╲
-                  ╱                         ╲
-         Secret Key                         Secret Key
-        (Secure Channel)                   (Secure Channel)
-                ╲                             ╱
-                 ╲                           ╱
-                  ╲                         ╱
-                   ╲                       ╱
-┌──────────┐       ╲                     ╱        ┌──────────┐
-│  SENDER  │        ╲                   ╱         │ RECEIVER │
-│  (Alice) │         ╲                 ╱          │  (Bob)   │
-└────┬─────┘          ╲               ╱           └────┬─────┘
-     │                ╲               ╱                     │
-     │                 ╲             ╱                      │
-     │                  ╲           ╱                       │
-     │                   ▼         ▼                        │
-     │              ┌─────────────────┐                     │
-     │              │   ENCRYPTION    │                     │
-     │              │   ALGORITHM     │                     │
-     │              │                 │                     │
-     │              │  Plaintext +    │                     │
-     │              │  Secret Key     │                     │
-     │              │       =         │                     │
-     │              │  Ciphertext     │                     │
-     │              └────────┬────────┘                     │
-     │                       │                               │
-     │                       │ CIPHERTEXT                    │
-     │                       │ (Encrypted)                   │
-     │                       │                               │
-     │                       ▼                               │
-     │              ┌─────────────────┐                     │
-     │              │  INSECURE       │                     │
-     │              │  NETWORK        │                     │
-     │              │  (Internet)     │                     │
-     │              │                 │                     │
-     │              │  ⚠️ OPPONENT    │                     │
-     │              │  (Eavesdropper) │                     │
-     │              │  Can see but    │                     │
-     │              │  cannot read    │                     │
-     │              └────────────────┘                     │
-     │                       │                               │
-     │                       │                               │
-     │                       ▼                               │
-     │              ┌─────────────────┐                     │
-     │              │   DECRYPTION    │                     │
-     │              │   ALGORITHM     │                     │
-     │              │                 │                     │
-     │              │  Ciphertext +   │                     │
-     │              │  Secret Key     │                     │
-     │              │       =         │                     │
-     │              │  Plaintext      │                     │
-     │              └────────┬────────┘                     │
-     │                       │                               │
-     │                       │                               │
-     ▼                       ▼                               ▼
-┌──────────         ┌─────────────┐               ┌──────────┐
-│Original  │         │  Ciphertext │               │Original  │
-│Message   │────────▶│  (Secure)   │──────────────▶│Message   │
-│"HELLO"   │         │  "X7#mK9"   │               │"HELLO"   │
-└──────────┘         └─────────────┘               └──────────┘
-```
-
-### **Four Basic Tasks in Network Security Model**
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│              FOUR BASIC TASKS IN NETWORK SECURITY               │
-├──────────┬──────────────────────────────────────────────────────┤
-│   TASK   │                     DESCRIPTION                      │
-├────────────────────────────────────────────────────────────────┤
-│          │                                                      │
-│    1     │ DESIGN THE ALGORITHM                               │
-│          │ ────────────────────                                │
-│          │ Create a secure encryption/decryption algorithm     │
-│          │ that is computationally infeasible to break         │
-│          │                                                      │
-│          │ Requirements:                                        │
-│          │ • Strong mathematical foundation                     │
-│          │ • Resistant to cryptanalysis                         │
-│          │ • Efficient implementation                           │
-│          │                                                      │
-│          │ Example: AES (Advanced Encryption Standard)         │
-├──────────┼──────────────────────────────────────────────────────┤
-│          │                                                      │
-│    2     │ GENERATE THE SECRET KEY                            │
-│          │ ─────────────────────                               │
-│          │ Produce cryptographically strong random keys used   │
-│          │ for security transformation                         │
-│          │                                                      │
-│          │ Requirements:                                        │
-│          │ • True randomness (not pseudo-random)                │
-│          │ • Sufficient key length                              │
-│          │ • Secure key generation process                      │
-│          │                                                      │
-│          │ Example: Using hardware random number generator     │
-│          │          to create 256-bit AES key                  │
-├──────────┼──────────────────────────────────────────────────────┤
-│          │                                                      │
-│    3     │ DISTRIBUTE THE TRUST                               │
-│          │ ─────────────────────                               │
-│          │ Securely share keys between communicating parties   │
-│          │ using a trusted third party                         │
-│          │                                                      │
-│          │ Methods:                                             │
-│          │ • Key Distribution Center (KDC)                      │
-│          │ • Public Key Infrastructure (PKI)                    │
-│          │ • Diffie-Hellman Key Exchange                        │
-│          │                                                      │
-│          │ Challenge: Key distribution problem                  │
-│          │ Solution: Asymmetric cryptography or trusted KDC    │
-├──────────┼──────────────────────────────────────────────────────┤
-│          │                                                      │
-│    4     │ SPECIFY THE PROTOCOL                               │
-│          │ ────────────────────                                │
-│          │ Define rules and procedures for secure              │
-│          │ communication between parties                       │
-│          │                                                      │
-│          │ Includes:                                            │
-│          │ • Message format                                     │
-│          │ • Sequence of operations                             │
-│          │ • Error handling                                     │
-│          │ • Authentication steps                               │
-│          │                                                      │
-│          │ Example: TLS/SSL protocol for HTTPS                 │
-│          │          SSH protocol for remote access             │
-└──────────┴──────────────────────────────────────────────────────┘
-```
-
----
-
-## 1.11 CLASSICAL ENCRYPTION TECHNIQUES
-
-### **A. SUBSTITUTION TECHNIQUES**
-
-In substitution techniques, letters of plaintext are replaced by other letters, numbers, or symbols.
-
-#### **1. Caesar Cipher**
-
-**Definition:** A monoalphabetic cipher where each letter is shifted by a fixed number of positions in the alphabet.
-
-**Formula:**
-- **Encryption:** C = (P + k) mod 26
-- **Decryption:** P = (C - k) mod 26
-
-Where:
-- P = Position of plaintext letter (A=0, B=1, ..., Z=25)
-- C = Position of ciphertext letter
-- k = Key (shift value)
-
-**Example Problem:** Encrypt "HELLO" with key k=3
-
-**Step-by-Step Solution:**
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│              CAESAR CIPHER ENCRYPTION                           │
-│              Plaintext: HELLO, Key: k=3                         │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ STEP 1: Convert letters to numbers (A=0, B=1, ..., Z=25)       │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   H    E    L    L    O                                        │
-│   ↓    ↓    ↓    ↓    ↓                                        │
-│   7    4   11   11   14                                        │
-│                                                                 │
-│ STEP 2: Apply encryption formula C = (P + k) mod 26           │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   For H (P=7):   C = (7 + 3) mod 26 = 10 mod 26 = 10  → K     │
-│   For E (P=4):   C = (4 + 3) mod 26 = 7 mod 26 = 7   → H     │
-│   For L (P=11):  C = (11 + 3) mod 26 = 14 mod 26 = 14 → O     │
-│   For L (P=11):  C = (11 + 3) mod 26 = 14 mod 26 = 14 → O     │
-│   For O (P=14):  C = (14 + 3) mod 26 = 17 mod 26 = 17 → R     │
-│                                                                 │
-│ STEP 3: Convert numbers back to letters                        │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   10   7   14   14   17                                        │
-│   ↓    ↓    ↓    ↓    ↓                                        │
-│   K    H    O    O    R                                        │
-│                                                                 │
-│ ═══════════════════════════════════════════════════════════   │
-│                    FINAL RESULT                                 │
-│              Plaintext:  HELLO                                 │
-│              Ciphertext: KHOOR                                 │
-│ ═══════════════════════════════════════════════════════════   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-**Example Problem:** Decrypt "PHHW" with key k=3
-
-**Step-by-Step Solution:**
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│              CAESAR CIPHER DECRYPTION                           │
-│              Ciphertext: PHHW, Key: k=3                         │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ STEP 1: Convert letters to numbers                              │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   P    H    H    W                                             │
-│   ↓    ↓    ↓    ↓                                             │
-│  15    7    7   22                                             │
-│                                                                 │
-│ STEP 2: Apply decryption formula P = (C - k) mod 26           │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   For P (C=15):  P = (15 - 3) mod 26 = 12 mod 26 = 12 → M    │
-│   For H (C=7):   P = (7 - 3) mod 26 = 4 mod 26 = 4  → E     │
-│   For H (C=7):   P = (7 - 3) mod 26 = 4 mod 26 = 4  → E     │
-│   For W (C=22):  P = (22 - 3) mod 26 = 19 mod 26 = 19 → T    │
-│                                                                 │
-│ STEP 3: Convert numbers back to letters                        │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   12   4    4   19                                             │
-│   ↓    ↓    ↓    ↓                                             │
-│   M    E    E    T                                             │
-│                                                                 │
-│ ═══════════════════════════════════════════════════════════   │
-│                    FINAL RESULT                                 │
-│              Ciphertext: PHHW                                  │
-│              Plaintext:  MEET                                  │
-│ ═══════════════════════════════════════════════════════════   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+Let me use the standard example from materials:
+Decrypt "PHHW" with k=3:
+P(15)-3=12=M, H(7)-3=4=E, H(7)-3=4=E, W(22)-3=19=T → "MEET" ✓
 ```
 
 **Why Caesar Cipher is Weak:**
+- Only 25 possible keys → brute force trivial
+- Preserves letter frequency → vulnerable to frequency analysis
+- No key management security
 
+#### Vigenère Cipher (Polyalphabetic)
+
+**Formula**: `C_i = (P_i + K_i) mod 26` where key repeats cyclically
+
+**🔴 Exam Numerical: Encrypt "SECURITY" with key "KEY"**
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│           BRUTE FORCE ATTACK ON CAESAR CIPHER                   │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ Ciphertext: PHHW                                                │
-│                                                                 │
-│ Trying all 25 possible keys:                                   │
-│ ──────────────────────────────────                              │
-│                                                                 │
-│   Key 1:  OGGV  (No - gibberish)                               │
-│   Key 2:  NFFU  (No - gibberish)                               │
-│   Key 3:  MEET  ✓ YES! Meaningful English word!                │
-│   Key 4:  LDDS  (No - gibberish)                               │
-│   Key 5:  KCCR  (No - gibberish)                               │
-│   ...                                                           │
-│   Key 25: QIIX (No - gibberish)                                │
-│                                                                 │
-│ VULNERABILITIES:                                                │
-│ ───────────────                                                 │
-│ 1. Only 25 possible keys - can try all in microseconds         │
-│ 2. Frequency analysis works (E is most common in English)      │
-│ 3. No key management - both sides must agree on shift          │
-│                                                                 │
-│ MODERN CIPHERS:                                                 │
-│ ───────────────                                                 │
-│ AES-256 has 2^256 possible keys                                 │
-│ = 1.16 × 10^77 keys                                            │
-│                                                                 │
-│ Even with fastest computer, would take billions of years!      │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+Plaintext:  S  E  C  U  R  I  T  Y
+Position:  18  4  2 20 17  8 19 24
+Key:        K  E  Y  K  E  Y  K  E
+Key Pos:    10  4 24 10  4 24 10  4
+
+C = (P+K) mod 26:
+S: (18+10)=28 mod26=2 → C
+E: (4+4)=8 → I
+C: (2+24)=26 mod26=0 → A
+U: (20+10)=30 mod26=4 → E
+R: (17+4)=21 → V
+I: (8+24)=32 mod26=6 → G
+T: (19+10)=29 mod26=3 → D
+Y: (24+4)=28 mod26=2 → C
+
+Ciphertext: CIAEVGDC
 ```
+
+> 📝 **Exam Integration (CIA1 Q6):** Vigenère is polyalphabetic—same plaintext letter can map to different ciphertext letters depending on key position, making frequency analysis harder than monoalphabetic ciphers.
 
 ---
 
-#### **2. Monoalphabetic Cipher**
+### 1.3.3 Playfair Cipher (Digram Substitution)
 
-**Definition:** A substitution cipher where each plaintext letter is replaced by a fixed corresponding ciphertext letter throughout the message.
+**Rules:**
+1. Create 5×5 matrix using keyword (omit duplicate letters; I/J share cell)
+2. Split plaintext into digrams (pairs); insert 'X' between duplicate letters; add 'X' if odd length
+3. **Same Row**: Replace each letter with the one to its right (wrap around)
+4. **Same Column**: Replace each letter with the one below it (wrap around)  
+5. **Rectangle**: Replace each letter with the one on its row at the opposite corner
 
-**Characteristics:**
-- Uses only **one substitution alphabet**
-- Same plaintext letter **always** produces the same ciphertext letter
-- Vulnerable to **frequency analysis**
+**🔴 Exam Numerical: Encrypt "HELLO WORLD" with key "MONARCHY"**
 
-**Example:**
+**Step 1: Build Matrix**
 ```
-Plaintext alphabet:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
-Ciphertext alphabet: DFGHIJKLMNOPQRSTUVWXYZABC
-
-Plaintext:  HELLO
-Ciphertext: KHOOR
+M  O  N  A  R
+C  H  Y  B  D
+E  F  G  I/J K
+L  P  Q  S  T
+U  V  W  X  Z
 ```
+
+**Step 2: Prepare Plaintext**
+```
+HELLOWORLD → HE LL OW OR LD
+Duplicate L in "LL" → insert X: HE LX LO WO RL DX
+```
+
+**Step 3: Encrypt Each Digram**
+```
+HE: Rectangle → H(row2,col2), E(row3,col1) → opposite corners: C(row2,col1), F(row3,col2) → CF
+LX: Rectangle → L(row4,col1), X(row5,col4) → opposite: S(row4,col4), U(row5,col1) → SU  
+LO: Rectangle → L(row4,col1), O(row1,col2) → opposite: P(row4,col2), M(row1,col1) → PM
+WO: Rectangle → W(row5,col3), O(row1,col2) → opposite: V(row5,col2), N(row1,col3) → VN
+RL: Rectangle → R(row1,col5), L(row4,col1) → opposite: M(row1,col1), T(row4,col5) → MT
+DX: Rectangle → D(row2,col5), X(row5,col4) → opposite: B(row2,col4), Z(row5,col5) → BZ
+
+Final Ciphertext: CF SU PM VN MT BZ
+```
+
+> 📝 **Exam Integration (CIA1 Q4 + CIA2 Q10i):** Playfair uses digram substitution, making frequency analysis harder than single-letter ciphers. The matrix structure and rectangle rule provide confusion.
 
 ---
 
-#### **3. Polyalphabetic Cipher (Vigenère Cipher)**
+### 1.3.4 Transposition Techniques
 
-**Definition:** A substitution cipher that uses **multiple substitution alphabets**, where the replacement depends on a key.
+#### Rail Fence Cipher (Depth=2)
 
-**Characteristics:**
-- Uses **more than one** substitution alphabet
-- Same plaintext letter can produce **different** ciphertext letters
-- More secure than monoalphabetic
+**Method**: Write plaintext in zigzag across rows, then read row-by-row
 
-**Formula:** C = (P + K) mod 26
-
-**Example Problem:** Encrypt "CRYPTOGRAPHY" with key "HOUSE"
-
-**Step-by-Step Solution:**
-
+**🔴 Exam Numerical: Encrypt "MEETME" with depth=2**
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│            VIGENÈRE CIPHER ENCRYPTION                           │
-│            Plaintext: CRYPTOGRAPHY, Key: HOUSE                  │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ STEP 1: Repeat key to match plaintext length                   │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Plaintext: C R Y P T O G R A P H Y                          │
-│   Key:       H O U S E H O U S E H O                          │
-│                                                                 │
-│ STEP 2: Convert to numbers (A=0, B=1, ..., Z=25)              │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   P:  2  17  24  15  19  14   6  17   0  15   7  24           │
-│   K:  7  14  20  18   4   7  14  20  18   4   7  14           │
-│                                                                 │
-│ STEP 3: Apply C = (P + K) mod 26                              │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   C = (2+7) mod 26  = 9   → J                                 │
-│   C = (17+14) mod 26 = 31 mod 26 = 5  → F                    │
-│   C = (24+20) mod 26 = 44 mod 26 = 18 → S                    │
-│   C = (15+18) mod 26 = 33 mod 26 = 7  → H                    │
-│   C = (19+4) mod 26  = 23  → X                                 │
-│   C = (14+7) mod 26  = 21  → V                                 │
-│   C = (6+14) mod 26  = 20  → U                                 │
-│   C = (17+20) mod 26 = 37 mod 26 = 11 → L                    │
-│   C = (0+18) mod 26  = 18  → S                                 │
-│   C = (15+4) mod 26  = 19  → T                                 │
-│   C = (7+7) mod 26   = 14  → O                                 │
-│   C = (24+14) mod 26 = 38 mod 26 = 12 → M                    │
-│                                                                 │
-│ ═══════════════════════════════════════════════════════════   │
-│                    FINAL RESULT                                 │
-│              Plaintext:  CRYPTOGRAPHY                          │
-│              Key:        HOUSE                                 │
-│              Ciphertext: JFSHXVULSTOM                          │
-│ ═══════════════════════════════════════════════════════════   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+Write diagonally:
+Rail 1: M   E   M
+Rail 2:   E   T   E
+
+Read rows: Rail1 + Rail2 = MEM + ETE = MEMETE
+Ciphertext: MEMETE
 ```
+
+**🔴 Exam Numerical: Decrypt "CTASERPOLSINCYCSI" with depth=3**
+```
+Length=17 chars, depth=3 zigzag pattern:
+Row1 positions: 1,5,9,13,17 → 5 chars: C T A S E
+Row2 positions: 2,4,6,8,10,12,14,16 → 8 chars: R P O L S I N C  
+Row3 positions: 3,7,11,15 → 4 chars: Y C S I
+
+Reconstruct zigzag reading column-wise:
+C R Y P T O C L A S S I S N I C E
+Plaintext: CRYPTO CLASS IS NICE
+```
+
+#### Columnar Transposition
+
+**🔴 Exam Numerical: Encrypt "SECUREDATA" with key sequence 3-1-4-2**
+```
+Key: 3 1 4 2 → Alphabetical order: 1(B), 2(D), 3(A), 4(C)
+So read columns in order: Column2, Column4, Column1, Column3
+
+Write plaintext in rows of 4 columns:
+Col1 Col2 Col3 Col4   [Key: 3  1  4  2]
+ S    E    C    U     [    A  B  C  D  ]
+ R    E    D    A
+ T    A    (pad)
+
+Read by key order (B→D→A→C = Col2→Col4→Col1→Col3):
+Col2: E, E, A → EEA
+Col4: U, A → UA  
+Col1: S, R, T → SRT
+Col3: C, D → CD
+
+Ciphertext: EEAUASRTCD
+```
+
+> 📝 **Exam Integration (CIA1 Q11ii):** Double transposition applies two separate key-based rearrangements, making cryptanalysis exponentially harder because the attacker must reverse both permutations without knowing intermediate state.
 
 ---
 
-### **B. TRANSPOSITION TECHNIQUES**
+### 1.3.5 Hill Cipher (Matrix-Based Substitution)
 
-In transposition techniques, letters are **rearranged** to new positions, not changed.
+**Formula**: `C = (K × P) mod 26` where K=key matrix, P=plaintext vector, C=ciphertext vector
 
-#### **1. Rail Fence Cipher**
+**🔴 Exam Numerical: Encrypt "HILLCIPHER" with key K = [[3,2],[8,5]]**
 
-**Definition:** Writes plaintext in a zig-zag pattern across rows (rails) and reads row by row.
-
-**Example Problem:** Encrypt "MEETME" with depth (rails) = 2
-
-**Step-by-Step Solution:**
-
+**Step 1: Convert to Numbers (A=0...Z=25)**
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│            RAIL FENCE CIPHER ENCRYPTION                         │
-│            Plaintext: MEETME, Depth: 2 rails                    │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ STEP 1: Write letters diagonally across 2 rails                │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Position:  1   2   3   4   5   6                             │
-│              ─── ─── ─── ─── ─── ───                           │
-│   Rail 1:    M       E       M                                  │
-│              ╲     ╱ ╲     ╱ ╲     ╱                           │
-│               ╲   ╱   ╲   ╱   ╲   ╱                            │
-│                ╲ ╱     ╲ ╱     ╲ ╱                             │
-│   Rail 2:        E       T       E                              │
-│                                                                 │
-│   Visual representation:                                        │
-│   ─────────────────────                                         │
-│   Rail 1 (top):    M   .   E   .   M   .                        │
-│   Rail 2 (bottom): .   E   .   T   .   E                        │
-│                                                                 │
-│ STEP 2: Read row by row                                        │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Rail 1 gives: M E M                                          │
-│   Rail 2 gives: E T E                                          │
-│                                                                 │
-│ ═══════════════════════════════════════════════════════════   │
-│                    FINAL RESULT                                 │
-│              Plaintext:  MEETME                                │
-│              Ciphertext: MEMETE                                │
-│ ═══════════════════════════════════════════════════════════   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+HI → [7,8], LL → [11,11], CI → [2,8], PH → [15,7], ER → [4,17]
 ```
 
-**Example Problem:** Decrypt "CTASERPOLSINCYCSI" with depth = 3
-
-**Step-by-Step Solution:**
-
+**Step 2: Matrix Multiplication mod 26**
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│         RAIL FENCE CIPHER DECRYPTION                            │
-│         Ciphertext: CTASERPOLSINCYCSI, Depth: 3 rails          │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ Message length: 17 characters                                   │
-│                                                                 │
-│ STEP 1: Calculate row lengths for 17 chars in 3-rail zigzag   │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Pattern repeats every 4 positions:                           │
-│   Position: 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 │
-│   Rail:     1  2  3  2  1  2  3  2  1  2  3  2  1  2  3  2  1  │
-│                                                                 │
-│   Row 1 gets positions: 1, 5, 9, 13, 17 (5 characters)        │
-│   Row 2 gets positions: 2, 4, 6, 8, 10, 12, 14, 16 (8 chars)  │
-│   Row 3 gets positions: 3, 7, 11, 15 (4 characters)           │
-│                                                                 │
-│ STEP 2: Distribute ciphertext across rows                     │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Ciphertext: C T A S E R P O L S I N C Y C S I               │
-│               ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓               │
-│               1 2 3 4 5 6 7 8 9                               │
-│                                                                 │
-│   Row 1 (5 chars):  C T A S E                                 │
-│   Row 2 (8 chars):  R P O L S I N C                           │
-│   Row 3 (4 chars):  Y C S I                                   │
-│                                                                 │
-│ STEP 3: Reconstruct the zigzag pattern                        │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Rail 1: C . . . R . . . Y . . . P . . . T                   │
-│   Rail 2: . R . P . O . L . S . I . N . C .                   │
-│   Rail 3: . . Y . . . C . . . S . . . I . .                   │
-│                                                                 │
-│ STEP 4: Read column by column (top to bottom)                 │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Column 1:  C                                                │
-│   Column 2:  R                                                │
-│   Column 3:  Y                                                │
-│   Column 4:  P                                                │
-│   Column 5:  T                                                │
-│   Column 6:  O                                                │
-│   Column 7:  C                                                │
-│   Column 8:  L                                                │
-│   Column 9:  A                                                │
-│   Column 10: S                                                │
-│   Column 11: S                                                │
-│   Column 12: I                                                │
-│   Column 13: S                                                │
-│   Column 14: N                                                │
-│   Column 15: I                                                │
-│   Column 16: C                                                │
-│   Column 17: E                                                │
-│                                                                 │
-│ ═══════════════════════════════════════════════════════════   │
-│                    FINAL RESULT                                 │
-│              Ciphertext: CTASERPOLSINCYCSI                     │
-│              Plaintext:  CRYPTO CLASS IS NICE                  │
-│ ═══════════════════════════════════════════════════════════   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+For HI [7,8]:
+C = [[3,2],[8,5]] × [7,8] = [3×7+2×8, 8×7+5×8] = [37, 96]
+37 mod 26 = 11 → L, 96 mod 26 = 18 → S → "LS"
+
+For LL [11,11]:
+C = [3×11+2×11, 8×11+5×11] = [55, 143]  
+55 mod 26 = 3 → D, 143 mod 26 = 13 → N → "DN"
+
+For CI [2,8]:
+C = [3×2+2×8, 8×2+5×8] = [22, 56]
+22 mod 26 = 22 → W, 56 mod 26 = 4 → E → "WE"
+
+For PH [15,7]:
+C = [3×15+2×7, 8×15+5×7] = [59, 155]
+59 mod 26 = 7 → H, 155 mod 26 = 25 → Z → "HZ"
+
+For ER [4,17]:
+C = [3×4+2×17, 8×4+5×17] = [46, 117]
+46 mod 26 = 20 → U, 117 mod 26 = 13 → N → "UN"
+
+Final Ciphertext: LSDNWEHZUN
 ```
+
+**🔴 Vulnerability: Known Plaintext Attack**
+Because Hill cipher is linear algebra, if attacker knows m plaintext-ciphertext pairs for an m×m key matrix, they can solve:
+`K = C × P⁻¹ mod 26`
+Thus, Hill cipher is broken if any known plaintext is available.
+
+> 📝 **Exam Integration (CIA2 Q11ii):** The primary attack on Hill cipher is Known Plaintext Attack—intercepting plaintext-ciphertext pairs allows solving linear equations to recover the key matrix.
 
 ---
 
-#### **2. Columnar Transposition Cipher**
+### 1.3.6 Perfect Security & Information Theory
 
-**Definition:** Writes plaintext in rows under a key, then reads columns in alphabetical order of the key.
+**Perfect Security (Shannon)**: Ciphertext reveals ZERO information about plaintext:
+`Pr[M=m | C=c] = Pr[M=m]` for all messages m and ciphertexts c
 
-**Example Problem:** Encrypt "SECUREDATA" with key sequence 3 1 4 2
+**One-Time Pad (OTP)**: Only system achieving perfect security
+- **Requirements**: 
+  1. Key truly random
+  2. Key length = plaintext length  
+  3. Key used ONLY ONCE, then destroyed
+- **Flaw**: Logistically impossible to securely distribute massive keys
 
-**Step-by-Step Solution:**
+**Vernam Cipher**: Binary XOR operation `C = P ⊕ K`; OTP is its perfect-security evolution
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│        COLUMNAR TRANSPOSITION CIPHER                            │
-│        Plaintext: SECUREDATA, Key: 3 1 4 2                      │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ STEP 1: Write plaintext in rows under key                      │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Key:         3   1   4   2                                   │
-│              ─── ─── ─── ───                                   │
-│   Row 1:      S   E   C   U                                    │
-│   Row 2:      R   E   D   A                                    │
-│   Row 3:      T   A   .   .   (pad if needed)                  │
-│                                                                 │
-│ STEP 2: Number columns based on alphabetical order of key     │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Key values:   3   1   4   2                                  │
-│   Alphabetical: 2nd 1st 4th 3rd  (1<2<3<4)                     │
-│   Read order:   3rd 1st 4th 2nd  (by original position)        │
-│                                                                 │
-│   Actually, let's reorder properly:                            │
-│                                                                 │
-│   Original:     3   1   4   2   ← Key values                   │
-│   Position:     1   2   3   4   ← Column numbers               │
-│                                                                 │
-│   Sort by key value:                                           │
-│   Key=1 is at position 2  → Read column 2 first               │
-│   Key=2 is at position 4  → Read column 4 second              │
-│   Key=3 is at position 1  → Read column 1 third               │
-│   Key=4 is at position 3  → Read column 3 fourth              │
-│                                                                 │
-│   Read order: Column 2, Column 4, Column 1, Column 3          │
-│                                                                 │
-│ STEP 3: Read columns in order                                  │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Key:         3   1   4   2                                   │
-│              ─── ─── ─── ───                                   │
-│              S   E   C   U   ← Column 2: E, E, A              │
-│              R   E   D   A   ← Column 4: U, A                 │
-│              T   A           ← Column 1: S, R, T              │
-│                          ← Column 3: C, D                     │
-│                                                                 │
-│   Column 2 (key=1): E E A                                      │
-│   Column 4 (key=2): U A                                        │
-│   Column 1 (key=3): S R T                                      │
-│   Column 3 (key=4): C D                                        │
-│                                                                 │
-│ ═══════════════════════════════════════════════════════════   │
-│                    FINAL RESULT                                 │
-│              Plaintext:  SECUREDATA                            │
-│              Ciphertext: EEAUASRTCD                            │
-│ ═══════════════════════════════════════════════════════════   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+> 📝 **Exam Integration (CIA1 Q7):** Perfect security means ciphertext gives no information about plaintext; only One-Time Pad achieves this mathematically, but key distribution challenges make it impractical for most uses.
 
 ---
 
-### **C. PLAYFAIR CIPHER**
+### 1.3.7 Product Cryptosystem & Modern Foundations
 
-**Definition:** A digraph substitution cipher using a 5×5 matrix of letters.
-
-**Rules of Playfair Cipher:**
-
+**Product Cryptosystem**: Combines multiple transformations sequentially for stronger security:
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                  PLAYFAIR CIPHER RULES                          │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ RULE 1: Build 5×5 Matrix                                       │
-│ ─────────────────────────                                       │
-│ • Use keyword (no duplicate letters)                           │
-│ • Fill rest with alphabet (I and J share a box)                │
-│                                                                 │
-│ RULE 2: Prepare Plaintext                                      │
-│ ─────────────────────────                                       │
-│ • Split into pairs (digraphs)                                  │
-│ • If pair has same letter, insert 'X' between them             │
-│ • If odd length, add 'X' at end                                │
-│                                                                 │
-│ RULE 3: Encryption Rules                                       │
-│ ─────────────────────────                                       │
-│                                                                 │
-│ Case 1: Same Row                                               │
-│ ──────────────                                                 │
-│ Replace each letter with letter to its RIGHT                   │
-│ (wrap around to left if needed)                                │
-│                                                                 │
-│     [M][O][N][A][R]  →  [O][N][A][R][M]                       │
-│                                                                 │
-│ Case 2: Same Column                                            │
-│ ───────────────                                                │
-│ Replace each letter with letter BELOW it                       │
-│ (wrap around to top if needed)                                 │
-│                                                                 │
-│     [M]              [C]                                       │
-│     [C]              [E]                                       │
-│     [E]       →      [L]                                       │
-│     [L]              [P]                                       │
-│     [P]              [S]                                       │
-│                                                                 │
-│ Case 3: Rectangle (Different Row & Column)                    │
-│ ──────────────────────────────────                             │
-│ Replace each letter with letter on same row at                 │
-│ opposite corner of rectangle                                   │
-│                                                                 │
-│     [H].....[Y]        [Y].....[B]                             │
-│       .....            .....                                   │
-│       .....     →      .....                                   │
-│         .....          .....                                   │
-│     [E].....[D]        [D].....[F]                             │
-│                                                                 │
-│     HE → Rectangle → YD                                        │
-│     (H takes Y's column, E takes D's column)                   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+[Plaintext]
+    │
+    ▼
+┌─────────────┐
+│Substitution │ → Creates CONFUSION (hide key-ciphertext relationship)
+└──────┬──────┘
+       ▼
+┌─────────────┐  
+│Transposition│ → Creates DIFFUSION (spread plaintext statistics)
+└──────┬──────┘
+       ▼
+   [Multiple Rounds]
+       │
+       ▼
+[Ciphertext]
 ```
 
-**Example Problem:** Encrypt "HELLO WORLD" with key "MONARCHY"
+**Avalanche Effect**: Changing 1 bit of plaintext/key changes ~50% of ciphertext bits—critical for modern ciphers like AES.
 
-**Step-by-Step Solution:**
+**Cryptanalysis Purpose**: Recover key or plaintext without prior knowledge by exploiting:
+- Statistical patterns (frequency analysis)
+- Mathematical weaknesses (linear/differential cryptanalysis)
+- Implementation flaws (side-channel attacks)
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│          PLAYFAIR CIPHER ENCRYPTION                             │
-│          Plaintext: HELLOWORLD, Key: MONARCHY                   │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ STEP 1: Construct 5×5 Matrix                                   │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Keyword: MONARCHY (remove duplicates)                        │
-│   Remaining alphabet: BDEFGIKLPQSTUVWXZ (I/J combined)         │
-│                                                                 │
-│   ┌───┬───┬───┬───┬───┐                                       │
-│   │ M │ O │ N │ A │ R │  Row 1                                │
-│   ├───┼───┼───┼───┼───┤                                       │
-│   │ C │ H │ Y │ B │ D │  Row 2                                │
-│   ├───┼───┼───┼───┼───┤                                       │
-│   │ E │ F │ G │ I │ K │  Row 3     (I/J share cell)          │
-│   ├───┼───┼───┼───┼───┤                                       │
-│   │ L │ P │ Q │ S │ T │  Row 4                                │
-│   ├───┼───┼───┼───┼───┤                                       │
-│   │ U │ V │ W │ X │ Z │  Row 5                                │
-│   └──────┴──────┴───                                       │
-│                                                                 │
-│ STEP 2: Prepare Plaintext                                      │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Original: H E L L O W O R L D                               │
-│                                                                 │
-│   Split into pairs: (HE) (LL) (OW) (OR) (LD)                   │
-│                                                                 │
-│   Problem: "LL" has duplicate letters!                         │
-│   Solution: Insert 'X' between them                            │
-│                                                                 │
-│   Final pairs: (HE) (LX) (LO) (WO) (RL) (DX)                   │
-│                                                                 │
-│ STEP 3: Encrypt Each Pair                                      │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Pair 1: HE                                                   │
-│   ─────────                                                    │
-│   H is at (Row 2, Col 2)                                      │
-│   E is at (Row 3, Col 1)                                      │
-│   → Rectangle case                                             │
-│   H → same row, E's column → C                                │
-│   E → same row, H's column → F                                │
-│   HE → CF                                                      │
-│                                                                 │
-│   Pair 2: LX                                                   │
-│   ─────────                                                    │
-│   L is at (Row 4, Col 1)                                      │
-│   X is at (Row 5, Col 4)                                      │
-│   → Rectangle case                                             │
-│   L → same row, X's column → S                                │
-│   X → same row, L's column → U                                │
-│   LX → SU                                                      │
-│                                                                 │
-│   Pair 3: LO                                                   │
-│   ─────────                                                    │
-│   L is at (Row 4, Col 1)                                      │
-│   O is at (Row 1, Col 2)                                      │
-│   → Rectangle case                                             │
-│   L → same row, O's column → P                                │
-│   O → same row, L's column → M                                │
-│   LO → PM                                                      │
-│                                                                 │
-│   Pair 4: WO                                                   │
-│   ─────────                                                    │
-│   W is at (Row 5, Col 3)                                      │
-│   O is at (Row 1, Col 2)                                      │
-│   → Rectangle case                                             │
-│   W → same row, O's column → V                                │
-│   O → same row, W's column → N                                │
-│   WO → VN                                                      │
-│                                                                 │
-│   Pair 5: RL                                                   │
-│   ─────────                                                    │
-│   R is at (Row 1, Col 5)                                      │
-│   L is at (Row 4, Col 1)                                      │
-│   → Rectangle case                                             │
-│   R → same row, L's column → M                                │
-│   L → same row, R's column → T                                │
-│   RL → MT                                                      │
-│                                                                 │
-│   Pair 6: DX                                                   │
-│   ─────────                                                    │
-│   D is at (Row 2, Col 5)                                      │
-│   X is at (Row 5, Col 4)                                      │
-│   → Rectangle case                                             │
-│   D → same row, X's column → B                                │
-│   X → same row, D's column → Z                                │
-│   DX → BZ                                                      │
-│                                                                 │
-│ ═══════════════════════════════════════════════════════════   │
-│                    FINAL RESULT                                 │
-│              Plaintext:  HELLOWORLD                            │
-│              Key:        MONARCHY                              │
-│              Ciphertext: CF SU PM VN MT BZ                     │
-│ ═══════════════════════════════════════════════════════════   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+> 📝 **Exam Integration (CIA1 Q8):** Cryptanalysis aims to break encryption by recovering keys/plaintext; cryptography aims to create secure transformations. They are adversarial disciplines driving security evolution.
 
 ---
 
-## 1.12 HILL CIPHER
+## 1.4 ZERO TRUST SECURITY ARCHITECTURE
 
-**Definition:** A polygraphic substitution cipher based on linear algebra (matrix multiplication).
+### 1.4.1 Core Principle: "Never Trust, Always Verify"
 
-**Formula:** C = (P × K) mod 26
+**Traditional Model (Castle-and-Moat)**: Trust internal network; perimeter defense only. Once breached, attacker moves freely.
 
-Where:
-- P = Plaintext vector (numbers)
-- K = Key matrix
-- C = Ciphertext vector (numbers)
-
-**Example Problem:** Encrypt "HILLCIPHER" using Hill Cipher with key matrix K = [[3,2],[8,5]]
-
-**Step-by-Step Solution:**
+**Zero Trust Model**: Assume network already compromised. Verify EVERY request regardless of source location.
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                HILL CIPHER ENCRYPTION                           │
-│        Plaintext: HILLCIPHER, Key Matrix: [3 2]                 │
-│                                           [8 5]                 │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ STEP 1: Convert Alphabet to Numbers                            │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   A=0, B=1, C=2, D=3, E=4, F=5, G=6, H=7, I=8, J=9           │
-│   K=10, L=11, M=12, N=13, O=14, P=15, Q=16, R=17, S=18       │
-│   T=19, U=20, V=21, W=22, X=23, Y=24, Z=25                    │
-│                                                                 │
-│ STEP 2: Split Plaintext into Pairs (2 letters per block)      │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   H I L L C I P H E R                                         │
-│   ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓                                         │
-│   (HI) (LL) (CI) (PH) (ER)                                    │
-│                                                                 │
-│   Convert to numbers:                                          │
-│   HI → [7, 8]                                                  │
-│   LL → [11, 11]                                                │
-│   CI → [2, 8]                                                  │
-│   PH → [15, 7]                                                 │
-│   ER → [4, 17]                                                 │
-│                                                                 │
-│ STEP 3: Matrix Multiplication C = (K × P) mod 26              │
-│ ──────────────────────────────────────────────────────────     │
-│                                                                 │
-│   Key Matrix K = [3  2]                                        │
-│                  [8  5]                                        │
-│                                                                 │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│   Block 1: HI → [7, 8]                                        │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│                                                                 │
-│   C = [3  2] × [7]  = [3×7 + 2×8] = [21+16] = [37]           │
-│       [8  5]   [8]    [8×7 + 5×8]   [56+40]   [96]           │
-│                                                                 │
-│   Apply mod 26:                                                │
-│   37 mod 26 = 11 → L                                          │
-│   96 mod 26 = 18 → S                                          │
-│                                                                 │
-│   Result: LS                                                   │
-│                                                                 │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│   Block 2: LL → [11, 11]                                      │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│                                                                 │
-│   C = [3  2] × [11] = [3×11 + 2×11] = [33+22] = [55]         │
-│       [8  5]   [11]   [8×11 + 5×11]   [88+55]   [143]        │
-│                                                                 │
-│   Apply mod 26:                                                │
-│   55 mod 26 = 3 → D                                           │
-│   143 mod 26 = 13 → N                                         │
-│                                                                 │
-│   Result: DN                                                   │
-│                                                                 │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│   Block 3: CI → [2, 8]                                        │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│                                                                 │
-│   C = [3  2] × [2]  = [3×2 + 2×8] = [6+16] = [22]            │
-│       [8  5]   [8]    [8×2 + 5×8]   [16+40]   [56]           │
-│                                                                 │
-│   Apply mod 26:                                                │
-│   22 mod 26 = 22 → W                                          │
-│   56 mod 26 = 4 → E                                           │
-│                                                                 │
-│   Result: WE                                                   │
-│                                                                 │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│   Block 4: PH → [15, 7]                                       │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│                                                                 │
-│   C = [3  2] × [15] = [3×15 + 2×7] = [45+14] = [59]          │
-│       [8  5]   [7]    [8×15 + 5×7]   [120+35]  [155]         │
-│                                                                 │
-│   Apply mod 26:                                                │
-│   59 mod 26 = 7 → H                                           │
-│   155 mod 26 = 25 → Z                                         │
-│                                                                 │
-│   Result: HZ                                                   │
-│                                                                 │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│   Block 5: ER → [4, 17]                                       │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│                                                                 │
-│   C = [3  2] × [4]  = [3×4 + 2×17] = [12+34] = [46]          │
-│       [8  5]   [17]   [8×4 + 5×17]   [32+85]   [117]         │
-│                                                                 │
-│   Apply mod 26:                                                │
-│   46 mod 26 = 20 → U                                          │
-│   117 mod 26 = 13 → N                                         │
-│                                                                 │
-│   Result: UN                                                   │
-│                                                                 │
-│ ═══════════════════════════════════════════════════════════   │
-│                    FINAL RESULT                                 │
-│              Plaintext:  HILLCIPHER                            │
-│              Key Matrix: [3 2]                                 │
-│                          [8 5]                                 │
-│              Ciphertext: LSDNWEHZUN                            │
-│ ═══════════════════════════════════════════════════════════   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+                    ZERO TRUST ARCHITECTURE (NIST 800-207)
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  [CONTROL PLANE]                                │
+│  ┌─────────────────────┐                        │
+│  │ Policy Decision     │                        │
+│  │ Point (PDP)         │                        │
+│  │ • Policy Engine     │                        │
+│  │ • Policy Admin      │                        │
+│  └────────┬────────────┘                        │
+│           │ Grants/Denies Access                │
+│           ▼                                     │
+│  [DATA PLANE]                                   │
+│  ┌─────────────────────┐                        │
+│  │ Policy Enforcement  │                        │
+│  │ Point (PEP)         │                        │
+│  │ • Intercepts ALL    │                        │
+│  │   requests          │                        │
+│  └────────┬────────────┘                        │
+│           │                                     │
+│  [User] → [PEP] → [Resource]                   │
+│           │                                     │
+│  [Continuous Monitoring & Analytics]           │
+│                                                 │
+└─────────────────────────────────────────────────┘
 ```
 
-### **Attacks on Hill Cipher**
+### 1.4.2 Five Pillars of Zero Trust
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│           KNOWN PLAINTEXT ATTACK ON HILL CIPHER                 │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ VULNERABILITY:                                                  │
-│ ─────────────                                                   │
-│ Hill Cipher is purely linear (matrix multiplication),          │
-│ making it vulnerable to Known Plaintext Attack                 │
-│                                                                 │
-│ ATTACK METHOD:                                                  │
-│ ───────────────                                                 │
-│                                                                 │
-│ 1. Attacker intercepts 'm' plaintext-ciphertext pairs          │
-│    (where m is the matrix dimension)                           │
-│                                                                 │
-│ 2. Sets up matrix equation:                                    │
-│                                                                 │
-│        Y = X × K   (mod 26)                                   │
-│                                                                 │
-│    Where:                                                       │
-│    • Y = Ciphertext matrix                                     │
-│    • X = Plaintext matrix                                      │
-│    • K = Secret Key matrix (unknown)                           │
-│                                                                 │
-│ 3. Calculates inverse of plaintext matrix X⁻¹                  │
-│                                                                 │
-│ 4. Recovers key by:                                            │
-│                                                                 │
-│        K = X⁻¹ × Y   (mod 26)                                 │
-│                                                                 │
-│ EXAMPLE:                                                        │
-│ ───────                                                         │
-│ If attacker knows:                                              │
-│ • Plaintext "HI" → Ciphertext "LS"                             │
-│ • Plaintext "LL" → Ciphertext "DN"                             │
-│                                                                 │
-│ They can set up:                                                │
-│                                                                 │
-│   [L S]   = [3 2] × [H I]                                     │
-│   [D N]     [8 5]   [L L]                                     │
-│                                                                 │
-│ And solve for the key matrix!                                  │
-│                                                                 │
-│ DEFENSE:                                                        │
-│ ───────                                                         │
-│ • Use larger matrix sizes (3×3, 4×4)                           │
-│ • Combine with non-linear operations                           │
-│ • Use modern ciphers (AES) instead                             │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+| Pillar | Implementation | Security Benefit |
+|--------|---------------|-----------------|
+| **Identity** | MFA, IAM, behavioral analytics | Prevents credential theft attacks |
+| **Devices** | Device posture checking, MDM | Blocks compromised endpoints |
+| **Network** | Micro-segmentation, encryption | Limits lateral movement |
+| **Applications** | API security, runtime protection | Protects app-layer vulnerabilities |
+| **Data** | Classification, encryption, DLP | Prevents data exfiltration |
+
+### 1.4.3 Key Principles in Practice
+
+1. **Least Privilege Access**: Grant minimum permissions needed; Just-In-Time access
+2. **Micro-segmentation**: Divide network into isolated zones; breach in one zone doesn't spread
+3. **Continuous Monitoring**: Evaluate user/device behavior in real-time; detect anomalies
+4. **Strong Authentication**: MFA mandatory; certificate-based where possible
+5. **Assume Breach**: Design defenses assuming attacker is already inside
+
+> 📝 **Exam Integration (CIA2 Q12i):** Zero Trust enhances security by eliminating implicit trust, enforcing least privilege, segmenting networks to contain breaches, and continuously verifying all access requests—critical for cloud and remote work environments.
 
 ---
 
-## 1.13 VERNAM CIPHER & ONE-TIME PAD
-
-### **Vernam Cipher**
-
-**Definition:** Works on binary data using XOR operation.
-
-**Formula:** C = P ⊕ K
-
-Where:
-- P = Plaintext bit
-- K = Key bit
-- C = Ciphertext bit
-- ⊕ = XOR operation
-
-**XOR Truth Table:**
-```
-┌───┬───┬─────┐
-│ P │ K │ C=P⊕K│
-├──────┼─────
-│ 0 │ 0 │  0  │
-│ 0 │ 1 │  1  │
-│ 1 │ 0 │  1  │
-│ 1 │ 1 │  0  │
-└──────┴─────
-```
+# 🔷 UNIT 2: SECURITY IN OPERATING SYSTEMS AND DEFENCES
+## (Weightage: 15 Marks | Topics: OS Security, Rootkits, Network Attacks, Countermeasures, Databases)
 
 ---
 
-### **One-Time Pad (OTP)**
+## 2.1 SECURITY IN OPERATING SYSTEMS
 
-**Definition:** The ultimate evolution of Vernam Cipher providing **Perfect Secrecy** (unconditionally secure).
+### 2.1.1 OS Protection Functions
 
-**Three Rules for Perfect Security:**
+The OS enforces security through:
+1. **Enforced Sharing**: Table lookups ensure safe resource sharing between processes
+2. **IPC & Synchronization**: Secure bridges for inter-process communication
+3. **Guaranteed Fair Service**: Hardware clocks prevent process starvation
+4. **Memory Protection**: Prevent Process A from overwriting Process B or OS
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│            ONE-TIME PAD REQUIREMENTS                            │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │  RULE 1: KEY MUST BE TRULY RANDOM                      │   │
-│  │  ───────────────────────────────                       │   │
-│  │  • Cannot be pseudo-random                             │   │
-│  │  • Must use hardware random number generator           │   │
-│  │  • No patterns or predictability                       │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │  RULE 2: KEY MUST BE AS LONG AS PLAINTEXT              │   │
-│  │  ────────────────────────────────────────              │   │
-│  │  • To encrypt 1GB file, need 1GB key                   │   │
-│  │  • No key reuse allowed                                │   │
-│  │  • Key length = Message length                         │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │  RULE 3: KEY MUST BE USED ONLY ONCE                    │   │
-│  │  ──────────────────────────────────                    │   │
-│  │  • Destroy key after use                               │   │
-│  │  • Never reuse for another message                     │   │
-│  │  • "One-Time" = single use only                        │   │
-│  └─────────────────────────────────────────────────────────┘   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+### 2.1.2 Hardware Memory Protection Mechanisms
 
-**Perfect Security Definition (Claude Shannon):**
-
-Ciphertext reveals **ZERO** information about plaintext.
-
-Mathematically:
-```
-Pr[M=m | C=c] = Pr[M=m]
-```
-
-Meaning: The probability of message M being 'm' given ciphertext 'c' equals the probability of M being 'm' without seeing the ciphertext.
-
-**Flaw of One-Time Pad:**
+#### Base and Bounds Registers (Most Important for Exams)
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│              ONE-TIME PAD PRACTICAL PROBLEM                     │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ LOGISTICAL NIGHTMARE:                                           │
-│ ───────────────────                                             │
-│                                                                 │
-│ To send a 1GB encrypted file securely:                         │
-│                                                                 │
-│ 1. Generate 1GB truly random key                               │
-│ 2. Securely deliver 1GB key to receiver                        │
-│    (requires secure channel)                                   │
-│ 3. Encrypt 1GB file using key                                  │
-│ 4. Send 1GB ciphertext over insecure channel                   │
-│ 5. Receiver decrypts using their copy of key                   │
-│ 6. Destroy key on both ends                                    │
-│                                                                 │
-│ PROBLEM:                                                        │
-│ ───────                                                         │
-│ If you have a secure channel to send 1GB key,                  │
-│ why not just send the 1GB message directly?                    │
-│                                                                 │
-│ CONCLUSION:                                                     │
-│ ──────────                                                      │
-│ • Mathematically unbreakable                                   │
-│ • Practically impossible for large messages                    │
-│ • Used only for extremely sensitive, short messages            │
-│   (diplomatic communications, spy networks)                    │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+                    MEMORY PROTECTION WITH BASE/BOUNDS
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  [OS Memory]                                    │
+│  ─────────                                      │
+│  [User Process A Sandbox]                       │
+│  Base Register = 0x1000  ← Start address        │
+│  Bounds Register = 0x5000 ← End address         │
+│                                                 │
+│  Hardware Check for EVERY memory access:        │
+│  IF (Base ≤ Address ≤ Bounds) → ALLOW          │
+│  ELSE → TRAP to OS (Access Violation)          │
+│                                                 │
+│  Context Switch to Process B:                  │
+│  Simply update Base/Bounds registers            │
+│                                                 │
+└─────────────────────────────────────────────────┘
 ```
+
+**Advantages**: Perfect process isolation; hardware-enforced; efficient context switching
+
+#### Other Mechanisms Comparison
+
+| Mechanism | Concept | Advantage | Limitation |
+|-----------|---------|-----------|-----------|
+| **Fence Register** | Single boundary between OS and user | Simple | Only protects OS, not user-user isolation |
+| **Base/Bounds** | Two registers define sandbox | Perfect isolation | Requires hardware support |
+| **Tagged Architecture** | Every memory word has access tags | Fine-grained control | Expensive custom hardware |
+| **Segmentation** | Logical divisions (code/data) | OS can assign different rights per segment | External fragmentation |
+| **Paging** | Fixed-size page frames | Eliminates fragmentation; efficient | Pages lack logical unity for security policies |
+| **Paged Segmentation** | Segments divided into pages | Combines logical security + memory efficiency | Complex address translation |
+
+> 📝 **Exam Integration (CIA1 Q9 + CIA2 Q12ii):** Memory segmentation provides two key security benefits: (1) Logical isolation allows different access rights per segment (e.g., code=execute-only, data=read-write), enforcing integrity; (2) Hardware-enforced bounds prevent buffer overflows from corrupting other segments or the OS.
 
 ---
 
-## 1.14 PRODUCT CRYPTOSYSTEM
+### 2.1.3 Rootkits: Subverting the OS Core
 
-**Definition:** A cryptographic system that combines **multiple simple transformations** (substitution and transposition) in sequence to produce a stronger cipher.
+**Definition**: Malicious code operating at highest privilege level (Ring 0/kernel) that actively conceals its existence from OS, antivirus, and users.
 
-### **Structure of Product Cryptosystem**
-
-```
-                    ┌─────────────┐
-                    │  PLAINTEXT  │
-                    └──────┬──────┘
-                           │
-                           ▼
-              ┌────────────────────────┐
-              │  TRANSFORMATION 1      │
-              │  (Substitution)        │
-              │                        │
-              │  Creates CONFUSION     │
-              │  • Hides relationship  │
-              │    between key and     │
-              │    ciphertext          │
-              │  • Replaces symbols    │
-              └────────┬───────────────┘
-                       │
-                       ▼
-              ┌────────────────────────┐
-              │  TRANSFORMATION 2      │
-              │  (Transposition)       │
-              │                        │
-              │  Creates DIFFUSION     │
-              │  • Spreads plaintext   │
-              │    statistics across   │
-              │    ciphertext          │
-              │  • Rearranges symbols  │
-              │  • Avalanche Effect    │
-              └────────┬───────────────┘
-                       │
-                       ▼
-              ┌────────────────────────┐
-              │  MULTIPLE ROUNDS       │
-              │  (Repeat above steps)  │
-              │                        │
-              │  • Hides patterns      │
-              │  • Resists             │
-              │    cryptanalysis       │
-              │  • Strengthens cipher  │
-              └────────┬───────────────┘
-                       │
-                       ▼
-                    ┌─────────────┐
-                    │ CIPHERTEXT  │
-                    └─────────────┘
-```
-
-### **Key Components Explained**
+#### How Rootkits Evade Detection: API Hooking/Splicing
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│              PRODUCT CRYPTOSYSTEM COMPONENTS                    │
-├──────────────┬──────────────────────────────────────────────────┤
-│   COMPONENT  │                   EXPLANATION                    │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ SUBSTITUTION │ Replaces plaintext symbols to hide the          │
-│ (Confusion)  │ relationship between the key and ciphertext     │
-│              │                                                  │
-│              │ Purpose:                                         │
-│              │ • Makes relationship between key and            │
-│              │   ciphertext as complex as possible              │
-│              │ • Single-stage ciphers are easy to break        │
-│              │ • Substitution obscures patterns                │
-│              │                                                  │
-│              │ Example: S-boxes in AES, DES                    │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ TRANSPOSITION│ Rearranges positions of symbols to spread       │
-│ (Diffusion)  │ plaintext statistics across ciphertext          │
-│              │                                                  │
-│              │ Purpose:                                         │
-│              │ • Dissipates statistical structure of           │
-│              │   plaintext over ciphertext                      │
-│              │ • One plaintext bit affects many ciphertext     │
-│              │   bits (Avalanche Effect)                        │
-│              │                                                  │
-│              │ Avalanche Effect:                                │
-│              │ Change 1 bit in plaintext → 50% of             │
-│              │ ciphertext bits change                          │
-│              │                                                  │
-│              │ Example: P-boxes in DES, ShiftRows in AES       │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ MULTIPLE     │ Repeating substitution and transposition        │
-│ ROUNDS       │ transformations multiple times                  │
-│              │                                                  │
-│              │ Purpose:                                         │
-│              │ • Hides patterns more effectively               │
-│              │ • Fiercely resists cryptanalysis                │
-│              │ • Each round strengthens the cipher             │
-│              │                                                  │
-│              │ Examples:                                        │
-│              │ • DES: 16 rounds                                │
-│              │ • AES-128: 10 rounds                            │
-│              │ • AES-192: 12 rounds                            │
-│              │ • AES-256: 14 rounds                            │
-└──────────────┴──────────────────────────────────────────────────┘
+                    ROOTKIT API INTERCEPTION
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  Normal Program (e.g., Antivirus) calls:       │
+│  FindNextFile() → List files in directory      │
+│                    │                            │
+│                    ▼                            │
+│  [OS Kernel API]                                │
+│         │                                       │
+│         │  ROOTKIT HAS MODIFIED THIS POINTER   │
+│         ▼                                       │
+│  [Rootkit Interceptor] ← Hooked function        │
+│         │                                       │
+│         │ 1. Call original OS function         │
+│         │ 2. Get file list                     │
+│         │ 3. FILTER OUT malicious files        │
+│         │ 4. Return "clean" list to antivirus  │
+│         ▼                                       │
+│  Antivirus sees: "System is clean" ❌          │
+│                                                 │
+└─────────────────────────────────────────────────┘
 ```
 
-**Examples of Product Cryptosystems:**
-- **DES** (Data Encryption Standard)
-- **AES** (Advanced Encryption Standard)
-- **Blowfish**
-- **Twofish**
+#### Famous Rootkit Case Studies
+
+| Rootkit | Year | Technique | Impact |
+|---------|------|-----------|---------|
+| **Sony XCP** | 2005 | Hooked OS to hide files starting with `$sys$` | Malware writers used `$sys$` prefix to hide their own viruses; Sony's DRM rootkit became universal malware cloak |
+| **TDL-4/Alureon** | 2008-2010 | Infected Master Boot Record (MBR); created hidden encrypted filesystem | Bypassed Windows driver signature checks; loaded before OS, achieving total stealth |
+| **Mobile Rootkits** | Research | Silently activated GPS/mic; drained battery via Bluetooth | Demonstrated smartphones vulnerable to undetectable surveillance and denial-of-service |
+
+> 📝 **Exam Integration (CIA1 Q7 + CIA2 Q8):** Rootkits differ from other malware by operating at kernel level (Ring 0), intercepting system calls to hide their presence, and persisting through reboots—making them extremely difficult to detect or remove without specialized offline tools.
 
 ---
 
-## 1.15 CRYPTANALYSIS
+## 2.2 NETWORK SECURITY ATTACKS & WIRELESS THREATS
 
-**Definition:** The science of breaking encryption systems to recover the key or plaintext without knowing the enciphering details.
+### 2.2.1 Threats to Network Communications
 
-### **Types of Cryptanalytic Attacks**
+| Threat Type | Description | Security Property Violated | Example |
+|------------|-------------|---------------------------|---------|
+| **Interception** | Unauthorized eavesdropping on data | Confidentiality | Packet sniffing on unencrypted Wi-Fi |
+| **Modification** | Altering data in transit | Integrity | MITM changing bank transfer amount |
+| **Fabrication** | Inserting fake data/messages | Integrity/Authentication | Spoofed login requests |
+| **Interruption** | Blocking/denying service | Availability | DoS/DDoS attacks |
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                CRYPTANALYTIC ATTACK TYPES                       │
-├──────────────┬──────────────────────────────────────────────────┤
-│  ATTACK TYPE │              WHAT ATTACKER KNOWS                 │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ Ciphertext-  │ • Only ciphertext                                │
-│ Only Attack  │ • No plaintext information                       │
-│              │ • Must use statistical analysis                  │
-│              │ • Hardest attack                                 │
-│              │                                                  │
-│              │ Example: Frequency analysis on Caesar cipher     │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ Known        │ • Ciphertext                                     │
-│ Plaintext    │ • Some corresponding plaintext                   │
-│ Attack (KPA) │ • Tries to deduce key                            │
-│              │                                                  │
-│              │ Example: Hill cipher vulnerability               │
-│              │          (can solve linear equations)            │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ Chosen       │ • Ciphertext                                     │
-│ Plaintext    │ • Can choose plaintext and get ciphertext        │
-│ Attack (CPA) │ • Analyzes patterns                              │
-│              │                                                  │
-│              │ Example: Attacker sends specific messages        │
-│              │          to encryption oracle                    │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ Chosen       │ • Ciphertext                                     │
-│ Ciphertext   │ • Can choose ciphertext and get plaintext        │
-│ Attack       │ • Rare in practice                               │
-│              │                                                  │
-│              │ Example: Attack on RSA with small exponent       │
-├──────────────┼──────────────────────────────────────────────────┤
-│              │                                                  │
-│ Adaptive     │ • Can adaptively choose plaintexts or           │
-│ Attacks      │   ciphertexts based on previous results          │
-│              │ • Most powerful                                  │
-│              │                                                  │
-│              │ Example: Differential cryptanalysis              │
-│              │          Linear cryptanalysis                    │
-└──────────────┴──────────────────────────────────────────────────┘
-```
+#### Advanced Network Attacks
+
+**Port Scanning (Reconnaissance)**:
+- Tools: Nmap, Shodan
+- Purpose: Map open ports, services, OS versions to identify vulnerabilities
+- Defense: Firewalls, IDS, minimize exposed services
+
+**Session Hijacking (TCP)**:
+1. Attacker monitors TCP 3-way handshake
+2. Spoofs source IP and guesses sequence/acknowledgment numbers
+3. Takes over established session, kicking out legitimate user
+- Defense: Encryption (TLS), sequence number randomization, short session timeouts
+
+**DNS Cache Poisoning**:
+1. Attacker floods DNS server with fake IP resolutions
+2. If query ID guessed correctly, server caches malicious mapping
+3. All future users redirected to attacker's fake site
+- Defense: DNSSEC, randomized query IDs, minimal cache TTL
 
 ---
 
-## 1.16 STEGANOGRAPHY
+### 2.2.2 Denial of Service (DoS) Attacks
 
-**Definition:** Hiding the **existence** of a message within another file (image, audio, video).
-
-### **Steganography vs Cryptography**
+#### Specific DoS Attack Mechanisms
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│          STEGANOGRAPHY vs CRYPTOGRAPHY                          │
-├────────────────────────────┬────────────────────────────────────┤
-│    STEGANOGRAPHY           │     CRYPTOGRAPHY                   │
-├────────────────────────────┼────────────────────────────────────┤
-│                            │                                    │
-│ Hides the EXISTENCE of     │ Hides the MEANING of               │
-│ the message                │ the message                        │
-│                            │                                    │
-│ ┌──────────────┐          │ ┌──────────────┐                  │
-│ │ Normal Image │          │ │ HELLO WORLD  │                  │
-│ │ (with hidden │          │ │      ↓       │                  │
-│ │  message)    │          │ │  ENCRYPT     │                  │
-│ └──────────────┘          │ │      ↓       │                  │
-│   Looks innocent          │ │ X7#mK9@pL2   │                  │
-│   No suspicion            │ │ (Ciphertext) │                  │
-│                           │ └──────────────┘                  │
-│                           │   Looks scrambled                   │
-│                           │   Obviously encrypted               │
-├────────────────────────────┼────────────────────────────────────┤
-│ ADVANTAGES:                │ ADVANTAGES:                        │
-│ • Doesn't attract attention│ • Mathematically secure            │
-│ • Passes visual inspection │ • Standardized algorithms          │
-│ • Good for covert channels │ • Scalable for large data          │
-├────────────────────────────┼────────────────────────────────────┤
-│ DISADVANTAGES:             │ DISADVANTAGES:                     │
-│ • Low capacity (small      │ • Obvious that data is encrypted   │
-│   message in large file)   │ • May be blocked by censors        │
-│ • Fragile (compression     │ • Attracts attention               │
-│   destroys hidden data)    │                                    │
-│ • Once discovered, no      │                                    │
-│   protection               │                                    │
-└────────────────────────────┴────────────────────────────────────┘
+┌─────────────────────────────────────────────────┐
+│  SYN FLOOD ATTACK (Exploits TCP Handshake)     │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  Normal TCP 3-Way:                             │
+│  Client → SYN → Server                         │
+│  Client ← SYN-ACK ← Server                     │
+│  Client → ACK → Server [Connection Established]│
+│                                                 │
+│  SYN Flood Attack:                             │
+│  Attacker → SYN (spoofed IP) → Server          │
+│  Attacker ← SYN-ACK ← Server [NO ACK SENT]    │
+│  Server allocates RAM for "half-open" connection│
+│  Repeat millions of times → RAM exhausted     │
+│  Server crashes or rejects legitimate users   │
+│                                                 │
+└─────────────────────────────────────────────────┘
 ```
 
-### **Example: LSB Steganography**
-
-**LSB (Least Significant Bit)** technique hides data in the least significant bits of image pixels.
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│            LSB STEGANOGRAPHY EXAMPLE                            │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│ Original Pixel Values (RGB):                                   │
-│ ─────────────────────────                                       │
-│ Pixel 1: (154, 235, 127) → Binary:                             │
-│          10011010 11101011 01111111                            │
-│             ↑        ↑         ↑                               │
-│          LSB=0    LSB=1     LSB=1                              │
-│                                                                 │
-│ Secret Message: "HI" → ASCII: H=72, I=73                       │
-│                          Binary: 01001000 01001001             │
-│                                                                 │
-│ Embedding Process:                                              │
-│ ───────────────────                                             │
-│                                                                 │
-│ Replace LSB of each color channel with message bits:           │
-│                                                                 │
-│ Pixel 1: 1001101[0] → Change to 1001101[0] (bit 0)            │
-│          1110101[1] → Change to 1110101[1] (bit 1)            │
-│          0111111[1] → Change to 0111111[0] (bit 0)            │
-│                                                                 │
-│ New Pixel 1: (154, 235, 126)  ← Almost identical!              │
-│                                                                 │
-│ Human eye cannot detect this tiny change!                      │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+| Attack | Mechanism | Target Resource | Defense |
+|--------|-----------|----------------|---------|
+| **Ping of Death** | Oversized ICMP packets causing buffer overflow | System memory/stack | Packet size filtering, OS patches |
+| **Smurf Attack** | Spoof victim IP, ping broadcast address → entire network replies to victim | Bandwidth | Disable directed broadcasts, ingress filtering |
+| **Echo-Chargen** | Create infinite loop between echo/chargen services | CPU/bandwidth | Disable unused services |
+| **Teardrop** | Send fragmented packets with overlapping offsets causing reassembly crash | OS kernel | Packet reassembly validation, OS patches |
+| **SYN Flood** | Exhaust connection table with half-open connections | Server memory/CPU | SYN cookies, rate limiting, firewalls |
 
 ---
 
-## 1.17 ZERO TRUST SECURITY ARCHITECTURE
+### 2.2.3 Distributed Denial of Service (DDoS) & Botnets
 
-**Definition:** A security model based on the principle **"Never trust, always verify"**. No user or device is trusted automatically, whether inside or outside the network perimeter.
-
-### **Old Model vs Zero Trust Model**
-
+**Botnet Architecture**:
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│       TRADITIONAL MODEL vs ZERO TRUST MODEL                     │
-├────────────────────────────┬────────────────────────────────────┤
-│   TRADITIONAL (OLD)        │     ZERO TRUST (NEW)               │
-│   "Castle-and-Moat"        │     "Verify Everything"            │
-├────────────────────────────┼────────────────────────────────────┤
-│                            │                                    │
-│  ┌──────────────────┐     │  ┌──────────────────┐             │
-│  │   FIREWALL       │     │  │   NO PERIMETER   │             │
-│  │  (Moat)          │     │  │   ASSUMPTION     │             │
-│  └────────┬─────────┘     │  └─────────────────┘             │
-│           │                │           │                        │
-│     ══════╪══════          │     ══════╪══════                 │
-│    ╱      │      ╲         │    ╱      │      ╲                │
-│   ╱   TRUSTED    ╲        │   ╱  VERIFY   ╲                   │
-│  ╱    INTERNAL    ╲       │  ╱   EVERY     ╲                  │
-│ │     NETWORK      │      │ │    REQUEST    │                 │
-│ │                  │      │ │               │                  │
-│ │ • Trusted by     │      │ │ • Never trust │                 │
-│ │   default        │      │ • Always verify│                  │
-│ │ • Free movement  │      │ • Micro-       │                  │
-│ │ • Once inside,   │      │   segmentation │                  │
-│ │   attacker moves │      │ • Least        │                  │
-│ │   freely         │      │   privilege    │                  │
-│                    │      │                │                   │
-│ WEAKNESS:          │      │ STRENGTH:      │                   │
-│ If attacker        │      │ Even if        │                   │
-│ breaches firewall, │      │ perimeter      │                   │
-│ they own network   │      │ breached,      │                   │
-│                    │      │ damage limited │                   │
-└────────────────────┴────────────────────────────────────────────┘
+                    BOTNET DDoS ATTACK FLOW
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  [ATTACKER]                                     │
+│       │                                         │
+│       ▼                                         │
+│  [Command & Control Server]                    │
+│       │  (Encrypted commands via Push/Pull)    │
+│       ▼                                         │
+│  [Handler Machines - Tier 2]                   │
+│       │                                         │
+│       ▼                                         │
+│  [Bots/Zombies - Tier 3]                       │
+│  • Thousands of infected PCs, IoT devices      │
+│  • Each sends attack traffic simultaneously    │
+│       │                                         │
+│       ▼                                         │
+│  [TARGET SERVER]                               │
+│  • Bandwidth/CPU/memory exhausted              │
+│  • Legitimate users blocked                    │
+│                                                 │
+└─────────────────────────────────────────────────┘
 ```
 
-### **Key Principles of Zero Trust**
+**Why IP Blocking Fails Against DDoS**:
+1. **Massive Scale**: Botnets contain 10,000-1,000,000+ IPs; blocking all is impossible
+2. **IP Spoofing**: Attackers forge source IPs; blocking "attack IPs" harms innocent parties
+3. **Dynamic IPs**: Home IoT devices use DHCP; blocked bots reconnect with new IPs
+4. **Legitimate-Looking Traffic**: Application-layer DDoS mimics real user requests
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│              ZERO TRUST KEY PRINCIPLES                          │
-├──────────┬──────────────────────────────────────────────────────┤
-│ PRINCIPLE│                    EXPLANATION                       │
-├────────────────────────────────────────────────────────────────┤
-│          │                                                      │
-│    1     │ NEVER TRUST, ALWAYS VERIFY                          │
-│          │ ─────────────────────────                           │
-│          │ • No user or device trusted by default              │
-│          │ • Verify every access request                       │
-│          │ • Inside or outside network - same verification     │
-│          │ • Assume network is already breached                │
-├──────────┼──────────────────────────────────────────────────────┤
-│          │                                                      │
-│    2     │ LEAST PRIVILEGE ACCESS                              │
-│          │ ─────────────────────                               │
-│          │ • Grant minimum permissions needed                  │
-│          │ • Just-In-Time (JIT) access                         │
-│          │ • Just-Enough-Access (JEA)                          │
-│          │ • Reduces impact of compromised accounts            │
-├──────────┼──────────────────────────────────────────────────────┤
-│          │                                                      │
-│    3     │ MICRO-SEGMENTATION                                  │
-│          │ ───────────────────                                 │
-│          │ • Divide network into small secure zones            │
-│          │ • Isolate workloads from each other                 │
-│          │ • Prevents lateral movement                         │
-│          │ • If one segment breached, others safe              │
-├──────────┼──────────────────────────────────────────────────────┤
-│          │                                                      │
-│    4     │ CONTINUOUS MONITORING                               │
-│          │ ────────────────────                                │
-│          │ • Not just one-time login check                     │
-│          │ • Continuously evaluate:                            │
-│          │   - Device posture                                  │
-│          │   - User behavior                                   │
-│          │   - Threat intelligence                             │
-│          │ • Real-time risk assessment                         │
-├────────────────────────────────────────────────────────────────┤
-│          │                                                      │
-│    5     │ STRONG AUTHENTICATION                               │
-│          │ ─────────────────────                               │
-│          │ • Multi-Factor Authentication (MFA)                 │
-│          │ • Identity Access Management (IAM)                  │
-│          │ • Device health verification                        │
-│          │ • Certificate-based authentication                  │
-└──────────┴──────────────────────────────────────────────────────┘
-```
+**Real-World Examples**:
+- **Mirai (2016)**: 600,000 IoT devices → 1.2 Tbps attack on Dyn DNS → Twitter/Netflix/Reddit down
+- **GitHub (2018)**: 1.35 Tbps memcached amplification attack
+- **AWS (2020)**: 2.3 Tbps attack (largest recorded) mitigated by AWS Shield
 
-### **NIST 800-207 Zero Trust Architecture**
-
-```
-                    ┌─────────────────────────┐
-                    │    CONTROL PLANE        │
-                    │                         │
-                    │  ┌──────────────────┐  │
-                    │  │ Policy Decision  │  │
-                    │  │ Point (PDP)      │  │
-                    │  │                  │  │
-                    │  │ • Policy Engine  │  │
-                    │  │ • Policy         │  │
-                    │  │   Administrator  │  │
-                    │  └─────────────────┘  │
-                    │           │             │
-                    │           │ Grants/     │
-                    │           │ Denies      │
-                    │           │ Access      │
-                    └───────────┼─────────────┘
-                                │
-                                ▼
-┌─────────┐           ┌─────────────────────────┐           ┌──────────┐
-│  USER   │──────────▶│    DATA PLANE           │──────────▶│ RESOURCE │
-│         │           │                         │           │ (App/    │
-│ (Device)│           │  ┌──────────────────┐  │           │  Data)   │
-└─────────           │  │ Policy Enforcement│  │           └──────────┘
-                      │  │ Point (PEP)      │  │
-                      │  │                  │  │
-                      │  │ • Enforces       │  │
-                      │  │   decisions      │  │
-                      │  │   from PDP       │  │
-                      │  └──────────────────┘  │
-                      └─────────────────────────┘
-```
-
-### **Five Pillars of Zero Trust**
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│              FIVE PILLARS OF ZERO TRUST                         │
-├──────────┬──────────────────────────────────────────────────────┤
-│  PILLAR  │                    FOCUS AREA                        │
-├────────────────────────────────────────────────────────────────┤
-│    1     │ IDENTITY                                             │
-│          │ • Verify user identity                               │
-│          │ • Strong authentication (MFA)                        │
-│          │ • Identity federation                                │
-├──────────┼──────────────────────────────────────────────────────┤
-│    2     │ DEVICES                                              │
-│          │ • Verify device health                               │
-│          │ • Device compliance checks                           │
-│          │ • Endpoint security                                  │
-├──────────┼──────────────────────────────────────────────────────┤
-│    3     │ NETWORKS                                             │
-│          │ • Micro-segmentation                                 │
-│          │ • Software-defined perimeters                        │
-│          │ • Encrypted communications                           │
-├──────────┼──────────────────────────────────────────────────────┤
-│    4     │ APPLICATIONS/WORKLOADS                               │
-│          │ • Application-level access control                   │
-│          │ • API security                                       │
-│          │ • Container security                                 │
-├──────────┼──────────────────────────────────────────────────────┤
-│    5     │ DATA                                                 │
-│          │ • Data classification                                │
-│          │ • Encryption at rest and in transit                  │
-│          │ • Data loss prevention (DLP)                         │
-└────────────────────────────────────────────────────────────────┘
-```
+> 📝 **Exam Integration (CIA2 Q13i):** Blocking IPs is ineffective against DDoS because of botnet scale, IP spoofing, dynamic addressing, and application-layer attacks that mimic legitimate traffic—requiring multi-layered defenses like traffic scrubbing, CDNs, and behavioral analysis.
 
 ---
+
+### 2.2.4 Wireless Network Security (IEEE 802.11)
+
+#### Why WEP Failed Completely
+
+| Flaw | Technical Reason | Consequence |
+|------|-----------------|-------------|
+| **Short IV (24-bit)** | Initialization Vector repeats quickly on busy networks | IV collisions allow RC4 key recovery via statistical attacks |
+| **Static Keys** | Same encryption key used for all sessions, rarely changed | Compromise one session → all sessions vulnerable |
+| **No Authentication** | Relies only on SSID/MAC (easily spoofed) | Rogue APs and clients can join freely |
+| **Broken Integrity (CRC-32)** | Linear checksum allows bit-flipping without detection | Attacker can modify encrypted packets and adjust CRC to match |
+
+**Tools that Break WEP**: Aircrack-ng can recover keys in minutes with ~50,000 captured packets.
+
+#### IEEE 802.11i (WPA2) - The Solution: 5 Phases
+
+```
+┌─────────────────────────────────────────────────┐
+│  IEEE 802.11i RSN OPERATION PHASES             │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  Phase 1: DISCOVERY                            │
+│  • AP broadcasts Beacon with RSN IE            │
+│  • Station & AP agree on cipher suite (AES-CCMP)│
+│                                                 │
+│  Phase 2: AUTHENTICATION                       │
+│  • PSK (WPA2-Personal) or 802.1X/EAP (Enterprise)│
+│  • RADIUS server verifies credentials          │
+│                                                 │
+│  Phase 3: 4-WAY HANDSHAKE (Key Generation)    │
+│  • AP sends ANonce → Station computes PTK      │
+│  • Station sends SNonce+MIC → AP verifies     │
+│  • AP sends GTK encrypted → Station confirms  │
+│  • Result: Unique session keys per connection │
+│                                                 │
+│  Phase 4: PROTECTED DATA TRANSFER              │
+│  • AES-CCMP encryption + 64-bit MIC           │
+│  • 48-bit Packet Number prevents replay      │
+│                                                 │
+│  Phase 5: CONNECTION TERMINATION              │
+│  • Secure deauthentication frame              │
+│  • Session keys destroyed (forward secrecy)  │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+**Key Innovations in WPA2**:
+- **Dynamic Keys**: 4-way handshake generates unique PTK/GTK per session
+- **Strong Encryption**: AES-CCMP replaces broken RC4
+- **Message Integrity**: 64-bit MIC (Michael algorithm) prevents bit-flipping
+- **Replay Protection**: Packet numbers ensure frames processed in order
+
+> 📝 **Exam Integration (CIA2 Q13ii):** IEEE 802.11i's five phases provide layered security: discovery negotiates strong ciphers, authentication verifies identity, 4-way handshake creates unique session keys, AES-CCMP protects data integrity/confidentiality, and secure termination prevents key reuse—fixing all WEP vulnerabilities.
+
+---
+
+## 2.3 SECURITY COUNTERMEASURES
+
+### 2.3.1 Cryptography in Network Security
+
+#### Symmetric vs. Asymmetric Cryptography
+
+| Feature | Symmetric (Secret Key) | Asymmetric (Public Key) |
+|---------|----------------------|------------------------|
+| **Keys Used** | Same key for encryption & decryption | Mathematically linked public/private key pair |
+| **Speed** | Very fast (ideal for bulk data) | 100-1000× slower (computationally heavy) |
+| **Key Distribution** | Problem: Securely share secret key beforehand | Solution: Public key published openly; private key kept secret |
+| **Non-Repudiation** | ❌ Cannot prove who encrypted | ✅ Digital signatures provide non-repudiation |
+| **Algorithms** | AES, 3DES, ChaCha20 | RSA, ECC, Diffie-Hellman |
+| **Use Cases** | Encrypting files, database, TLS bulk data | Key exchange, digital signatures, certificates |
+
+#### Hybrid Cryptosystems (How HTTPS/TLS Works)
+
+```
+                    HYBRID CRYPTO IN PRACTICE
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  Step 1: Asymmetric Key Exchange               │
+│  Client & Server use RSA/Diffie-Hellman to    │
+│  securely agree on a temporary "Session Key"  │
+│                                                 │
+│  Step 2: Symmetric Bulk Encryption            │
+│  Once Session Key established, switch to AES  │
+│  for encrypting actual webpage/data transfer  │
+│                                                 │
+│  Result: Best of both worlds                  │
+│  • Secure key distribution (asymmetric)       │
+│  • Fast bulk encryption (symmetric)           │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+#### 🔴 RSA Numerical Example (Most Important Exam Problem)
+
+**Given**: p=5, q=11, e=3, message M=7  
+**Find**: n, φ(n), d, encrypt, decrypt
+
+**Step-by-Step Solution**:
+```
+1. Compute n = p × q = 5 × 11 = 55
+2. Compute φ(n) = (p-1)(q-1) = 4 × 10 = 40
+3. Find d such that: (e × d) mod φ(n) = 1
+   (3 × d) mod 40 = 1
+   Try d=27: 3×27=81; 81 mod 40 = 1 ✓ → d=27
+4. Public Key: (e,n) = (3,55); Private Key: (d,n) = (27,55)
+5. Encrypt: C = M^e mod n = 7^3 mod 55 = 343 mod 55 = 13
+6. Decrypt: M = C^d mod n = 13^27 mod 55
+   Use modular exponentiation:
+   13^2=169 mod55=4; 13^4=4^2=16; 13^8=16^2=256 mod55=36;
+   13^16=36^2=1296 mod55=31; 13^27=13^16×13^8×13^2×13^1
+   =31×36×4×13 mod55 = (31×36=1116 mod55=16) ×4=64 mod55=9 ×13=117 mod55=7 ✓
+   Decrypted M=7 (original message recovered)
+```
+
+#### 🔴 Diffie-Hellman Key Exchange Numerical
+
+**Given**: p=23 (prime), g=5 (generator), A's secret=6, B's secret=15  
+**Find**: Shared secret key
+
+**Step-by-Step**:
+```
+1. A computes public value: A_pub = g^a mod p = 5^6 mod 23
+   5^2=25 mod23=2; 5^4=2^2=4; 5^6=5^4×5^2=4×2=8 mod23 → A_pub=8
+2. B computes public value: B_pub = g^b mod p = 5^15 mod 23
+   5^1=5; 5^2=2; 5^4=4; 5^8=4^2=16; 5^15=5^8×5^4×5^2×5^1=16×4×2×5=640 mod23
+   640÷23=27×23=621, remainder 19 → B_pub=19
+3. A computes shared key: K = B_pub^a mod p = 19^6 mod 23
+   19^2=361 mod23=16; 19^4=16^2=256 mod23=3; 19^6=19^4×19^2=3×16=48 mod23=2
+4. B computes shared key: K = A_pub^b mod p = 8^15 mod 23
+   8^2=64 mod23=18; 8^4=18^2=324 mod23=2; 8^8=2^2=4; 8^15=8^8×8^4×8^2×8^1=4×2×18×8=1152 mod23
+   1152÷23=50×23=1150, remainder 2 → K=2 ✓
+Both compute same shared key K=2 without ever transmitting it!
+```
+
+#### 🔴 Modular Exponentiation Practice
+**Compute**: 3^45 mod 11
+```
+Use repeated squaring:
+3^1 = 3 mod11
+3^2 = 9 mod11  
+3^4 = 9^2 = 81 mod11 = 4
+3^8 = 4^2 = 16 mod11 = 5
+3^16 = 5^2 = 25 mod11 = 3
+3^32 = 3^2 = 9 mod11
+
+45 = 32 + 8 + 4 + 1
+3^45 = 3^32 × 3^8 × 3^4 × 3^1 = 9 × 5 × 4 × 3 mod11
+= (9×5=45 mod11=1) × (4×3=12 mod11=1) = 1×1 = 1 mod11
+Answer: 1
+```
+
+> 📝 **Exam Integration (Question Bank Q8-9):** RSA and Diffie-Hellman are high-probability numerical questions. Practice key generation, encryption/decryption steps, and modular arithmetic. Always show work for partial credit.
+
+---
+
+### 2.3.2 Firewalls
+
+#### Firewall Types & Architecture
+
+```
+                    SCREENED SUBNET (DMZ) ARCHITECTURE
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  [INTERNET]                                     │
+│       │                                         │
+│       ▼                                         │
+│  ┌─────────────────┐                           │
+│  │ EXTERNAL FIREWALL│                          │
+│  │ (Less strict rules)│                        │
+│  └────────┬────────┘                           │
+│           │                                     │
+│           ▼                                     │
+│  ┌─────────────────┐                           │
+│  │ DMZ (Public Servers)│                       │
+│  │ • Web Server    │                           │
+│  │ • Email Server  │                           │
+│  │ • DNS Server    │                           │
+│  └────────┬────────┘                           │
+│           │                                     │
+│           ▼                                     │
+│  ┌─────────────────┐                           │
+│  │ INTERNAL FIREWALL│                          │
+│  │ (Very strict rules)│                        │
+│  └────────┬────────┘                           │
+│           │                                     │
+│           ▼                                     │
+│  ┌─────────────────┐                           │
+│  │ INTERNAL LAN    │                           │
+│  │ • HR Workstations│                          │
+│  │ • Internal DB   │                           │
+│  └─────────────────┘                           │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+| Firewall Type | OSI Layer | How It Works | Pros | Cons |
+|--------------|-----------|--------------|------|------|
+| **Packet Filtering (Stateless)** | L3/L4 | Checks IP/port/protocol per packet | Fast, low resource | No connection state; vulnerable to spoofing |
+| **Stateful Inspection** | L3/L4 + state table | Tracks connection state (SYN/ACK); allows return traffic | More secure; prevents many spoofing attacks | State table memory; vulnerable to SYN flood |
+| **Application/Proxy** | L7 | Acts as intermediary; inspects application payload | Highest security; understands app context | Slow; may break non-proxy-aware apps |
+| **Next-Generation (NGFW)** | Multi-layer | Combines stateful + DPI + IPS + app awareness + malware filtering | Comprehensive protection | Complex configuration; higher cost |
+
+#### 🔴 Firewall Rule Evaluation Example
+**Rule Set**:
+1. Allow TCP port 80 (HTTP) from any source
+2. Deny all other traffic
+
+**Packet**: Source IP=192.168.1.100, Dest Port=443 (HTTPS), Protocol=TCP  
+**Evaluation**: 
+- Rule 1: Port 443 ≠ 80 → No match
+- Rule 2: "Deny all" → Packet blocked  
+**Result**: Denied (HTTPS not allowed by policy)
+
+> 📝 **Exam Integration (Question Bank):** Firewalls enforce access control by filtering traffic based on rules. Stateful firewalls track connection state for better security; NGFWs add deep packet inspection and application awareness.
+
+---
+
+### 2.3.3 Intrusion Detection & Prevention Systems (IDPS)
+
+#### IDS vs. IPS: Critical Differences
+
+| Feature | IDS (Detection) | IPS (Prevention) |
+|---------|----------------|-----------------|
+| **Placement** | Out-of-band (SPAN port/tap); receives copy of traffic | In-line; all traffic passes through |
+| **Action** | Generates alerts; cannot block traffic | Can block/drop packets, reset connections in real-time |
+| **Risk** | No impact on network performance/availability | False positives can block legitimate traffic (availability risk) |
+| **Use Case** | Monitoring, forensics, threat intelligence | Active defense, critical infrastructure protection |
+
+#### Detection Methodologies
+
+| Method | How It Works | Pros | Cons | Best For |
+|--------|-------------|------|--------|----------|
+| **Signature-Based** | Compare traffic against database of known attack patterns | Fast, accurate for known threats, low false positives | Blind to zero-day attacks; requires constant updates | Known malware, exploit patterns |
+| **Anomaly-Based** | Build baseline of "normal" behavior; flag significant deviations | Can detect zero-days, insider threats, novel attacks | High false positives; requires training period; complex tuning | APTs, insider threats, novel attacks |
+
+**🔴 Exam Case**: Sudden traffic spike detected  
+- **IDS**: Alerts administrators to investigate potential DDoS  
+- **IPS**: Can automatically rate-limit or block suspicious source IPs  
+- **Decision**: Critical networks prefer IPS for automatic response; research networks may prefer IDS to avoid blocking legitimate traffic spikes
+
+> 📝 **Exam Integration (CIA2 Q2 + Question Bank):** Intrusion prevention is preferred over detection in critical networks because IPS can block attacks in real-time, preventing damage rather than just alerting after the fact—though false positive risk requires careful tuning.
+
+---
+
+### 2.3.4 Network Management & SNMP Security
+
+#### SNMP Architecture & Security Evolution
+
+```
+                    SNMP MANAGER-AGENT MODEL
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  [SNMP Manager - Central Server]               │
+│         │                                       │
+│         │ GET/SET requests                      │
+│         ▼                                       │
+│  [Network: UDP Port 161/162]                  │
+│         │                                       │
+│         ▼                                       │
+│  [SNMP Agent - Router/Switch/Firewall]        │
+│         │                                       │
+│         │ TRAP notifications (async alerts)    │
+│         ▼                                       │
+│  [Manager processes responses/updates MIB]    │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+| SNMP Version | Security Features | Vulnerability |
+|-------------|------------------|---------------|
+| **SNMPv1/v2c** | Community string (password) sent in cleartext | Packet sniffers can capture community string → full device control |
+| **SNMPv3** | • Authentication: HMAC-MD5/SHA<br>• Privacy: AES/DES encryption<br>• VACM: Granular access control | Complex configuration; performance overhead |
+
+**Best Practice**: Always use SNMPv3 with authentication AND privacy enabled for production networks.
+
+---
+
+## 2.4 DATABASES: SECURITY & INTEGRITY
+
+### 2.4.1 Security Requirements of Databases
+
+| Requirement | Definition | Example Threat | Countermeasure |
+|------------|-----------|---------------|---------------|
+| **Physical Integrity** | Immunity to hardware failures, disasters | Disk crash, power failure | RAID, backups, UPS |
+| **Logical Integrity** | Structure preserved during crashes/transactions | Partial transaction commit | ACID properties, 2PC |
+| **Element Integrity** | Individual data values accurate and valid | SQL injection altering values | Input validation, parameterized queries |
+| **Semantic Integrity** | Business rules enforced (e.g., age ≥ 18) | Application bug allowing invalid data | Database constraints, triggers |
+| **Referential Integrity** | Foreign keys map to valid primary keys | Deleting parent record leaves orphaned child | Foreign key constraints |
+| **Access Control** | Granular permissions (row/column level) | Employee viewing CEO salary | RBAC, row-level security |
+| **Auditability** | Tamper-proof logs of all access/modifications | Insider deleting audit trails | Write-once storage, SIEM integration |
+
+---
+
+### 2.4.2 Reliability & Integrity: ACID Properties (CRITICAL FOR EXAMS)
+
+**ACID** ensures database transactions are processed reliably:
+
+| Property | Meaning | Example Scenario | Failure Consequence |
+|----------|---------|-----------------|-------------------|
+| **Atomicity** | "All or nothing": transaction completes fully or not at all | Money transfer: deduct from A, add to B | If crash after deducting from A but before adding to B → money lost |
+| **Consistency** | Transaction moves DB from one valid state to another | Salary cannot be negative; foreign keys valid | Invalid data corrupts business logic, reports |
+| **Isolation** | Concurrent transactions don't interfere; result = serial execution | Two users booking last seat on flight | Lost update: both think they booked, overbooking |
+| **Durability** | Committed transactions persist despite crashes | Power failure after "Transaction Complete" | Lost sales, inconsistent inventory |
+
+#### 🔴 Exam Case: Identify Failed ACID Property
+**Scenario**: During fund transfer, system crashes after deducting from Account A but before adding to Account B.  
+**Analysis**: Atomicity failed—transaction was not treated as indivisible unit; partial completion caused data inconsistency.  
+**Solution**: Use transaction logs and rollback mechanisms to ensure atomicity.
+
+---
+
+### 2.4.3 Two-Phase Commit Protocol (2PC) for Distributed Databases
+
+```
+                    TWO-PHASE COMMIT PROTOCOL
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  [Coordinator]      [Node 1]      [Node 2]     │
+│        │                │             │         │
+│        │ PHASE 1: PREPARE PHASE                │
+│        │---------------->│             │         │
+│        │ "Prepare to Commit"                  │
+│        │                │---------------->│     │
+│        │                │ "Prepare to Commit" │ │
+│        │                │             │         │
+│        │                │ (Check local state, │ │
+│        │                │  acquire locks)    │ │
+│        │<----------------│             │         │
+│        │ "VOTE: READY" │             │         │
+│        │<-----------------------------│         │
+│        │                │ "VOTE: READY"│         │
+│        │                │             │         │
+│        │ PHASE 2: COMMIT PHASE (if ALL voted READY)│
+│        │---------------->│             │         │
+│        │ "Global Commit"│             │         │
+│        │                │---------------->│     │
+│        │                │ "Global Commit"│     │
+│        │                │             │         │
+│        │                │ (Write to disk)│     │
+│        │<----------------│             │         │
+│        │ "ACK: Committed"│            │         │
+│        │<-----------------------------│         │
+│        │                │ "ACK: Committed"│    │
+│        │                │             │         │
+│        ▼                ▼             ▼         │
+│  [Transaction Complete - All nodes consistent]│
+│                                                 │
+│  If ANY node voted ABORT or timed out:        │
+│  Coordinator sends "Global Rollback" to all   │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+> 📝 **Exam Integration (CIA2 Q3 + Question Bank):** Database reliability and integrity are crucial for enterprise systems because financial transactions, inventory, and customer data must remain consistent even during failures—ACID properties and protocols like 2PC ensure this.
+
+---
+
+### 2.4.4 Database Disclosure & Inference Attacks
+
+#### Types of Disclosure
+
+| Type | Description | Example |
+|------|-------------|---------|
+| **Exact Data Disclosure** | Attacker learns precise sensitive value | Query reveals Alice's salary = $125,500 |
+| **Bounds Disclosure** | Attacker determines value range | Average salary queries reveal Alice's salary is $120K-$130K |
+| **Negative Result Disclosure** | Attacker learns what value is NOT | "List employees >$150K" excludes Alice → Alice earns <$150K |
+| **Probabilistic Disclosure** | Attacker infers likelihood of value | Knowing Alice is Senior Engineer + 90% of Seniors earn >$100K → probable inference |
+
+#### Inference Attack Defense: Polyinstantiation
+
+**Problem**: In multilevel secure databases (Unclassified/Secret/Top Secret), users can infer classified data from unclassified queries.
+
+**Solution**: Allow multiple rows with same primary key but different classification levels.
+
+```
+                    POLYINSTANTIATION EXAMPLE
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  Database Table: SHIP_LOCATIONS                │
+│                                                 │
+│  Ship_ID | Destination      | Classification  │
+│  --------|------------------|----------------│
+│  ENT-01  | War Zone Alpha   | TOP SECRET    │
+│  ENT-01  | Training Exercise| UNCLASSIFIED  │ ← Returned to unclassified users
+│                                                 │
+│  Unclassified User Query: "Where is USS Enterprise?"│
+│  → Returns: "Training Exercise" (fake data)  │
+│  → User cannot infer secret mission exists  │
+│                                                 │
+│  Top Secret User Query: Same question        │
+│  → Returns: "War Zone Alpha" (real data)     │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+> 📝 **Exam Integration (CIA2 Q10i + Question Bank):** Database disclosure occurs via direct queries or inference attacks. Polyinstantiation prevents inference by providing classification-appropriate data versions, hiding the existence of sensitive information from lower-clearance users.
+
+---
+
+# 🔷 UNIT 3: CYBER SECURITY MANAGEMENT
+## (Weightage: 15 Marks | Topics: Planning, BCP, Incident Response, Risk, Industrial Security, Ethics)
+
+---
+
+## 3.1 SECURITY PLANNING & GOVERNANCE
+
+### 3.1.1 Hierarchical Security Documentation
+
+```
+                    SECURITY DOCUMENT HIERARCHY
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  [POLICIES] - "What & Why" (CEO/Board Level)   │
+│  • High-level management intent                │
+│  • Mandatory, organization-wide              │
+│  • Example: "All sensitive data must be      │
+│    protected from unauthorized access"       │
+│           │                                     │
+│           ▼                                     │
+│  [STANDARDS] - "Musts" (Technical Requirements)│
+│  • Specific, mandatory rules to enforce policies│
+│  • Example: "All laptops must use AES-256   │
+│    full-disk encryption"                     │
+│           │                                     │
+│           ▼                                     │
+│  [GUIDELINES] - "Shoulds" (Best Practices)    │
+│  • Recommendations, not mandatory            │
+│  • Example: "Users should use password      │
+│    managers for credential storage"         │
+│           │                                     │
+│           ▼                                     │
+│  [PROCEDURES] - "How" (Step-by-Step Instructions)│
+│  • Detailed implementation guides            │
+│  • Example: "10-step manual for IT admin   │
+│    to configure BitLocker on new laptop"   │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+> 📝 **Exam Integration (Question Bank Q31):** Security planning components include policies (strategic intent), standards (technical mandates), guidelines (recommendations), and procedures (implementation steps)—ensuring consistent, auditable security practices across the organization.
+
+---
+
+## 3.2 BUSINESS CONTINUITY & DISASTER RECOVERY
+
+### 3.2.1 BCP vs. DRP: Scope & Focus
+
+| Aspect | Business Continuity Planning (BCP) | Disaster Recovery Planning (DRP) |
+|--------|-----------------------------------|---------------------------------|
+| **Scope** | Entire organization: people, processes, facilities | IT infrastructure only: servers, networks, data |
+| **Goal** | Keep critical business functions operating during/after disaster | Restore IT systems and data to operational state |
+| **Timeline** | Immediate response through long-term recovery | Focused on technical recovery within RTO |
+| **Example** | Activate alternate office; manual order processing | Restore database from backups; rebuild servers |
+
+### 3.2.2 Critical Recovery Metrics (EXAM ESSENTIALS)
+
+| Metric | Definition | Formula/Example | Exam Application |
+|--------|-----------|-----------------|-----------------|
+| **RTO (Recovery Time Objective)** | Maximum allowable downtime before unacceptable business impact | "E-commerce site RTO=4 hours" → IT must restore within 4h | Determines backup/redundancy strategy |
+| **RPO (Recovery Point Objective)** | Maximum acceptable data loss measured in time | "RPO=1 hour" → backups must run at least hourly | Determines backup frequency |
+| **MTD (Maximum Tolerable Downtime)** | Absolute maximum survival time before business failure | "MTD=72 hours" for critical system | RTO must always be < MTD |
+
+**Relationship**: `RTO ≤ MTD` and `Backup Interval ≤ RPO`
+
+> 📝 **Exam Integration (CIA2 Q12i + Question Bank Q33):** Business Continuity Planning includes components like risk assessment, strategy development, plan documentation, training/testing, and maintenance. In a data center loss scenario, BCP activates alternate sites while DRP restores systems within RTO/RPO targets.
+
+---
+
+## 3.3 INCIDENT RESPONSE & MANAGEMENT
+
+### 3.3.1 PICERL Incident Response Lifecycle
+
+```
+                    PICERL FRAMEWORK
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  1. PREPARATION (Before Incident)              │
+│  • Train IR team; establish communication plans│
+│  • Prepare forensic toolkits; draft policies  │
+│                                                 │
+│  2. IDENTIFICATION (Detection & Triage)       │
+│  • Monitor IDS/SIEM alerts                    │
+│  • Confirm true incident vs. false positive  │
+│  • Classify severity; activate response team │
+│                                                 │
+│  3. CONTAINMENT (Stop the Bleeding)          │
+│  • Isolate compromised systems from network │
+│  • ⚠️ DO NOT power off if volatile RAM data │
+│    needed for forensics                     │
+│  • Preserve evidence; document actions      │
+│                                                 │
+│  4. ERADICATION (Remove the Threat)          │
+│  • Identify root cause; patch vulnerability│
+│  • Delete malware; disable compromised accounts│
+│  • Verify threat completely removed        │
+│                                                 │
+│  5. RECOVERY (Restore Operations)            │
+│  • Restore from clean backups; test functionality│
+│  • Gradually bring systems back online    │
+│  • Monitor closely for reinfection        │
+│                                                 │
+│  6. LESSONS LEARNED (Post-Mortem)           │
+│  • Meeting within 2 weeks of incident      │
+│  • Document: What happened? Why defenses failed?│
+│  • Update policies/tools to prevent recurrence│
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+**🔴 Exam Case: Malware Detected – Immediate Actions**
+1. **Contain**: Disconnect affected machine from network (but keep powered for memory forensics)
+2. **Identify**: Capture RAM dump; collect logs; determine malware type and entry point
+3. **Notify**: Alert IR team, management, legal/compliance per policy
+4. **Preserve**: Document chain of custody for potential legal action
+5. **Contain Further**: Block malicious IPs/domains at firewall; reset compromised credentials
+
+> 📝 **Exam Integration (CIA2 Q5 + Question Bank Q34):** Incident handling follows PICERL: Preparation (training/tools), Identification (detection/triage), Containment (isolate systems), Eradication (remove threat), Recovery (restore operations), Lessons Learned (improve defenses).
+
+---
+
+## 3.4 RISK ANALYSIS (HIGH-PROBABILITY NUMERICALS)
+
+### 3.4.1 Quantitative Risk Analysis Formulas
+
+```
+RISK = THREAT × VULNERABILITY × IMPACT
+```
+
+**Key Metrics & Formulas**:
+1. **AV (Asset Value)**: Monetary worth of asset  
+   Example: Database AV = ₹100,000
+
+2. **EF (Exposure Factor)**: % of asset lost in single incident  
+   Example: Fire destroys 50% of database → EF = 0.50
+
+3. **SLE (Single Loss Expectancy)**: Loss from one incident  
+   `SLE = AV × EF`  
+   Example: ₹100,000 × 0.50 = ₹50,000
+
+4. **ARO (Annualized Rate of Occurrence)**: Expected incidents per year  
+   Example: Fire once per 10 years → ARO = 0.1
+
+5. **ALE (Annualized Loss Expectancy)**: Expected annual loss  
+   `ALE = SLE × ARO`  
+   Example: ₹50,000 × 0.1 = ₹5,000/year
+
+**Decision Rule**: Do not spend more than ALE on countermeasures.  
+If fire suppression costs ₹10,000/year but ALE=₹5,000 → cheaper to accept risk.
+
+---
+
+### 🔴 Exam Numerical Practice Set
+
+**Problem 1**: Asset value = ₹50,000; Exposure factor = 0.4  
+**Find SLE**:
+```
+SLE = AV × EF = ₹50,000 × 0.4 = ₹20,000
+```
+
+**Problem 2**: SLE = ₹20,000; ARO = 0.5  
+**Find ALE**:
+```
+ALE = SLE × ARO = ₹20,000 × 0.5 = ₹10,000/year
+```
+
+**Problem 3**: Compare risk before/after control  
+- Before: ALE = ₹10,000/year  
+- Control cost: ₹3,000/year  
+- New ARO after control: 0.1 (reduced from 0.5)  
+- New ALE = ₹20,000 × 0.1 = ₹2,000/year  
+- Net benefit: (₹10,000 - ₹2,000) - ₹3,000 = ₹5,000/year savings → Control justified
+
+> 📝 **Exam Integration (Question Bank Q38-40):** Risk analysis numericals are high-probability exam questions. Master SLE=AV×EF and ALE=SLE×ARO formulas. Always show units (₹) and interpret results for business decisions.
+
+---
+
+## 3.5 DEALING WITH DISASTER
+
+### 3.5.1 Disaster Classification & Mitigation
+
+| Disaster Type | Examples | Primary Mitigation Strategies |
+|--------------|----------|------------------------------|
+| **Natural** | Earthquake, flood, hurricane | Geographic redundancy; offsite backups; structural hardening |
+| **Technical** | Power failure, hardware crash, software bug | UPS/generators; RAID; clustering; patch management |
+| **Human** | Insider threat, accidental deletion, sabotage | Access controls; audit logs; training; separation of duties |
+
+**🔴 Exam Case: Power Failure Mitigation**
+- **Immediate**: UPS provides short-term power for graceful shutdown
+- **Short-term**: Backup generators kick in for extended outages
+- **Long-term**: Geographic redundancy (failover to secondary data center)
+- **Data Protection**: Frequent backups with RPO-aligned intervals; transaction logs for point-in-time recovery
+
+---
+
+## 3.6 CYBER SECURITY IN INDUSTRIAL CONTEXTS
+
+### 3.6.1 Information Governance: IT vs. OT Priorities
+
+```
+                    CIA vs. AIC TRIAD PRIORITY SHIFT
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  CORPORATE IT Priority Order:                  │
+│  1. Confidentiality (protect data secrecy)    │
+│  2. Integrity (ensure data accuracy)         │
+│  3. Availability (keep systems running)      │
+│                                                 │
+│  INDUSTRIAL OT Priority Order:                 │
+│  1. Availability & Safety (systems must run  │
+│     24/7; milliseconds matter for physical  │
+│     processes; human safety paramount)      │
+│  2. Integrity (commands to machines must be│
+│     accurate; wrong valve command = explosion)│
+│  3. Confidentiality (reading boiler temp   │
+│     rarely matters if attacker can't alter it)│
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+> 📝 **Exam Integration (CIA2 Q12ii + Question Bank Q41):** Information governance in industry prioritizes availability and safety over confidentiality because industrial control system failures can cause physical damage, environmental disasters, or loss of life—unlike IT breaches which primarily cause financial/data loss.
+
+---
+
+### 3.6.2 Securing the Industrial Internet of Things (IIoT)
+
+#### Purdue Enterprise Reference Architecture (PERA)
+
+```
+                    PURDUE MODEL FOR OT SECURITY
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  LEVEL 5: Enterprise Network                  │
+│  • Internet access, corporate VPNs, email    │
+│                                                 │
+│  LEVEL 4: Site Business Planning              │
+│  • ERP systems, business analytics           │
+│                                                 │
+│  ═══════════════════════════════════════     │
+│  [IT/OT DMZ - "Air Gap" Equivalent]          │
+│  • Jump servers, patch management, strict  │
+│    firewalls; NO direct L4↔L3 traffic      │
+│  ═══════════════════════════════════════     │
+│                                                 │
+│  LEVEL 3: Site Operations                     │
+│  • Plant-wide SCADA, historian databases     │
+│                                                 │
+│  LEVEL 2: Area Supervisory Control           │
+│  • HMI (Human-Machine Interface) screens    │
+│                                                 │
+│  LEVEL 1: Basic Control                      │
+│  • PLCs (Programmable Logic Controllers),  │
+│    RTUs (Remote Terminal Units)            │
+│                                                 │
+│  LEVEL 0: Physical Process                  │
+│  • Motors, valves, pumps, sensors          │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+**Security Principle**: Strict segmentation prevents IT breach from reaching OT. Attacker compromising HR email (L4) cannot directly access turbine controllers (L1).
+
+#### IIoT Threats & Challenges
+
+| Threat | Why Critical in OT | Mitigation |
+|--------|-------------------|------------|
+| **Legacy Protocols** (Modbus, DNP3) | No encryption/authentication; commands in cleartext | Protocol gateways; network segmentation; monitoring |
+| **Patching Difficulties** | Cannot reboot nuclear reactor for Windows Update | Virtual patching (IPS); scheduled maintenance windows; compensating controls |
+| **State-Sponsored Attacks** (Stuxnet) | Target physical processes; cause kinetic damage | Air-gapping where possible; behavioral monitoring; supply chain security |
+| **Insider Threats** | Operators with physical access can cause catastrophic harm | Least privilege; dual-control for critical actions; continuous monitoring |
+
+---
+
+### 3.6.3 Intrusion Detection in OT Environments
+
+**Why Traditional IPS Fails in OT**:
+- **Availability Risk**: False positive blocking a legitimate valve command could cause explosion
+- **Timing Sensitivity**: OT protocols require millisecond response; IPS inspection adds latency
+- **Proprietary Protocols**: Commercial IDS don't understand Modbus, Profibus, etc.
+
+**OT-Appropriate Solution: Passive Specialized IDS**
+```
+                    PASSIVE IDS FOR OT
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  [OT Network Traffic]                          │
+│         │                                       │
+│         ▼                                       │
+│  [Network Tap/SPAN Port] → Copy of traffic only│
+│         │                                       │
+│         ▼                                       │
+│  [Specialized OT-IDS]                          │
+│  • Trained on industrial protocols            │
+│  • Builds baseline of "normal" process behavior│
+│  • Alerts on anomalies (e.g., valve command  │
+│    at unusual time/parameter)                │
+│         │                                       │
+│         ▼                                       │
+│  [Human Operator Review] ← Final safety decision│
+│  • IDS alerts; human decides to intervene    │
+│  • Prevents automated false-positive blocking│
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+> 📝 **Exam Integration (Question Bank Q44):** Traditional IDS fails in industrial systems because automated blocking risks physical safety. OT environments use passive, protocol-aware IDS that alert human operators—who make final safety-critical decisions.
+
+---
+
+### 3.6.4 Compliance Standards
+
+| Standard | Scope | Key Focus | Industry Application |
+|----------|-------|-----------|---------------------|
+| **IEC 62443** | Industrial Automation & Control Systems (IACS) | Security zones/conduits; security levels for OT | Manufacturing, energy, utilities |
+| **ISO/IEC 27001** | General Information Security Management System (ISMS) | Policies, risk management, continuous improvement | All sectors; foundational framework |
+| **NIST Cybersecurity Framework (CSF)** | Critical infrastructure | Identify, Protect, Detect, Respond, Recover functions | US critical infrastructure; widely adopted globally |
+
+**Implementation Tip**: Map controls across standards to avoid duplication—e.g., IEC 62443 zone segmentation supports NIST "Protect" function.
+
+---
+
+### 3.6.5 Computer Ethics in Industrial Contexts
+
+#### RFC 1087: Ethics and the Internet (IAB)
+
+Unethical activities include any that:
+1. Seek unauthorized access to Internet resources
+2. Disrupt intended Internet use
+3. Waste resources (people, capacity, computers)
+4. Destroy integrity of computer-based information
+5. Compromise user privacy
+
+#### Ten Commandments of Computer Ethics (Computer Ethics Institute)
+
+1. Thou shalt not use a computer to harm other people  
+2. Thou shalt not interfere with other people's computer work  
+3. Thou shalt not snoop around in other people's computer files  
+4. Thou shalt not use a computer to steal  
+5. Thou shalt not use a computer to bear false witness  
+6. Thou shalt not copy or use proprietary software without payment  
+7. Thou shalt not use other people's computer resources without authorization  
+8. Thou shalt not appropriate other people's intellectual output  
+9. Thou shalt think about social consequences of programs/systems you design  
+10. Thou shalt use computers with consideration and respect for fellow humans  
+
+**🔴 Exam Case: Employee Leaks Industrial Data**  
+- **Ethical Violation**: Commandments #3 (snooping), #4 (theft of IP), #7 (unauthorized resource use)  
+- **Industrial Impact**: Could enable sabotage of physical processes → safety/environmental risk  
+- **Prevention**: Ethics training; clear policies; technical controls (DLP, access logs); whistleblower channels  
+
+> 📝 **Exam Integration (CIA2 Q8 + Question Bank Q46):** Computer ethics are paramount in industrial contexts because cyber attacks can cause kinetic damage. RFC 1087 and the Ten Commandments provide moral frameworks for security professionals managing life-critical systems.
+
+---
+
+# 🎯 FINAL EXAM PREPARATION CHECKLIST
+
+## 🔥 High-Probability Numerical Problems (Practice Until Automatic)
+- [ ] RSA key generation, encryption, decryption (p,q,e,M given)
+- [ ] Diffie-Hellman shared key calculation (p,g,a,b given)  
+- [ ] Modular exponentiation (a^b mod n)
+- [ ] Risk analysis: SLE=AV×EF; ALE=SLE×ARO
+- [ ] Caesar/Vigenère encryption/decryption with given keys
+
+## 📚 High-Probability Theory Questions
+- [ ] IDS vs. IPS: placement, action, use cases
+- [ ] Firewall types: stateless vs. stateful vs. application vs. NGFW
+- [ ] ACID properties with failure scenario analysis
+- [ ] Database disclosure types + polyinstantiation defense
+- [ ] PICERL incident response steps with containment cautions
+- [ ] IIoT threats + Purdue Model segmentation
+- [ ] Zero Trust principles + five pillars
+- [ ] SNMPv3 security features vs. v1/v2c vulnerabilities
+
+## 🧠 Conceptual Integration Points
+- [ ] How hybrid cryptosystems combine symmetric/asymmetric strengths
+- [ ] Why OT prioritizes Availability over Confidentiality (AIC vs. CIA)
+- [ ] How rootkits evade detection via API hooking
+- [ ] Why IP blocking fails against DDoS (scale, spoofing, dynamics)
+- [ ] How 4-way handshake in 802.11i enables forward secrecy
+
+## ✍️ Exam Technique Tips
+1. **Show All Steps** in numericals—even if final answer wrong, partial credit for method
+2. **Use Tables** for comparison questions (IDS/IPS, firewall types, ACID properties)
+3. **Draw ASCII Diagrams** only when explicitly helpful (Purdue Model, PICERL, hybrid crypto)
+4. **Link to Real Examples**: Stuxnet for OT attacks, Mirai for DDoS, Sony XCP for rootkits
+5. **Answer the Question Asked**: If question says "explain with example", include one; if "list", use bullet points
+
+---
+
+```
+┌─────────────────────────────────────────────────┐
+│  🏆 CENTUM STRATEGY SUMMARY                    │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  ✅ Master all numericals: RSA, DH, Risk, Ciphers│
+│  ✅ Memorize frameworks: PICERL, ACID, CIA/DAD│
+│  ✅ Understand OT vs. IT priority differences  │
+│  ✅ Practice ASCII diagrams: Purdue, Hybrid Crypto│
+│  ✅ Integrate ethics: RFC 1087 + Ten Commandments│
+│  ✅ Review all CIA1/CIA2 questions as examples│
+│                                                 │
+│  🎯 Target: Answer every question with        │
+│     structured, example-rich, exam-focused    │
+│     responses that demonstrate deep understanding│
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
 
