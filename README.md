@@ -1,7 +1,7 @@
-# 🎯 MASTER CYBERSECURITY STUDY GUIDE: CENTUM EDITION
+# 🎯 CYBERSECURITY STUDY GUIDE: CENTUM EDITION
 ## Course: 23CYC01 - Cyber Security Essentials
-### Target: 100/100 | Target Length: 50+ Pages Equivalent
-### Based on: SKCT Regulations 2022 | Semester 3/4 | B.E/B.Tech CSE (Cyber Security)
+### Target: 100/100 
+### Based on: SKCT Regulations 2022 | Semester 4 | B.E/B.Tech CSE (Cyber Security)
 
 ---
 
