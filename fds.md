@@ -164,7 +164,17 @@ Data exists in multiple forms. Understanding these is crucial for proper data ha
 
 **Examples:** Live ecommerce purchases, in-game player activity, financial trading, social media feeds
 
+```
+📊 Data Distribution in Organizations:
+┌─────────────────────────────────┐
+│ Unstructured: ████████████ 80%+ │
+│ Structured:   ████ 15%          │
+│ Semi-struct:  █ 5%              │
+└─────────────────────────────────┘
+```
+
 ---
+
 
 ## 1.3 THE DATA SCIENCE PROCESS (6 Steps)
 
@@ -338,7 +348,7 @@ Multiple sources    Clean, standardize,   Warehouse for
 **Disadvantages:** Not 100% accurate, resource-heavy, privacy concerns
 **Managed by:** Data Scientists / Business Users
 
-### COMPARISON TABLE
+### 📊 Comparison Table: Data Warehousing vs Data Mining *(CIA Exam Ready)*
 
 | Feature | Data Warehousing | Data Mining |
 |---------|-----------------|-------------|
@@ -347,7 +357,10 @@ Multiple sources    Clean, standardize,   Warehouse for
 | **Purpose** | Store & report on historical data | Discover hidden patterns & predict outcomes |
 | **Data Handling** | Pools all relevant data together | Extracts knowledge from large datasets |
 | **Managed By** | Data Engineers | Data Scientists / Business Users |
-| **Example** | Consolidating sales from 50 stores | Finding "customers who buy X also buy Y" |
+| **Functionality** | Subject-oriented, integrated, time-varying, non-volatile | AI, statistics, databases, machine learning |
+| **Task** | Extracting and storing data for efficient reporting | Pattern recognition logic to find patterns |
+| **Uses** | Makes reporting easier and faster | Aids in identification of access patterns |
+| **Example** | Consolidating sales from 50 stores into one server | Finding "customers who buy X also buy Y" |
 
 ---
 
@@ -514,6 +527,28 @@ Symmetric:           Right-Skewed:        Left-Skewed:
 | **Leptokurtic** | High peak, heavy tails | > 3 | More outliers |
 | **Platykurtic** | Flat, light tails | < 3 | Fewer outliers |
 
+### Frequency Distribution Tables
+
+**Ungrouped (Individual Values):**
+```
+Marks    Frequency
+10         2
+15         5
+20         8
+25         3
+30         2
+```
+
+**Grouped (Class Intervals):**
+```
+Class Interval    Frequency    Midpoint
+10-14             3            12
+15-19             7            17
+20-24            12            22
+25-29             5            27
+30-34             3            32
+```
+
 ### Data Visualization Types
 
 | Chart | Best For | Key Features |
@@ -527,6 +562,39 @@ Symmetric:           Right-Skewed:        Left-Skewed:
 | **Scatter Plot** | Relationship between 2 variables | X-Y points, shows correlation |
 
 ---
+### Box Plot Components *(Important for CIA)*
+
+```
+    Value
+      90 |                    ○ (outlier)
+      80 |                    │
+      75 |              +-----+ ← Q3 (75th percentile)
+      70 |              │     │
+      65 |         +----+     │
+      60 |         │    │     │
+      55 |         │    │     │
+      50 |    +----+    │     │ ← Q1 (25th percentile)
+      45 |    │         │     │
+      40 +----+---------+-----+
+           Min         Med    Max
+```
+
+**5-Number Summary:**
+- Minimum
+- Q1 (25th percentile)
+- Median/Q2 (50th percentile)
+- Q3 (75th percentile)
+- Maximum
+
+**IQR (Interquartile Range):** Q3 - Q1
+
+**Outlier Detection:**
+- Lower fence: Q1 - 1.5×IQR
+- Upper fence: Q3 + 1.5×IQR
+- Points beyond fences = outliers
+
+---
+
 
 ## 1.8 NORMAL DISTRIBUTION & Z-SCORES
 
