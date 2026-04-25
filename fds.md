@@ -1,20 +1,18 @@
-# 📚 DATA SCIENCE STUDY GUIDE
-## Your Complete Path to 100/100
+# 📚DATA SCIENCE STUDY GUIDE
+## 🎯 Complete Path to 100/100 | Units 1-5 Merged
 
 ---
 
 # 📖 MODULE 1: INTRODUCTION AND DESCRIBING DATA
 
-## 1.1 DATA SCIENCE: BENEFITS AND USES
+## 1.1 DATA SCIENCE: FOUNDATIONS & BENEFITS
 
 ### What is Data Science?
 
-**Data Science** is the domain of study that deals with vast volumes of data using modern tools and techniques to:
-- Find unseen patterns
-- Derive meaningful information
-- Make business decisions
-
-Data Science sits at the **intersection** of three critical domains:
+**Data Science** is the domain of study that deals with vast volumes of data using modern tools and techniques (like machine learning) to:
+- ✅ Find unseen patterns
+- ✅ Derive meaningful information  
+- ✅ Make business decisions
 
 ```
                     +-------------------+
@@ -49,19 +47,14 @@ Data Science sits at the **intersection** of three critical domains:
 3. **Visualizing data** to get a better perspective
 4. **Understanding the data** to make better decisions
 
-### Importance of Data Science
-
-- **Global data projection**: Expected to grow to **175 zettabytes by 2025** (IDC)
-- **Speed**: Replaces traditional days/weeks of analysis, processing data in **hours**
-- **Insights**: Allows companies to understand gigantic data and derive valuable insights
-
 ### Benefits of Data Science
 
-1. **Identifying business opportunities** - Discovering new markets and trends
-2. **Helping make better decisions** - Data-driven decision making
-3. **Improving performance** - Optimizing operations and processes
-4. **Identifying target audiences** - Precise customer segmentation
-5. **Fighting competitors** - Strategic advantage through insights
+| Benefit | Description |
+|---------|-------------|
+| 🔍 Better Decision Making | Data-driven decisions by analyzing patterns, reducing guesswork |
+| 🎯 Identifying Target Audiences | Segment valuable customer groups for effective marketing |
+| 💡 Identifies Opportunities | Discover new business opportunities through pattern recognition |
+| ⚡ Improves Performance | Optimize business processes and operational efficiency |
 
 ### Uses and Applications
 
@@ -75,20 +68,20 @@ Data Science sits at the **intersection** of three critical domains:
 - Internet Search (Google)
 - Speech/Image Recognition
 
-**Uses:**
-- Transforming user data into profitable information
-- Lowering accidents in transport (e.g., driverless cars)
-- Therapeutic customization in genetics/genomics
+**Real-World Uses:**
+- Predicts future outcomes
+- Lowers risks (e.g., driverless cars)
+- Customizes therapeutics (genomics)
+- Transforms user data into profitable information
 
 ---
 
 ## 1.2 FACETS OF DATA
 
-Data comes in various types. Understanding these facets is crucial for proper data handling.
+Data exists in multiple forms. Understanding these is crucial for proper data handling.
 
-### 1. Structured Data
-
-**Definition:** Data organized in an identifiable structure, like rows and columns methodology.
+### 1. Structured Data ✅
+**Definition:** Organized in rows and columns format with fixed schema.
 
 **Characteristics:**
 - Easily searchable by data type
@@ -96,81 +89,52 @@ Data comes in various types. Understanding these facets is crucial for proper da
 - Fixed schema
 
 **Examples:**
-- Excel tables
-- Database Management Systems (SQL databases)
-- Spreadsheets
-
 ```
 +----------+----------+----------+----------+
 |   ID     |   Name   |   Age    |  Salary  |
 +----------+----------+----------+----------+
 |    1     |  Alice   |    25    |  50000   |
 |    2     |   Bob    |    30    |  60000   |
-|    3     |  Carol   |    28    |  55000   |
 +----------+----------+----------+----------+
 ```
 
-### 2. Unstructured Data
+### 2. Unstructured Data ✅
+**Definition:** Does not follow a specified format or structural rules.
 
-**Definition:** Data that does not follow a specified format, structural rules, or sequence.
-
-**Characteristics:**
+**Key Facts:**
+- Makes up **>80% of all data**
 - Unpredictable in nature
-- Makes up **over 80%** of modern organizational data
 - No predefined data model
 
-**Examples:**
-- Documents (PDFs, Word files)
-- Email messages
-- Customer feedback
-- Audio files
-- Video files
-- Images
+**Examples:** Emails, PDFs, customer feedback, images, videos, audio files
 
-### 3. Natural Language
+### 3. Semi-structured Data ✅
+**Definition:** Contains tags/markers to separate elements; has some organizational properties but not rigid structure.
 
-**Definition:** A special type of unstructured data representing human speech/text.
+**Examples:** JSON, XML files
 
-**Requirements:**
-- Requires **NLP (Natural Language Processing)** to help machines:
-  - Understand meaning
-  - Recognize entities
-  - Summarize text
-  - Perform sentiment analysis
+### 4. Natural Language ✅
+**Definition:** Human speech and text requiring **NLP (Natural Language Processing)**.
 
-**Examples:**
-- Social media posts
-- Chat logs
-- News articles
-- Customer reviews
+**NLP Capabilities:**
+- Understand meaning
+- Recognize entities
+- Summarize text
+- Perform sentiment analysis
 
-### 4. Machine-Generated Data
+**Examples:** Social media posts, chat logs, news articles, customer reviews
 
-**Definition:** Information created **without human interaction** by computer processes.
+### 5. Machine-Generated Data ✅
+**Definition:** Created without human interaction by computer processes.
 
 **Types:**
 - **M2M (Machine-to-Machine)** interactions
 - **H2M (Human-to-Machine)** interactions
 
-**Examples:**
-- Web server logs
-- Call detail records
-- Telemetry data
-- RFID technology data
-- Sensor data (IoT devices)
+**Examples:** Web server logs, IoT sensor data, call detail records, telemetry data
 
-### 5. Graph-Based (Network) Data
-
-**Definition:** Describes relationships/interactions in complex systems.
-
-**Components:**
-- **Nodes**: Entities/objects
-- **Edges**: The interactions between them
-
-**Storage:**
-- Graph Databases
-- Queries like **SPARQL**
-- Like sketching ideas on a whiteboard rather than using tables
+### 6. Graph-Based (Network) Data ✅
+**Definition:** Describes relationships (edges) between entities (nodes).
 
 ```
         (Alice)-----(Bob)
@@ -182,40 +146,27 @@ Data comes in various types. Understanding these facets is crucial for proper da
            (Eve)
 ```
 
-### 6. Audio, Image, and Video (Multimedia)
+**Storage:** Graph databases, queries like SPARQL
 
+### 7. Audio, Image, and Video (Multimedia) ✅
 **Characteristics:**
 - Time-based media storage
-- **Trivial for humans** (e.g., recognizing a face)
-- **Highly challenging for computers** to transform and index
+- Trivial for humans, challenging for computers
+- Requires deep learning and computer vision techniques
 
-**Examples:**
-- Surveillance footage
-- Medical imaging (X-rays, MRIs)
-- Music files
-- Video streams
-
-### 7. Streaming Data
-
-**Definition:** Data generated **continuously** by thousands of sources simultaneously in small sizes (Kilobytes).
+### 8. Streaming Data ✅ *(From PDF)*
+**Definition:** Data generated continuously by thousands of sources simultaneously.
 
 **Characteristics:**
 - Real-time generation
 - High velocity
-- Continuous flow
+- Continuous flow in small sizes (Kilobytes)
 
-**Examples:**
-- Live ecommerce purchases
-- In-game player activity
-- Financial trading floors
-- Social media feeds
-- Sensor networks
+**Examples:** Live ecommerce purchases, in-game player activity, financial trading, social media feeds
 
 ---
 
-## 1.3 DATA SCIENCE PROCESS: OVERVIEW
-
-The Data Science Process is the **lifecycle of a data project**, broken into **6 essential steps**:
+## 1.3 THE DATA SCIENCE PROCESS (6 Steps)
 
 ```
     +----------------+     +----------------+     +----------------+
@@ -230,361 +181,179 @@ The Data Science Process is the **lifecycle of a data project**, broken into **6
     +----------------+     +----------------+     +----------------+
 ```
 
-### Step 1: Setting the Research Goal
+### Step 1: Setting the Research Goal 🎯
 
-**Purpose:** Defining the **what, how, and why** of the project so all stakeholders understand.
+**Purpose:** Define the **what, how, and why** so all stakeholders are aligned.
 
-**Primary Output: Project Charter**
+**Project Charter Contains:**
+| Component | Description |
+|-----------|-------------|
+| Clear research goal | What problem are we solving? |
+| Project mission/context | Why does this matter? |
+| Analysis plan | How will we approach it? |
+| Required resources | What do we need? |
+| Proof of concept | Can it be done? |
+| Deliverables | What will we produce? |
+| Timeline | When will it be completed? |
 
-The Project Charter contains:
-1. **Clear research goal** - What problem are we solving?
-2. **Project mission/context** - Why does this matter?
-3. **Analysis plan** - How will we approach it?
-4. **Required resources** - What do we need?
-5. **Proof of concept** - Can it be done?
-6. **Deliverables** - What will we produce?
-7. **Timeline** - When will it be completed?
+**⚠️ Warning:** Without a well-defined research goal, the project can drift in the wrong direction, wasting time and resources.
 
-**Example:**
-If a retail company wants to reduce customer churn:
-- **Goal**: Identify customers likely to leave in next 3 months
-- **Mission**: Reduce churn by 15% to increase revenue
-- **Plan**: Analyze purchase history, customer service interactions
-- **Resources**: Data analyst, ML engineer, customer data
-- **Deliverable**: Churn prediction model with 85% accuracy
-- **Timeline**: 3 months
+### Step 2: Retrieving Data 📥
 
-### Step 2: Retrieving Data
+**Data Sources:**
 
-**Purpose:** Finding and acquiring the data needed for analysis.
+| Type | Examples |
+|------|----------|
+| **Internal** | Company databases, data marts, data warehouses, data lakes |
+| **External** | Purchased data (Nielsen), Twitter APIs, government datasets |
 
-**Sources of Data:**
-
-**A. Internal Data:**
-- Company databases
-- Data marts
-- Data warehouses
-- Data lakes
-
-**B. External Data:**
-- Bought/sourced from third parties
-- Examples: Nielsen data, Twitter API, government databases
-
-**Data Quality Checks:**
-Done at this stage to prevent spending hours fixing easily preventable import issues:
+**Quality Checks at This Stage:**
 - Check for missing values
 - Verify data types
 - Identify duplicates
 - Validate ranges
 
-**Example:**
-For a customer analytics project:
-- **Internal**: Customer database, transaction logs, CRM system
-- **External**: Demographic data from census, social media sentiment
+### Step 3: Data Preparation ⚙️ *(CRUCIAL - 80% of Time!)*
 
-### Step 3: Data Preparation (Data Cleansing & Transformation)
+#### A. Data Cleansing:
+1. **Fixing errors and typos** - Correct spelling mistakes, formatting inconsistencies
+2. **Handling Missing Values:**
+   ```
+   • Imputation: Fill with mean/median/mode
+   • Forward fill (ffill): Use previous value
+   • Backward fill (bfill): Use next value
+   • Deletion: Remove rows/columns with missing data
+   ```
+3. **Handling Outliers:**
+   ```
+   • Cap them (set maximum threshold)
+   • Remove them entirely
+   • Transform the data
+   ```
+4. **Removing Duplicates** - Prevents bias in analysis
 
-**⚠️ CRITICAL:** Expect to spend **up to 80% of project time** here!
+#### B. Data Transformation:
+1. Aggregating data to suitable level
+2. Deriving new computed measures (e.g., profit margin)
+3. Creating dummy variables for categorical data
+4. Joining multiple datasets
+5. Converting formats (text to numbers)
 
-**A. Data Cleansing:**
-Fixing issues in raw data:
-1. **Errors** - Incorrect values
-2. **Physically impossible values** - Age = 150, negative height
-3. **Missing values** - NULL, NaN entries
-4. **Outliers** - Extreme values that may skew results
-5. **Typos** - Spelling errors
-6. **Duplicate data** - Repeated records
+### Step 4: Data Exploration (EDA) 🔍
 
-**B. Data Transformation:**
-Converting data into usable format:
-1. **Aggregating data** - Summarizing at different levels
-2. **Deriving new measures** - Creating calculated fields
-3. **Creating dummy variables** - Converting categories to numbers
-4. **Reducing variables** - Feature selection
-5. **Joining datasets** - Combining multiple sources
-
-**Example:**
-Raw customer data issues:
-```
-Before Cleansing:
-ID  | Name    | Age | Purchase
-----+---------+-----+----------
-1   | Alice   | 25  | 100
-2   | Bob     |     | 150
-3   | Carol   | 150 | 200
-4   | Alice   | 25  | 100  (duplicate)
-5   | Dave    | -5  | 50
-```
-
-```
-After Cleansing:
-ID  | Name    | Age | Purchase
-----+---------+-----+----------
-1   | Alice   | 25  | 100
-2   | Bob     | 30* | 150   (*imputed mean)
-3   | Carol   | 50* | 200   (*corrected)
-4   | Dave    | 35* | 50    (*corrected)
-```
-
-### Step 4: Data Exploration (EDA - Exploratory Data Analysis)
-
-**Purpose:** Diving deeper into data using descriptive statistics and visual techniques.
+**Purpose:** Dive deeper into cleaned data using descriptive statistics and visualization to discover patterns before modeling.
 
 **Techniques:**
+| Technique | Purpose |
+|-----------|---------|
+| Histograms | Distribution of single variable |
+| Density plots | Smoothed distribution |
+| Box plots | Quartiles and outliers |
+| Scatter plots | Relationships between two variables |
+| Brushing & Linking | Select observations in one plot, highlight in others |
 
-**A. Simple Graphs:**
-- **Histograms** - Distribution of single variable
-- **Density plots** - Smoothed distribution
+### Step 5: Data Modeling 🤖
 
-**B. Combined Graphs:**
-- **Scatter plots** - Relationship between two variables
+**Key Sub-tasks:**
 
-**C. Brushing and Linking:**
-- Selecting observations in one plot
-- System highlights those same observations in other plots simultaneously
-- Helps identify patterns across multiple views
+1. **Model Selection** - Choose algorithm based on:
+   - Performance requirements
+   - Ease of implementation
+   - Explainability
+   - Maintenance cost
 
-**Goals:**
-- Find hidden patterns
-- Identify outliers
-- Understand distributions
-- Detect relationships
-- Generate hypotheses
+2. **Execution** - Using Python libraries:
+   ```python
+   # Key libraries
+   import sklearn      # Machine learning algorithms
+   import statsmodels  # Statistical models
+   import numpy, pandas # Data manipulation
+   ```
 
-**Example:**
-Exploring sales data:
-- Histogram shows most sales are between $50-$200
-- Scatter plot reveals higher sales on weekends
-- Box plot identifies 3 outlier transactions > $1000
+3. **Model Evaluation** - Holdout Sample strategy:
+   ```
+   • Typical split: 80% training / 20% testing
+   • Train on training data, evaluate on unseen test data
+   • Error measures: MSE, RMSE, R²
+   ```
 
-### Step 5: Data Modeling
-
-**Purpose:** Using ML and statistical techniques to achieve the goal.
-
-**A. Model Selection:**
-Deciding based on:
-1. **Performance** - Accuracy, precision, recall
-2. **Ease of implementation** - Complexity
-3. **Maintenance** - Ongoing requirements
-4. **Explainability** - Can we interpret results?
-
-**B. Execution:**
-Using Python libraries:
-- **Scikit-learn** - Machine learning algorithms
-- **StatsModels** - Statistical models
-
-**C. Model Comparison:**
-Using a **Holdout Sample**:
-- Typical split: **80% Train / 20% Test**
-- Model trained on one part
-- Evaluated on "unseen" test data
-- Calculate error measures:
-  - **Mean Square Error (MSE)**
-  - **Root Mean Square Error (RMSE)**
-  - **R-squared**
-
-**Example:**
-Predicting house prices:
-- **Algorithm**: Linear Regression
-- **Training**: 800 houses
-- **Testing**: 200 houses
-- **MSE**: 15,000
-- **R²**: 0.85 (85% variance explained)
-
-### Step 6: Presentation and Automation
-
-**Purpose:** Presenting findings to stakeholders and automating for future use.
+### Step 6: Presentation and Automation 📊
 
 **A. Presentation:**
-- Create reports
-- Visualizations
-- Dashboards
-- PowerPoint presentations
-- Executive summaries
+- Create clear visual reports
+- Build dashboards (Tableau, Power BI)
+- Prepare executive summaries
+- Translate findings into actionable business recommendations
 
 **B. Automation:**
-- Automating model scoring
-- Updating reports automatically
-- Excel sheet generation
-- Scheduled retraining
-- API deployment
-
-**Key Principle:** Analysis doesn't have to be entirely redone manually each time.
-
-**Example:**
-Monthly sales forecast:
-- **Dashboard**: Interactive Tableau/Power BI
-- **Report**: Automated PDF sent to managers
-- **Model**: Retrains monthly with new data
-- **API**: Allows real-time predictions
+- Set up automated pipelines
+- Model scores new data automatically
+- Update reports without manual intervention
+- Schedule retraining cycles
 
 ---
 
-## 1.4 DATA MINING
+## 1.4 DATA MINING vs DATA WAREHOUSING
 
-### Definition
+### DATA WAREHOUSING
 
-**Data Mining** is the process of analyzing data to discover meaningful patterns and predict future outcomes.
+**Definition:** A **subject-oriented, integrated, time-varying, and non-volatile** database system designed for analytical analysis.
 
-### Technology Used
+**Key Characteristics:**
+| Characteristic | Description |
+|---------------|-------------|
+| **Subject-Oriented** | Organized around business subjects (sales, customers), not operational processes |
+| **Integrated** | Combines data from multiple heterogeneous sources into consistent format |
+| **Time-Varying** | Stores historical data over time for trend analysis |
+| **Non-Volatile** | Data is loaded and read, NOT frequently updated or deleted |
 
-- **Artificial Intelligence (AI)**
-- **Machine Learning** algorithms
-- **Statistics**
-- **Pattern recognition logic**
-
-### Process Flow
-
+**ETL Process:**
 ```
-Raw Data → Preprocessing → Pattern Discovery → Validation → Knowledge
+┌─────────────┐    ┌──────────────┐    ┌─────────────┐
+│   EXTRACT   │ -> │  TRANSFORM   │ -> │    LOAD     │
+└─────────────┘    └──────────────┘    └─────────────┘
+│                    │                    │
+v                    v                    v
+Multiple sources    Clean, standardize,   Warehouse for
+(Sales, CRM, etc.)  restructure data      querying
 ```
 
-### Advantages
+**Advantages:** Easy to understand, continuous updates, stores historical data, faster reporting
+**Disadvantages:** Risk of accumulating irrelevant data, complex cleansing from multiple sources
+**Managed by:** Data Engineers / IT teams
 
-1. **Fault detection** - Identify anomalies and errors
-2. **Cost-effective** - Automated pattern discovery
-3. **Easily accessible knowledge** - Insights from large datasets
-4. **Predictive capabilities** - Forecast future trends
-5. **Hidden pattern discovery** - Find relationships not obvious
+### DATA MINING
 
-### Disadvantages
+**Definition:** Process of analyzing large datasets using **AI, machine learning, and statistical techniques** to discover meaningful patterns and predict future outcomes.
 
-1. **Not 100% accurate** - Can lead to breaches or false positives
-2. **Resource-heavy** - Requires significant training/implementation
-3. **Privacy concerns** - May reveal sensitive information
-4. **Complexity** - Requires specialized skills
-5. **Overfitting risk** - Models may not generalize well
+**Key Techniques:**
+| Technique | Description | Example |
+|-----------|-------------|---------|
+| **Classification** | Assigning items into predefined categories | Spam vs. not spam detection |
+| **Clustering** | Grouping similar data points without labels | Customer segmentation |
+| **Association Rule Mining** | Finding "if-then" patterns | "Customers who buy bread also buy butter" |
+| **Prediction/Regression** | Forecasting continuous numerical outcomes | Predicting house prices |
 
-### Carried Out By
+**Advantages:** Fault detection, cost-effective, actionable knowledge
+**Disadvantages:** Not 100% accurate, resource-heavy, privacy concerns
+**Managed by:** Data Scientists / Business Users
 
-- **Business users**
-- **Data Scientists**
+### COMPARISON TABLE
 
-### Data Mining Techniques
-
-**1. Classification:**
-- Assigning data into predefined categories
-- **Example**: Spam vs Not Spam email detection
-
-**2. Clustering:**
-- Grouping data based on similarities
-- No predefined classes
-- **Example**: Grouping customers into personas
-
-**3. Association Rule Mining:**
-- Finding "If-Then" patterns
-- **Example**: Market basket analysis - "If customer buys bread, they also buy butter"
-
-**4. Prediction:**
-- Forecasting continuous numerical outcomes
-- **Example**: Predicting house prices, stock values
+| Feature | Data Warehousing | Data Mining |
+|---------|-----------------|-------------|
+| **Definition** | Database system for analytical analysis | Process of analyzing data to find patterns |
+| **Process** | ETL (Extract, Transform, Load) | AI, ML, Statistics |
+| **Purpose** | Store & report on historical data | Discover hidden patterns & predict outcomes |
+| **Data Handling** | Pools all relevant data together | Extracts knowledge from large datasets |
+| **Managed By** | Data Engineers | Data Scientists / Business Users |
+| **Example** | Consolidating sales from 50 stores | Finding "customers who buy X also buy Y" |
 
 ---
 
-## 1.5 DATA WAREHOUSING
+## 1.5 TYPES OF DATA & VARIABLES
 
-### Definition
-
-A **Data Warehouse** is a:
-- **Subject-oriented** database system
-- **Integrated** from multiple sources
-- **Time-varying** (historical data)
-- **Non-volatile** (data doesn't change once loaded)
-- Designed for **analytical analysis** (NOT transactional work)
-
-### Process: ETL
-
-**Extract, Transform, Load (ETL)**
-
-```
-+----------+     +----------+     +----------+
-| Extract  | --> |Transform | --> |  Load    |
-+----------+     +----------+     +----------+
-    |                |                |
-    v                v                v
- Multiple       Clean &          Central
-Sources         Format          Warehouse
-```
-
-**Extract:** Pull data from various sources
-**Transform:** Clean, format, integrate data
-**Load:** Store in data warehouse
-
-### Advantages
-
-1. **Easy to understand** - Unified view of data
-2. **Continuous updates** - Regular refresh cycles
-3. **Stores historical data** - For trend evaluation
-4. **Improved data quality** - Cleansed during ETL
-5. **Better decision making** - Single source of truth
-
-### Disadvantages
-
-1. **Risk of accumulating useless data** - Storage costs
-2. **Cleansing data from multiple sources is difficult** - Complex ETL
-3. **High initial cost** - Infrastructure and setup
-4. **Time-consuming** - ETL processes take time
-5. **Data latency** - Not always real-time
-
-### Carried Out By
-
-- **Data Engineers**
-- **IT Professionals**
-
-### Data Mining vs Data Warehousing Comparison
-
-```
-+------------------+---------------------------+---------------------------+
-|    Feature       |    Data Warehousing       |      Data Mining          |
-+------------------+---------------------------+---------------------------+
-| Definition       | Database system for       | Process of analyzing      |
-|                  | analytical analysis       | data to discover patterns |
-+------------------+---------------------------+---------------------------+
-| Process          | ETL (Extract, Transform,  | Regular analysis using    |
-|                  | Load) periodically        | AI and ML algorithms      |
-+------------------+---------------------------+---------------------------+
-| Data Handling    | Pooling relevant data     | Extracting insights from  |
-|                  | into central location     | large datasets            |
-+------------------+---------------------------+---------------------------+
-| Managed By       | Data Engineers / IT       | Data Scientists /         |
-|                  |                           | Business Users            |
-+------------------+---------------------------+---------------------------+
-| Example          | Consolidating sales data  | Finding patterns like     |
-|                  | from 50 stores into one   | "customers who buy X      |
-|                  | server                    | also buy Y"               |
-+------------------+---------------------------+---------------------------+
-```
-
----
-
-## 1.6 BASIC STATISTICAL DESCRIPTIONS OF DATA
-
-### Why Describe Data?
-
-1. **Organize raw data** - Make sense of chaos
-2. **Identify trends/noise/outliers** - Understand patterns
-3. **Communicate insights visually** - Share findings
-4. **Make data-driven decisions** - Evidence-based actions
-
-### Types of Descriptive Statistics
-
-**1. Distribution:**
-- Frequencies of responses
-- How data is spread across values
-
-**2. Central Tendency:**
-- The "average" or typical value
-- **Measures**: Mean, Median, Mode
-
-**3. Variability:**
-- Spread or dispersion
-- **Measures**: Range, Variance, Standard Deviation, IQR
-
----
-
-## 1.7 TYPES OF DATA
-
-### Main Classifications
+### Qualitative vs Quantitative Data
 
 ```
                         DATA
@@ -599,534 +368,130 @@ Sources         Format          Warehouse
 NOMINAL        ORDINAL      DISCRETE      CONTINUOUS
 ```
 
-### Qualitative (Categorical) Data
+| Type | Description | Examples |
+|------|-------------|----------|
+| **Qualitative** | Describes qualities, non-numeric | Gender, color, brand name |
+| **Quantitative** | Represents measurable quantities | Height, weight, temperature |
+| **Discrete** | Countable, whole numbers only | Number of students, cars |
+| **Continuous** | Measurable, infinite decimals allowed | Height, temperature, time |
 
-**Definition:** Describes qualities, non-numeric characteristics.
+### Four Scales of Measurement (NOIR)
 
-**Examples:**
-- Color (Red, Blue, Green)
-- Gender (Male, Female, Other)
-- Brand (Apple, Samsung, Google)
-- Country (India, USA, UK)
+| Scale | Order? | Equal Intervals? | True Zero? | Examples |
+|-------|--------|-----------------|------------|----------|
+| **Nominal** | ❌ | ❌ | ❌ | Gender, colors, countries |
+| **Ordinal** | ✅ | ❌ | ❌ | Star ratings, education level |
+| **Interval** | ✅ | ✅ | ❌ | Temperature °C, calendar years |
+| **Ratio** | ✅ | ✅ | ✅ | Weight, income, age, height |
 
-**Cannot perform arithmetic operations**
+### Types of Variables
 
-### Quantitative (Numerical) Data
-
-**Definition:** Describes measurable quantities.
-
-**Two Types:**
-
-**A. Discrete Data:**
-- Countable whole numbers
-- **Question**: "Can I count it?"
-- **Examples**:
-  - Number of students in class (25, 30, 35)
-  - Number of cars (1, 2, 3)
-  - Number of defects (0, 1, 2)
-
-**B. Continuous Data:**
-- Any value in a range
-- Decimals allowed
-- **Question**: "Can I measure it?"
-- **Examples**:
-  - Height (175.5 cm, 180.2 cm)
-  - Temperature (36.7°C, 37.2°C)
-  - Weight (68.5 kg, 72.3 kg)
-  - Time (3.14 seconds)
+| Variable | Role | Also Called | Example |
+|----------|------|-------------|---------|
+| **Independent (IV)** | Hypothesized cause, manipulated | Predictor, Explanatory | Study hours |
+| **Dependent (DV)** | Effect/outcome, measured | Response, Outcome | Exam scores |
+| **Control** | Held constant to prevent bias | - | Room temperature |
+| **Confounding** | Hidden variable affecting both IV & DV | - | Temperature in ice cream/drowning study |
 
 ---
 
-## 1.8 TYPES OF VARIABLES
+## 1.6 DESCRIPTIVE STATISTICS
 
-### Four Scales of Measurement
+### Measures of Central Tendency
 
-**1. Nominal Scale:**
-- Categories with **NO order**
-- Only **Mode** can be calculated
-- **Examples**:
-  - Gender (Male/Female)
-  - Blood type (A, B, AB, O)
-  - Eye color (Blue, Brown, Green)
-
-**2. Ordinal Scale:**
-- Ordered categories
-- **Gaps between categories are unknown**
-- **Examples**:
-  - 1-5 star ratings (⭐⭐⭐⭐⭐)
-  - Education level (High School < Bachelor < Master < PhD)
-  - Customer satisfaction (Very Unsatisfied < Unsatisfied < Neutral < Satisfied < Very Satisfied)
-
-**3. Interval Scale:**
-- Ordered categories
-- **Equal intervals** between values
-- **NO true zero** (zero doesn't mean absence)
-- **Examples**:
-  - Temperature in Celsius (0°C doesn't mean "no temperature")
-  - Calendar years
-  - IQ scores
-
-**4. Ratio Scale:**
-- Ordered categories
-- **Equal intervals**
-- **TRUE ZERO** (zero means complete absence)
-- **Examples**:
-  - Weight (0 kg means no weight)
-  - Height (0 cm means no height)
-  - Income (₹0 means no income)
-  - Age (0 years means birth)
-
-### Variables in Research
-
-**1. Independent Variable (IV):**
-- Hypothesized **cause**
-- **Predictor** variable
-- **Manipulated** by researcher
-- **Example**: Study hours, dosage of medicine
-
-**2. Dependent Variable (DV):**
-- **Outcome** measured
-- The **response**
-- What we're trying to predict
-- **Example**: Exam score, patient recovery
-
-**3. Control Variable:**
-- **Held constant** to reduce bias
-- Prevents confounding
-- **Example**: Same exam for all students, same room temperature
-
-**4. Confounding Variable:**
-- A **hidden variable** affecting both IV and DV
-- Causes a **false relationship**
-- **Example**: Hot weather causing both ice cream sales AND sunburns (not that ice cream causes sunburns!)
-
----
-
-## 1.9 DESCRIBING DATA WITH TABLES AND GRAPHS
-
-### Frequency Distributions
-
-**Definition:** A systematic arrangement of data showing the frequency (count) of each value or class interval.
-
-**Types:**
-
-**A. Ungrouped Frequency Distribution:**
-- Individual scores and their frequencies
-- Used for small datasets
-
-**Example:**
-```
-Test Scores of 10 Students: 85, 90, 85, 78, 90, 92, 85, 78, 90, 88
-
-Score    Tally        Frequency
------------------------------
-  78      ||             2
-  85      |||            3
-  88      |              1
-  90      |||            3
-  92      |              1
------------------------------
-Total                    10
-```
-
-**B. Grouped Frequency Distribution:**
-- Data grouped into **Class Intervals**
-- Used for large datasets
-
-**Components:**
-- **Class Interval**: Range of values (e.g., 10-20, 20-30)
-- **Class Width**: Difference between upper and lower limits
-- **Midpoint**: (Lower limit + Upper limit) / 2
-
-**Example:**
-```
-Ages of 50 People:
-
-Class Interval    Tally        Frequency    Midpoint
-----------------------------------------------------
-   10-20           |||            3           15
-   20-30           |||||          5           25
-   30-40           |||||||        7           35
-   40-50           ||||||||||    10           45
-   50-60           |||||||||      9           55
-   60-70           ||||||||||    10           65
-   70-80           |||||          5           75
-   80-90           |              1           85
-----------------------------------------------------
-Total                           50
-```
-
-### Visualizing Data
-
-**1. Histogram:**
-
-**Characteristics:**
-- **Contiguous (touching) bars** of equal width
-- **X-axis**: Class intervals
-- **Y-axis**: Frequency
-- Shows **shape and spread** of distribution
-- Used for **continuous data**
-
-```
-    Frequency
-       10 |           ████
-        8 |        ████████
-        6 |     ████████████
-        4 |  ████████████████
-        2 |██████████████████
-        0 +-------------------
-          0   20  40  60  80  100
-              Class Intervals
-```
-
-**Example:**
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-data = np.random.normal(50, 15, 1000)
-plt.hist(data, bins=20, edgecolor='white', density=False)
-plt.xlabel('Value')
-plt.ylabel('Frequency')
-plt.title('Histogram of Data Distribution')
-plt.show()
-```
-
-**2. Frequency Polygon:**
-
-**Characteristics:**
-- **Line graph** connecting histogram midpoints
-- Good for **comparing multiple trends**
-- Points plotted at midpoints
-
-```
-    Frequency
-       10 |           ●
-        8 |        ●     ●
-        6 |     ●           ●
-        4 |  ●                 ●
-        2 |●                     ●
-        0 +---●---●---●---●---●---
-          0   20  40  60  80  100
-```
-
-**3. Bar Chart:**
-
-**Characteristics:**
-- Bars **NOT touching** (gaps between)
-- Used for **categorical data**
-- X-axis: Categories
-- Y-axis: Frequency or value
-
-```
-    Frequency
-       10 |       █
-        8 |       █       █
-        6 |   █   █   █   █
-        4 |   █   █   █   █   █
-        2 |   █   █   █   █   █
-        0 +---+---+---+---+---+
-           Red Blue Green Yellow
-            Color Categories
-```
-
-**4. Pie Chart:**
-
-**Characteristics:**
-- **Proportions as slices**
-- Shows parts of a whole
-- **Limitation**: Hard to read with too many categories
-
-```
-              Sales by Region
-                  
-            ┌─────────┐
-          ╱│    East  │╲
-         │ │   30%    │ │
-        │  └──────────┘  │
-        │ North    │West│
-        │  25%     │20% │
-         │         │    │
-          ╲        │   ╱
-            ╲──────╱
-              South
-              25%
-```
-
-**5. Line Graph:**
-
-**Characteristics:**
-- **Connects points over time**
-- Shows **trends**
-- X-axis: Time periods
-- Y-axis: Values
-
-```
-    Sales (₹L)
-       100 |           ●
-        80 |        ●     ●
-        60 |     ●           ●
-        40 |  ●                 ●
-        20 |●                     ●
-         0 +---●---●---●---●---●---
-            Jan Feb Mar Apr May Jun
-                  Time
-```
-
-**6. Ogive (Cumulative Frequency Curve):**
-
-**Characteristics:**
-- Shows **cumulative frequencies**
-- Always increasing (or flat)
-- Helps find percentiles
-
-```
-Cumulative Freq
-      100 |                  ●
-       80 |              ●
-       60 |          ●
-       40 |      ●
-       20 |  ●
-        0 +--●--●--●--●--●--
-           0  20 40 60 80 100
-```
-
-**7. Box Plot (Box-and-Whisker Plot):**
-
-**Characteristics:**
-- Shows **median, quartiles, and outliers**
-- **5-number summary**:
-  - Minimum
-  - Q1 (25th percentile)
-  - Median (Q2, 50th percentile)
-  - Q3 (75th percentile)
-  - Maximum
-- **IQR** = Q3 - Q1
-- **Outliers** shown as individual points
-
-```
-    Value
-      90 |                    ○ (outlier)
-      80 |                    |
-      75 |              +-----+
-      70 |              |     |
-      65 |         +----+     |
-      60 |         |    |     |
-      55 |         |    |     |
-      50 |    +----+    |     |
-      45 |    |         |     |
-      40 +----+---------+-----+
-           Min Q1      Med    Q3  Max
-```
-
-**Example:**
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-data = [5, 7, 8, 6, 5, 9, 10, 6, 7, 8, 5, 6]
-plt.boxplot(data)
-plt.ylabel('Value')
-plt.title('Box Plot')
-plt.show()
-```
-
----
-
-## 1.10 DESCRIBING DATA WITH AVERAGES (CENTRAL TENDENCY)
-
-### Mean (Arithmetic Average)
-
-**Definition:** The sum of all values divided by the number of values.
-
-**Formula:**
+#### Mean (Arithmetic Average)
 ```
         Σx
-   μ = ----
+   μ = ─────
         n
+```
+**Characteristics:** Uses all data, sensitive to outliers, best for symmetric data
 
-Where:
-μ = Population mean
-Σx = Sum of all values
-n = Number of values
+**Example:**
+```
+Data: {40, 45, 50, 55, 60}
+Sum = 250, n = 5
+Mean = 250/5 = 50
 ```
 
-**Characteristics:**
-- Uses all data points
-- Affected by outliers
-- Best for symmetric distributions
+#### Median
+**Definition:** Exact middle value when data is ordered.
 
-**Example 1 - Basic Calculation:**
-
-**Problem:** Calculate the mean of: 12, 15, 18, 20, 15, 22, 25, 15
-
-**Solution:**
+**How to Find:**
 ```
-Step 1: Sum all values
-Σx = 12 + 15 + 18 + 20 + 15 + 22 + 25 + 15 = 142
+• Odd n: Median = middle value at position (n+1)/2
+• Even n: Median = average of two middle values
+```
+**Characteristics:** NOT affected by outliers, preferred for skewed data
 
-Step 2: Count values
-n = 8
-
-Step 3: Calculate mean
-μ = 142 / 8 = 17.75
-
-Answer: Mean = 17.75
+**Example with Outliers:**
+```
+Salaries: [30000, 32000, 35000, 38000, 200000]
+Mean = ₹67,000 (skewed by outlier)
+Median = ₹35,000 (representative!)
 ```
 
-**Example 2 - Sales Data:**
+#### Mode
+**Definition:** Most frequently occurring value.
 
-**Problem:** Monthly sales (₹1000s): 25, 30, 28, 35, 40, 32, 30, 29
+**Types:** Unimodal (1), Bimodal (2), Multimodal (>2), No mode
 
-**Solution:**
+### Measures of Variability (Dispersion)
+
+#### Range
 ```
-Step 1: Sum all values
-Σx = 25 + 30 + 28 + 35 + 40 + 32 + 30 + 29 = 249
-
-Step 2: Count values
-n = 8
-
-Step 3: Calculate mean
-μ = 249 / 8 = 31.125
-
-Interpretation: Average monthly sales = ₹31,125
+Range = Maximum - Minimum
 ```
+**Characteristics:** Simplest measure, heavily affected by outliers
 
-### Median
-
-**Definition:** The exact middle value of a dataset when ordered sequentially.
-
-**Calculation:**
-
-**For Odd n:**
+#### Variance (σ²)
 ```
-Position = (n + 1) / 2
+          Σ(x - μ)²
+   σ² = ───────────
+             n
 ```
+**Characteristics:** Uses all data, squared units, always positive
 
-**For Even n:**
+#### Standard Deviation (σ)
 ```
-Median = Average of two middle values
-Position 1 = n/2
-Position 2 = (n/2) + 1
+   σ = √σ²
 ```
+**Characteristics:** In original units, most widely used measure of spread
 
-**Characteristics:**
-- Not affected by outliers
-- Best for skewed distributions
-- Represents the 50th percentile
-
-**Example 1 - Odd Number of Values:**
-
-**Problem:** Find median of: 7, 2, 9, 4, 6
-
-**Solution:**
+#### Coefficient of Variation (CV)
 ```
-Step 1: Arrange in order
-2, 4, 6, 7, 9
+         σ
+   CV = ─── × 100%
+         μ
+```
+**Interpretation:**
+- CV < 10% → Low variability
+- CV 10-30% → Moderate variability  
+- CV > 30% → High variability
 
-Step 2: Find position
-n = 5 (odd)
-Position = (5 + 1) / 2 = 3
-
-Step 3: Identify value at position 3
-Median = 6
+**Example - Comparing Datasets:**
+```
+Dataset A: Mean=100, SD=10 → CV = 10%
+Dataset B: Mean=50, SD=10  → CV = 20%
+→ Dataset B is MORE variable relative to its mean!
 ```
 
-**Example 2 - Even Number of Values:**
+### Linear Transformation Effects
 
-**Problem:** Find median of: 12, 15, 18, 20, 15, 22, 25, 15
+| Operation | Mean | Median | Variance | SD |
+|-----------|------|--------|----------|-----|
+| **Add constant (+c)** | +c | +c | Same | Same |
+| **Multiply by constant (×c)** | ×c | ×c | ×c² | ×c |
 
-**Solution:**
-```
-Step 1: Arrange in order
-12, 15, 15, 15, 18, 20, 22, 25
+---
 
-Step 2: Find positions
-n = 8 (even)
-Position 1 = 8/2 = 4
-Position 2 = 4 + 1 = 5
+## 1.7 DISTRIBUTION SHAPES & VISUALIZATION
 
-Step 3: Identify values
-Value at position 4 = 15
-Value at position 5 = 18
-
-Step 4: Calculate average
-Median = (15 + 18) / 2 = 16.5
-
-Answer: Median = 16.5
-```
-
-### Mode
-
-**Definition:** The value that appears **most frequently** in a dataset.
-
-**Characteristics:**
-- Can have no mode, one mode, or multiple modes
-- **Unimodal**: One mode
-- **Bimodal**: Two modes
-- **Multimodal**: More than two modes
-- Not affected by outliers
-- Only measure for nominal data
-
-**Example 1 - Single Mode:**
-
-**Problem:** Find mode of: 12, 15, 18, 20, 15, 22, 25, 15
-
-**Solution:**
-```
-Count frequencies:
-12: appears 1 time
-15: appears 3 times
-18: appears 1 time
-20: appears 1 time
-22: appears 1 time
-25: appears 1 time
-
-Most frequent = 15 (appears 3 times)
-
-Answer: Mode = 15
-```
-
-**Example 2 - Bimodal:**
-
-**Problem:** Find mode of: 5, 7, 8, 6, 5, 9, 10, 6, 7, 8, 5, 6
-
-**Solution:**
-```
-Count frequencies:
-5: appears 3 times
-6: appears 3 times
-7: appears 2 times
-8: appears 2 times
-9: appears 1 time
-10: appears 1 time
-
-Both 5 and 6 appear most frequently (3 times each)
-
-Answer: Mode = 5 and 6 (Bimodal)
-```
-
-### Relationship Between Mean, Median, and Mode
-
-**For Symmetric Distribution:**
-```
-Mean = Median = Mode
-```
-
-**For Right-Skewed (Positively Skewed):**
-```
-Mean > Median > Mode
-```
-
-**For Left-Skewed (Negatively Skewed):**
-```
-Mean < Median < Mode
-```
+### Skewness (Symmetry)
 
 ```
 Symmetric:           Right-Skewed:        Left-Skewed:
      ▲                    ▲                    ▲
-     │                    │                    │
      │       ╱─╲          │         ╱─╲        │  ╱─╲
      │     ╱     ╲        │       ╱       ╲    │╱     
      │   ╱         ╲      │     ╱           ╲  │       ╲
@@ -1135,231 +500,37 @@ Symmetric:           Right-Skewed:        Left-Skewed:
      M=Md=Mo              Mo  Md   M            M   Md  Mo
 ```
 
----
+| Distribution | Relationship | Example |
+|-------------|--------------|---------|
+| **Symmetric** | Mean = Median = Mode | Heights of adults |
+| **Right-Skewed** | Mean > Median > Mode | Income distribution |
+| **Left-Skewed** | Mean < Median < Mode | Age at retirement |
 
-## 1.11 DESCRIBING VARIABILITY (DISPERSION)
+### Kurtosis (Peakedness)
 
-### Range
+| Type | Description | Kurtosis | Outliers |
+|------|-------------|----------|----------|
+| **Mesokurtic** | Normal bell shape | = 3 | Normal |
+| **Leptokurtic** | High peak, heavy tails | > 3 | More outliers |
+| **Platykurtic** | Flat, light tails | < 3 | Fewer outliers |
 
-**Definition:** The difference between the highest and lowest values.
+### Data Visualization Types
 
-**Formula:**
-```
-Range = Maximum Value - Minimum Value
-```
-
-**Characteristics:**
-- Simplest measure
-- Highly affected by outliers
-- Only uses two values
-
-**Example:**
-
-**Problem:** Find range of: 12, 15, 18, 20, 15, 22, 25, 15
-
-**Solution:**
-```
-Maximum = 25
-Minimum = 12
-
-Range = 25 - 12 = 13
-
-Answer: Range = 13
-```
-
-### Variance
-
-**Definition:** The average squared distance of all values from the mean.
-
-**Formula (Population):**
-```
-          Σ(x - μ)²
-   σ² = -----------
-             n
-
-Where:
-σ² = Population variance
-x = Each value
-μ = Population mean
-n = Number of values
-```
-
-**Formula (Sample):**
-```
-          Σ(x - x̄)²
-   s² = -----------
-            n - 1
-```
-
-**Characteristics:**
-- Uses all data points
-- Squared units (not intuitive)
-- Foundation for standard deviation
-
-**Example 1 - Basic Variance:**
-
-**Problem:** Calculate variance of: 40, 45, 50, 55, 60
-
-**Solution:**
-```
-Step 1: Calculate mean
-μ = (40 + 45 + 50 + 55 + 60) / 5 = 250 / 5 = 50
-
-Step 2: Calculate squared deviations
-(40 - 50)² = (-10)² = 100
-(45 - 50)² = (-5)²  = 25
-(50 - 50)² = (0)²   = 0
-(55 - 50)² = (5)²   = 25
-(60 - 50)² = (10)²  = 100
-
-Step 3: Sum squared deviations
-Σ(x - μ)² = 100 + 25 + 0 + 25 + 100 = 250
-
-Step 4: Calculate variance
-σ² = 250 / 5 = 50
-
-Answer: Variance = 50
-```
-
-**Example 2 - Sales Data Variance:**
-
-**Problem:** Calculate variance for sales: 25, 30, 28, 35, 40, 32, 30, 29
-
-**Solution:**
-```
-Step 1: Calculate mean
-μ = 249 / 8 = 31.125
-
-Step 2: Calculate squared deviations
-(25 - 31.125)² = (-6.125)² = 37.516
-(30 - 31.125)² = (-1.125)² = 1.266
-(28 - 31.125)² = (-3.125)² = 9.766
-(35 - 31.125)² = (3.875)²  = 15.016
-(40 - 31.125)² = (8.875)²  = 78.766
-(32 - 31.125)² = (0.875)²  = 0.766
-(30 - 31.125)² = (-1.125)² = 1.266
-(29 - 31.125)² = (-2.125)² = 4.516
-
-Step 3: Sum squared deviations
-Σ(x - μ)² = 37.516 + 1.266 + 9.766 + 15.016 + 78.766 
-           + 0.766 + 1.266 + 4.516 = 148.878
-
-Step 4: Calculate variance
-σ² = 148.878 / 8 = 18.61
-
-Answer: Variance ≈ 19.36 (using exact values)
-```
-
-### Standard Deviation
-
-**Definition:** The square root of the variance. Shows the average distance of all values from the mean in **original units**.
-
-**Formula:**
-```
-   σ = √σ²
-
-Where:
-σ = Standard deviation
-σ² = Variance
-```
-
-**Characteristics:**
-- In original units (not squared)
-- Most common measure of spread
-- Interpretable
-
-**Example 1:**
-
-**Problem:** Calculate standard deviation of: 40, 45, 50, 55, 60
-
-**Solution:**
-```
-From previous calculation:
-Variance σ² = 50
-
-Standard Deviation:
-σ = √50 = 7.07
-
-Answer: Standard Deviation = 7.07
-
-Interpretation: On average, values deviate from the mean by 7.07 units.
-```
-
-**Example 2:**
-
-**Problem:** Calculate standard deviation for sales data
-
-**Solution:**
-```
-From previous calculation:
-Variance σ² = 19.359
-
-Standard Deviation:
-σ = √19.359 = 4.40
-
-Interpretation: The average deviation of monthly sales from the mean 
-is roughly ₹4,400.
-```
-
-### Coefficient of Variation (CV)
-
-**Definition:** Relative measure of variability. Compares variability of datasets with different units.
-
-**Formula:**
-```
-         σ
-   CV = --- × 100%
-         μ
-
-Where:
-σ = Standard deviation
-μ = Mean
-```
-
-**Interpretation:**
-- **CV < 10%**: Low variability / Stable
-- **CV 10-30%**: Moderate variability
-- **CV > 30%**: High variability
-
-**Example:**
-
-**Problem:** Compare variability of two datasets:
-- Dataset A: Mean = 100, SD = 15
-- Dataset B: Mean = 50, SD = 10
-
-**Solution:**
-```
-Dataset A:
-CV = (15 / 100) × 100% = 15%
-
-Dataset B:
-CV = (10 / 50) × 100% = 20%
-
-Interpretation: Dataset B has higher relative variability (20%) 
-compared to Dataset A (15%), even though A has higher absolute SD.
-```
+| Chart | Best For | Key Features |
+|-------|----------|--------------|
+| **Histogram** | Continuous data distribution | Contiguous bars, shows shape/spread |
+| **Frequency Polygon** | Comparing multiple distributions | Line connecting midpoints |
+| **Bar Chart** | Categorical data comparison | Gaps between bars |
+| **Pie Chart** | Showing proportions | Slices of circle, total=100% |
+| **Line Graph** | Trends over time | Points connected by lines |
+| **Box Plot** | Quartiles and outliers | 5-number summary, IQR |
+| **Scatter Plot** | Relationship between 2 variables | X-Y points, shows correlation |
 
 ---
 
-## 1.12 NORMAL DISTRIBUTIONS AND STANDARD (Z) SCORES
+## 1.8 NORMAL DISTRIBUTION & Z-SCORES
 
-### Normal Distribution
-
-**Definition:** A symmetric, bell-shaped distribution that is most common in nature.
-
-**Characteristics:**
-1. **Symmetric** around the center
-2. **Mean = Median = Mode**
-3. **Bell-shaped curve**
-4. **Tails approach but never touch** the x-axis
-5. **Total area under curve = 1** (or 100%)
-
-**Examples in Nature:**
-- Human heights
-- IQ scores
-- Blood pressure
-- Measurement errors
-- Test scores
+### Normal Distribution Properties
 
 ```
         Normal Distribution Curve
@@ -1376,17 +547,14 @@ compared to Dataset A (15%), even though A has higher absolute SD.
               μ-3σ μ-2σ μ-1σ μ μ+1σ μ+2σ μ+3σ
 ```
 
-### The Empirical Rule (68-95-99.7 Rule)
+**Characteristics:**
+- ✅ Symmetric around mean
+- ✅ Mean = Median = Mode
+- ✅ Bell-shaped curve
+- ✅ Tails never touch x-axis
+- ✅ Total area = 1 (100%)
 
-**Statement:** In a normal distribution:
-
-```
-• 68% of data falls within ±1 standard deviation of the mean
-• 95% of data falls within ±2 standard deviations of the mean
-• 99.7% of data falls within ±3 standard deviations of the mean
-```
-
-**Visual Representation:**
+### Empirical Rule (68-95-99.7)
 
 ```
         68%           95%            99.7%
@@ -1399,65 +567,34 @@ compared to Dataset A (15%), even though A has higher absolute SD.
     μ-1σ   μ+1σ   μ-2σ     μ+2σ   μ-3σ       μ+3σ
 ```
 
-**Example 1:**
+| Range | Percentage | Example (μ=50, σ=8) |
+|-------|------------|---------------------|
+| μ ± 1σ | 68% | 42 to 58 |
+| μ ± 2σ | 95% | 34 to 66 |
+| μ ± 3σ | 99.7% | 26 to 74 |
 
-**Problem:** Test scores are normally distributed with Mean = 50, SD = 8.
-a) What % of scores fall between 42 and 58?
-b) What % of scores are beyond 66?
-
-**Solution:**
+**Example Problem:**
 ```
-Given:
-μ = 50
-σ = 8
-
-a) Between 42 and 58:
-   42 = 50 - 8 = μ - 1σ
-   58 = 50 + 8 = μ + 1σ
-   
-   According to empirical rule:
-   68% of data falls within ±1σ
-   
-   Answer: 68%
-
-b) Beyond 66:
-   66 = 50 + 16 = 50 + 2(8) = μ + 2σ
-   
-   According to empirical rule:
-   95% of data falls between μ - 2σ and μ + 2σ
-   (between 34 and 66)
-   
-   Remaining = 100% - 95% = 5%
-   This 5% is split equally in both tails
-   
-   Beyond 66 = 5% / 2 = 2.5%
-   
-   Answer: 2.5%
+Given: μ=50, σ=8
+Q: What % beyond 66?
+A: 66 = μ+2σ → 95% within ±2σ → 5% outside → 2.5% beyond 66
 ```
 
 ### Z-Score (Standard Score)
 
-**Definition:** A standardized score showing how many standard deviations a value is from the mean.
-
-**Formula:**
 ```
          X - μ
-   Z = ---------
+   Z = ─────────
           σ
-
-Where:
-Z = Z-score
-X = Raw score
-μ = Population mean
-σ = Population standard deviation
 ```
 
 **Interpretation:**
-- **Z = 0**: Value equals the mean
-- **Z > 0**: Value above the mean
-- **Z < 0**: Value below the mean
-- **Z = 1**: Value is 1 SD above mean
-- **Z = -2**: Value is 2 SDs below mean
+| Z-Score | Meaning |
+|---------|---------|
+| Z = 0 | Value equals mean |
+| Z > 0 | Value above mean |
+| Z < 0 | Value below mean |
+| \|Z\| > 3 | Potential outlier |
 
 **Applications:**
 1. Comparing scores from different distributions
@@ -1465,349 +602,136 @@ X = Raw score
 3. Finding percentiles
 4. Standardizing variables
 
-**Example 1:**
-
-**Problem:** Class mean = 60, SD = 5. Student scored 70. Calculate and interpret Z-score.
-
-**Solution:**
+**Example - Comparing Tests:**
 ```
-Given:
-X = 70
-μ = 60
-σ = 5
-
-Formula:
-       X - μ     70 - 60     10
-   Z = ------- = --------- = ---- = 2.0
-         σ          5        5
-
-Interpretation: The student's score is exactly 2 standard deviations 
-above the class mean, indicating excellent performance relative to 
-the class.
-```
-
-**Example 2:**
-
-**Problem:** Mean height = 165 cm, SD = 5 cm.
-a) Find Z-score for height 170 cm
-b) Find Z-score for height 155 cm
-
-**Solution:**
-```
-Given:
-μ = 165 cm
-σ = 5 cm
-
-a) For X = 170 cm:
-         170 - 165     5
-   Z = ------------- = --- = +1.0
-            5         5
-   
-   Interpretation: 1 SD above average
-
-b) For X = 155 cm:
-         155 - 165    -10
-   Z = ------------- = ---- = -2.0
-            5          5
-   
-   Interpretation: 2 SDs below average
-```
-
-**Example 3 - Comparing Different Tests:**
-
-**Problem:** 
-- SAT Math: Score = 650, Mean = 500, SD = 100
-- ACT Math: Score = 28, Mean = 21, SD = 5
-
-Which is better?
-
-**Solution:**
-```
-SAT Math:
-       650 - 500    150
-   Z = --------- = ----- = 1.5
-         100       100
-
-ACT Math:
-       28 - 21     7
-   Z = -------- = --- = 1.4
-         5        5
-
-Interpretation: The SAT score (Z = 1.5) is slightly better relative 
-to its distribution than the ACT score (Z = 1.4).
-```
-
-### Outliers
-
-**Definition:** An extreme data point that differs significantly from other observations in the dataset.
-
-**Identification using Z-scores:**
-- **|Z| > 3**: Potential outlier
-- Often skews the mean
-
-**Example:**
-
-**Problem:** Identify outliers in: 10, 12, 11, 13, 50
-
-**Solution:**
-```
-Step 1: Calculate mean
-μ = (10 + 12 + 11 + 13 + 50) / 5 = 96 / 5 = 19.2
-
-Step 2: Calculate SD
-σ ≈ 15.8
-
-Step 3: Calculate Z-scores
-Z(10) = (10 - 19.2) / 15.8 = -0.58
-Z(12) = (12 - 19.2) / 15.8 = -0.46
-Z(11) = (11 - 19.2) / 15.8 = -0.52
-Z(13) = (13 - 19.2) / 15.8 = -0.39
-Z(50) = (50 - 19.2) / 15.8 = 1.95
-
-In this small dataset, 50 might be an outlier, though |Z| < 3.
-With larger datasets, use |Z| > 3 as threshold.
+SAT Math: Score=650, μ=500, σ=100 → Z = (650-500)/100 = 1.5
+ACT Math: Score=28, μ=21, σ=5     → Z = (28-21)/5 = 1.4
+→ SAT performance is slightly better relative to distribution
 ```
 
 ---
 
-# 📖 MODULE 2: DESCRIBING RELATIONSHIPS AND PYTHON LIBRARIES
+# 📖 MODULE 2: DESCRIBING RELATIONSHIPS
 
 ## 2.1 CORRELATION
 
-### What is Correlation?
+### Definition & Key Points
 
-**Definition:** A statistical measure of the **strength and direction** of the linear relationship between two quantitative variables.
+**Correlation** measures the **strength and direction** of the **linear relationship** between two quantitative variables.
 
-**Key Points:**
-- Ranges from **-1 to +1**
-- **Does NOT imply causation**
-- Measures **association**, not cause-and-effect
-- Symmetric: Correlation of X with Y = Correlation of Y with X
+**Key Facts:**
+- ✅ Range: **-1.0 to +1.0**
+- ✅ Symmetric: Correlation of X with Y = Correlation of Y with X
+- ✅ **Does NOT imply causation**
+- ✅ Only measures **linear** relationships
 
-### Scatter Plots
-
-**Definition:** A graphical representation showing the relationship between two quantitative variables using X and Y axes.
-
-**Components:**
-- **X-axis**: Independent variable
-- **Y-axis**: Dependent variable
-- **Each point**: One observation
-
-**Patterns:**
+### Types of Correlation
 
 ```
-Strong Positive      Weak Positive      No Correlation
-Correlation (r≈0.9)  Correlation (r≈0.4) (r≈0)
-     ▲                    ▲                    ▲
-     │  ●●●              │ ●  ●             │●  ● ●
-     │ ●●●●              │● ●● ●             │ ● ●●
-     │●●●●●              │ ● ● ●             │● ● ●
-     │●●●                │  ● ●              │ ●● ●
-     │                   │                   │● ● ●
-     └────────►         └────────►          └────────►
+Strong Positive (r≈0.9)    Weak Positive (r≈0.4)    No Correlation (r≈0)
+     ▲                          ▲                        ▲
+     │  ●●●                    │ ●  ●                 │●  ● ●
+     │ ●●●●                    │● ●● ●                 │ ● ●●
+     │●●●●●                    │ ● ● ●                 │● ● ●
+     │●●●                      │  ● ●                  │ ●● ●
+     │                         │                       │● ● ●
+     └────────►               └────────►              └────────►
 
-Strong Negative      Weak Negative
-Correlation (r≈-0.9) Correlation (r≈-0.4)
-     ▲                    ▲
-     │●●●                 │  ● ●
-     │ ●●●●               │ ● ●●
-     │  ●●●●●             │● ● ●
-     │   ●●●              │ ●● ●
-     │                    │● ●
-     └────────►         └────────►
+Strong Negative (r≈-0.9)   Weak Negative (r≈-0.4)
+     ▲                          ▲
+     │●●●                      │  ● ●
+     │ ●●●●                    │ ● ●●
+     │  ●●●●●                  │● ● ●
+     │   ●●●                   │ ●● ●
+     │                         │● ●
+     └────────►               └────────►
 ```
 
-### Correlation Coefficient (r)
+### Interpreting r Values
 
-**Definition:** A numerical value that quantifies the degree of linear correlation between two variables.
-
-**Range:**
-```
--1.0 ≤ r ≤ +1.0
-```
-
-**Interpretation:**
-
-| r Value | Strength | Direction |
-|---------|----------|-----------|
-| +1.0 | Perfect | Positive |
-| +0.8 to +1.0 | Strong | Positive |
-| +0.5 to +0.8 | Moderate | Positive |
-| +0.3 to +0.5 | Weak | Positive |
-| 0 to +0.3 | Very Weak | Positive |
-| 0 | None | None |
-| -0.3 to 0 | Very Weak | Negative |
-| -0.5 to -0.3 | Weak | Negative |
-| -0.8 to -0.5 | Moderate | Negative |
-| -1.0 to -0.8 | Strong | Negative |
-| -1.0 | Perfect | Negative |
+| r Value Range | Interpretation |
+|---------------|----------------|
+| **+0.8 to +1.0** | Strong positive correlation |
+| **+0.3 to +0.7** | Moderate positive correlation |
+| **0 to +0.2** | Weak or no positive correlation |
+| **0** | No linear correlation |
+| **-0.2 to 0** | Weak or no negative correlation |
+| **-0.3 to -0.7** | Moderate negative correlation |
+| **-0.8 to -1.0** | Strong negative correlation |
 
 ### Pearson Correlation Coefficient
 
-**Formula (Computational):**
+**Computational Formula:**
 ```
-           n(Σxy) - (Σx)(Σy)
-   r = -------------------------------------
-       √[nΣx² - (Σx)²][nΣy² - (Σy)²]
-
-Where:
-n = Number of pairs
-x = Values of variable 1
-y = Values of variable 2
+           n(ΣXY) - (ΣX)(ΣY)
+   r = ─────────────────────────────────────
+       √{[nΣX² - (ΣX)²] × [nΣY² - (ΣY)²]}
 ```
 
-**Formula (Using Covariance):**
+**Step-by-Step Example:**
 ```
-          Cov(X,Y)
-   r = ------------
-          σₓ × σ
+Data: Study Hours (X) vs Exam Scores (Y)
+Student  X   Y   X²   Y²   XY
+   1     2  50    4 2500  100
+   2     4  60   16 3600  240
+   3     6  70   36 4900  420
+   4     8  80   64 6400  640
+   5    10  90  100 8100  900
+────────────────────────────
+Σ      30 350  220 25500 2300
 
-Where:
-Cov(X,Y) = Covariance between X and Y
-σₓ = Standard deviation of X
-σᵧ = Standard deviation of Y
-```
+n=5
+r = [5(2300) - (30)(350)] / √{[5(220)-900][5(25500)-122500]}
+r = 1000 / √(200×5000) = 1000/1000 = 1.0
 
-**Example - Step by Step Calculation:**
-
-**Problem:** Calculate correlation between Study Hours (X) and Exam Scores (Y)
-
-```
-Student  Hours(X)  Score(Y)
-   1         2         50
-   2         4         60
-   3         6         70
-   4         8         80
-   5        10         90
-```
-
-**Solution:**
-```
-Step 1: Create calculation table
-
-Student   X    Y    X²    Y²    XY
-   1      2   50    4   2500   100
-   2      4   60   16   3600   240
-   3      6   70   36   4900   420
-   4      8   80   64   6400   640
-   5     10   90  100   8100   900
------------------------------------
-Σ       30  350  220  25500  2300
-
-n = 5
-
-Step 2: Apply formula
-
-           n(Σxy) - (Σx)(Σy)
-   r = -------------------------------------
-       √[nΣx² - (Σx)²][nΣy² - (Σy)²]
-
-           5(2300) - (30)(350)
-   r = ---------------------------------
-       √[5(220) - (30)²][5(25500) - (350)²]
-
-           11500 - 10500
-   r = -------------------------------
-       √[1100 - 900][127500 - 122500]
-
-           1000
-   r = -------------------
-       √[200][5000]
-
-           1000
-   r = -------------
-       √1,000,000
-
-           1000
-   r = --------- = 1.0
-       1000
-
-Answer: r = 1.0 (Perfect positive correlation)
-
-Interpretation: There is a perfect positive linear relationship 
-between study hours and exam scores in this dataset.
+Answer: Perfect positive correlation!
 ```
 
 ### Spearman Rank Correlation (ρ)
 
-**Definition:** Used for **monotonic** relationships and **ordinal (ranked)** data.
-
-**Characteristics:**
-- Resists non-normal distributions
-- Based on ranks, not raw values
-- Also ranges from -1 to +1
-
-**When to Use:**
-- Data is ordinal
+**Used when:**
+- Data is ordinal (ranked)
 - Relationship is monotonic but not linear
 - Data has outliers
 - Data is not normally distributed
 
+**Formula:**
+```
+          6Σd²
+   ρ = 1 - ─────────
+         n(n² - 1)
+```
+Where d = difference between ranks of X and Y
+
 ### Coefficient of Determination (R²)
 
-**Definition:** Square of correlation coefficient. Indicates the **proportion of variance explained** by the relationship.
-
-**Formula:**
 ```
    R² = r²
 ```
 
-**Interpretation:**
-- R² = 0.81 means **81% of variance in Y is explained by X**
-- Remaining 19% is due to other factors
+**Interpretation:** Proportion of variance in Y explained by X.
 
 **Example:**
-
-**Problem:** If r = 0.85, calculate and interpret R²
-
-**Solution:**
 ```
-R² = (0.85)² = 0.7225 = 72.25%
-
-Interpretation: 72.25% of the variation in the dependent variable 
-is explained by the independent variable. The remaining 27.75% 
-is due to other unmeasured factors.
-```
-
-**Example - Stress and Sleep:**
-
-**Problem:** Correlation between stress levels and sleep hours is r = -0.68
-
-**Solution:**
-```
-a) Interpretation of r:
-   There is a moderate negative linear correlation.
-   As stress goes up, sleep hours go down.
-
-b) Calculate R²:
-   R² = (-0.68)² = 0.4624 = 46.24%
-
-c) Implication:
-   46.24% of the variation in sleep hours is explained by stress levels.
-   The other 53.76% is due to other unmeasured factors 
-   (diet, exercise, caffeine, etc.)
+r = 0.85 → R² = 0.7225 = 72.25%
+→ 72.25% of variation in Y is explained by X
+→ Remaining 27.75% due to other unmeasured factors
 ```
 
 ---
 
 ## 2.2 REGRESSION
 
-### What is Regression?
-
-**Definition:** A statistical model representing the **functional relationship** between variables, used to **predict** the value of a dependent variable (Y) based on independent variables (X).
-
-**Key Differences from Correlation:**
+### Correlation vs Regression
 
 | Correlation | Regression |
 |-------------|------------|
 | Measures strength of relationship | Models functional relationship |
-| Symmetric (X to Y = Y to X) | Asymmetric (X → Y) |
-| Single value (r) | Equation (Y = a + bX) |
+| Symmetric (X↔Y) | Asymmetric (X→Y) |
+| Single value (r) | Equation (Ŷ = a + bX) |
 | No prediction | Enables prediction |
 
-### Regression Line
-
-**Definition:** A straight line that best summarizes the relationship between two variables, also known as the **"line of best fit."**
+### Regression Line (Line of Best Fit)
 
 **Equation:**
 ```
@@ -1815,483 +739,239 @@ c) Implication:
 
 Where:
 Ŷ = Predicted value of Y
-a = Y-intercept
-b = Slope
+a = Y-intercept (predicted Y when X=0)
+b = Slope (change in Y per 1-unit increase in X)
 X = Independent variable
 ```
 
-### Least Squares Regression Line
+### Least Squares Principle
 
-**Principle:** Finds a line that **minimizes the sum of squared vertical distances (residuals)** between data points and the regression line.
-
-**Formula:**
+**Concept:** Finds line that **minimizes sum of squared residuals**:
 ```
    Minimize: Σ(Y - Ŷ)²
-
-Where:
-Y = Actual value
-Ŷ = Predicted value
 ```
 
-### Calculating Slope and Intercept
-
-**Slope (b):**
+**Formulas:**
 ```
            n(ΣXY) - (ΣX)(ΣY)
-   b = -----------------------
+   b = ─────────────────────────
            nΣX² - (ΣX)²
 
-Alternative formula:
-         Σ(x - x̄)(y - ȳ)
-   b = -------------------
-           Σ(x - x̄)²
-```
-
-**Intercept (a):**
-```
-         ΣY        ΣX
-   a = ----- - b(-----)
-          n         n
-
-Or simply:
-   a = ȳ - b(x̄)
+   a = Ȳ - bX̄
 ```
 
 **Interpretation:**
+- **Slope (b):** Change in Y for one-unit increase in X
+- **Intercept (a):** Predicted Y when X=0 (may not be meaningful)
 
-**Slope (b):**
-- Change in Y for a **one-unit increase in X**
-- Positive b: Y increases as X increases
-- Negative b: Y decreases as X increases
+### Complete Regression Example
 
-**Intercept (a):**
-- Predicted value of Y when **X = 0**
-- May not always be meaningful
-
-**Example - Complete Calculation:**
-
-**Problem:** Find regression equation for:
+**Problem:** Predict exam scores from study hours
 
 ```
-X (Hours):  2,  4,  6,  8, 10
-Y (Score): 50, 60, 70, 80, 90
-```
+X(Hours): 2, 4, 6, 8, 10
+Y(Score): 50, 60, 70, 80, 90
 
-**Solution:**
-```
-Step 1: Create calculation table
+Calculation:
+ΣX=30, ΣY=350, ΣX²=220, ΣY²=25500, ΣXY=2300, n=5
+X̄=6, Ȳ=70
 
-   X    Y    X²    Y²    XY
-   2   50    4   2500   100
-   4   60   16   3600   240
-   6   70   36   4900   420
-   8   80   64   6400   640
-  10   90  100   8100   900
-----------------------------
-  30  350  220  25500  2300
+b = [5(2300) - (30)(350)] / [5(220) - 900] = 1000/200 = 5
+a = 70 - 5(6) = 40
 
-n = 5
-ΣX = 30
-ΣY = 350
-ΣX² = 220
-ΣY² = 25500
-ΣXY = 2300
+Equation: Ŷ = 40 + 5X
 
-Step 2: Calculate means
-x̄ = 30/5 = 6
-ȳ = 350/5 = 70
-
-Step 3: Calculate slope (b)
-
-           n(ΣXY) - (ΣX)(ΣY)
-   b = -----------------------
-           nΣX² - (ΣX)²
-
-           5(2300) - (30)(350)
-   b = -------------------------
-           5(220) - (30)²
-
-           11500 - 10500
-   b = -------------------
-           1100 - 900
-
-           1000
-   b = -------- = 5
-           200
-
-Step 4: Calculate intercept (a)
-
-   a = ȳ - b(x̄)
-   a = 70 - 5(6)
-   a = 70 - 30
-   a = 40
-
-Step 5: Write equation
-
-   Ŷ = 40 + 5X
-
-Interpretation:
-- Intercept (40): Base score with 0 hours of study
-- Slope (5): Each additional hour increases score by 5 points
-
-Step 6: Make prediction
-
-Predict score for 7 hours of study:
-Ŷ = 40 + 5(7) = 40 + 35 = 75
-
-Answer: Predicted score = 75
+Prediction for 7 hours: Ŷ = 40 + 5(7) = 75
 ```
 
 ### Finding Equation from Means and SDs
 
-**When given:**
-- x̄, ȳ (means)
-- Sₓ, S (standard deviations)
-- r (correlation)
+**When given:** x̄, ȳ, Sₓ, Sᵧ, r
 
-**Formula for slope:**
 ```
               Sᵧ
-   b = r × -------
+   b = r × ───────
               Sₓ
+   
+   a = ȳ - b(x̄)
 ```
 
 **Example:**
-
-**Problem:** Given: x̄ = 5, ȳ = 10, Sₓ = 2, Sᵧ = 4, r = 0.75
-Find regression equation and predict Y when X = 8
-
-**Solution:**
 ```
-Step 1: Calculate slope (b)
+Given: x̄=5, ȳ=10, Sₓ=2, Sᵧ=4, r=0.75
 
-         Sᵧ          4
-   b = r × --- = 0.75 × --- = 0.75 × 2 = 1.5
-         Sₓ          2
+b = 0.75 × (4/2) = 1.5
+a = 10 - 1.5(5) = 2.5
 
-Step 2: Calculate intercept (a)
-
-   a = ȳ - b(x̄)
-   a = 10 - 1.5(5)
-   a = 10 - 7.5
-   a = 2.5
-
-Step 3: Write equation
-
-   Ŷ = 2.5 + 1.5X
-
-Step 4: Predict Y when X = 8
-
-   Ŷ = 2.5 + 1.5(8)
-   Ŷ = 2.5 + 12
-   Ŷ = 14.5
-
-Answer: 
-Regression equation: Ŷ = 2.5 + 1.5X
-Predicted Y when X = 8: 14.5
+Equation: Ŷ = 2.5 + 1.5X
 ```
 
 ### Limitations of Regression
 
-1. **Doesn't prove causation**
-   - Correlation ≠ Causation
-   - Need experimental design for causality
-
-2. **Extrapolation is unreliable**
-   - Predicting outside data range is dangerous
-   - Relationship may not hold beyond observed data
-
-3. **Highly sensitive to outliers**
-   - Single outlier can drastically change line
-   - Always check for outliers
-
-4. **Only fits linear patterns**
-   - Cannot capture curved relationships
-   - Need polynomial or non-linear regression
+1. ❌ **Doesn't prove causation** - Need experimental design
+2. ❌ **Extrapolation is unreliable** - Don't predict outside data range
+3. ❌ **Sensitive to outliers** - Single outlier can drastically change line
+4. ❌ **Only fits linear patterns** - Need polynomial/non-linear for curves
 
 ---
 
 ## 2.3 STANDARD ERROR OF ESTIMATE (SEE)
 
-### Definition
+### Definition & Formula
 
-**Standard Error of Estimate (SEE)** measures **prediction accuracy** by finding the **average distance between observed values and predicted values** on the regression line.
+**SEE** measures **prediction accuracy** by finding average distance between observed and predicted values.
 
-**Formula:**
 ```
            Σ(Y - Ŷ)²
-   SEE = √-----------
+   SEE = √───────────
              n - 2
-
-Where:
-Y = Actual value
-Ŷ = Predicted value
-n = Number of observations
 ```
 
 ### Interpretation
 
-**Key Points:**
-- **Smaller SEE = Better predictions** (points are closer to the line)
-- Expressed in the **same units as Y** (unlike R² which is a percentage)
-- Used to create **prediction intervals**
+| SEE Value | Meaning |
+|-----------|---------|
+| **Smaller SEE** | Better predictions (points closer to line) |
+| **Larger SEE** | Less accurate predictions |
+| **Units** | Same as Y variable (unlike R² which is %) |
 
 **Relationship with R²:**
-- Higher R² (more variance explained) → Lower SEE
-- Lower R² (less variance explained) → Higher SEE
+- Higher R² → Lower SEE (better model)
+- Lower R² → Higher SEE (worse model)
 
-### When to Use
-
-**Use SEE when:**
-- You need prediction intervals in actual units
-- Comparing models with same Y variable
-
-**Use R² when:**
-- Comparing overall model fit
-- Explaining variance to stakeholders
-
-**Example:**
-
-**Problem:** Given regression predictions:
+### Example Calculation
 
 ```
-Actual(Y)  Predicted(Ŷ)
-   50          45
-   60          62
-   70          68
-   80          83
-   90          87
-```
+Actual(Y)  Predicted(Ŷ)  Residual  Residual²
+   50          45          +5         25
+   60          62          -2          4
+   70          68          +2          4
+   80          83          -3          9
+   90          87          +3          9
+─────────────────────────────────────
+Σ(Y-Ŷ)² = 51
 
-Calculate SEE
+SEE = √(51/(5-2)) = √17 = 4.12
 
-**Solution:**
-```
-Step 1: Calculate residuals (Y - Ŷ)
-
-Y    Ŷ    (Y - Ŷ)    (Y - Ŷ)²
-50   45      5          25
-60   62     -2           4
-70   68      2           4
-80   83     -3           9
-90   87      3           9
--------------------------
-Σ(Y - Ŷ)² = 51
-
-Step 2: Calculate SEE
-
-           Σ(Y - Ŷ)²        51
-   SEE = √----------- = √------- = √17 = 4.12
-             n - 2          5-2
-
-Interpretation: On average, predictions are off by about 
-4.12 units.
+Interpretation: Predictions are off by ~4.12 units on average
 ```
 
 ---
 
-## 2.4 MULTIPLE REGRESSION EQUATIONS
+## 2.4 MULTIPLE REGRESSION
 
-### From Simple to Multiple Regression
+### From Simple to Multiple
 
 **Simple Regression:**
 ```
-   Ŷ = β₀ + β₁X
-
-• One predictor variable
-• Fits a straight line
-• Example: Height → Weight
+Ŷ = β₀ + β₁X
+• One predictor
+• Fits straight line
 ```
 
 **Multiple Regression:**
 ```
-   Ŷ = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
-
-• Multiple predictor variables
-• Fits a hyperplane in n-dimensions
-• Explains more variance in Y
-• Example: Height + Age + Diet → Weight
+Ŷ = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
+• Multiple predictors
+• Fits hyperplane in n-dimensions
+• Explains more variance
 ```
 
-### Anatomy of the Multiple Regression Equation
+### Anatomy of Multiple Regression Equation
 
 ```
-   Ŷ = β₀ + β₁X₁ + β₂X₂ + β₃X₃ + ε
+Ŷ = β₀ + β₁X₁ + β₂X₂ + β₃X₃ + ε
 
-Where:
-
-Ŷ (Predicted Value)
-└─ Our model's best estimate of the outcome variable
-
-β₀ (Intercept)
-└─ Value of Ŷ when ALL predictors = 0
-   The baseline starting point
-
-β₁, β₂, β₃ (Coefficients)
-└─ Change in Ŷ for a 1-unit increase in X₁, X₂, X₃
-   Keeping all other variables constant
-   This is the POWER of multiple regression!
-
-X₁, X₂, X₃ (Predictors/Features)
-└─ The independent variables (inputs)
-   Can be continuous, ordinal, or dummy-coded
-
-ε (Error Term)
-└─ Residual - the part of Y we can't explain
-   Assumed to be normally distributed
+Term          Meaning
+─────────────────────────────────
+Ŷ            Predicted value (model's estimate)
+β₀           Intercept (Y when ALL predictors = 0)
+β₁, β₂, β₃   Coefficients (change in Y per 1-unit 
+              increase in Xᵢ, holding others constant)
+X₁, X₂, X₃   Predictors/Features (independent variables)
+ε            Error term (unexplained residual)
 ```
 
-### Worked Example: Predicting House Price
+**🔑 Key Power:** Each coefficient shows the **isolated effect** of one variable while controlling for all others!
 
-**Scenario:** Predict house price (in ₹ lakhs) using size, age, and number of bedrooms
+### Worked Example: House Price Prediction
 
-**Regression Equation:**
+**Equation:**
 ```
-Price = 10 + 0.8(Size m²) - 0.5(Age yrs) + 3.2(Bedrooms)
-```
-
-**Interpretation of Coefficients:**
-
-```
-β₀ = 10
-└─ Base price: ₹10 lakhs when all inputs = 0
-
-β₁ = +0.8
-└─ Each extra m² of size adds ₹0.8 lakhs to price
-
-β₂ = -0.5
-└─ Each year older reduces price by ₹0.5 lakhs
-
-β₃ = +3.2
-└─ Each extra bedroom adds ₹3.2 lakhs to price
+Price = 10 + 0.8(Size) - 0.5(Age) + 3.2(Bedrooms)
 ```
 
-**Prediction Example:**
+**Interpretation:**
+| Coefficient | Value | Meaning |
+|-------------|-------|---------|
+| β₀ | 10 | Base price: ₹10L when all inputs = 0 |
+| β₁ | +0.8 | Each extra m² adds ₹0.8L (holding others constant) |
+| β₂ | -0.5 | Each year older reduces price by ₹0.5L |
+| β₃ | +3.2 | Each extra bedroom adds ₹3.2L |
 
-**Problem:** Calculate price for a 120 m² house, 5 years old, 3 bedrooms
-
-**Solution:**
+**Prediction:**
 ```
+For 120m², 5 years old, 3 bedrooms:
 Price = 10 + 0.8(120) - 0.5(5) + 3.2(3)
-Price = 10 + 96 - 2.5 + 9.6
-Price = 113.1
-
-Answer: ₹113.1 Lakhs
+Price = 10 + 96 - 2.5 + 9.6 = ₹113.1 Lakhs
 ```
-
-**Key Insight:**
-Each coefficient tells you the **isolated effect** of one variable while all others stay constant. This is the power of multiple regression!
 
 ### Key Assumptions of Multiple Regression
 
-**Statistical Assumptions:**
-
-**1. Linearity**
-- Relationship between each Xᵢ and Y is linear
-- **Check**: Scatter plots, residual vs. fitted plots
-
-**2. Independence**
-- Observations are independent of each other
-- Important for time-series data
-- **Check**: Durbin-Watson test
-
-**3. Normality of Errors**
-- Errors (residuals) follow a normal distribution
-- **Check**: Q-Q plot, Shapiro-Wilk test
-
-**4. Homoscedasticity**
-- Residuals have constant variance across all fitted values
-- **Check**: Residuals vs. Fitted plot (no funnel shape)
-
-**Data Assumptions:**
-
-**5. No Multicollinearity**
-- Predictors should not be highly correlated with each other
-- **Check**: Variance Inflation Factor (VIF < 10)
-
-**6. Sufficient Sample Size**
-- Rule of thumb: At least 10-20 observations per predictor
-
-**7. No Outliers**
-- Extreme values can unduly influence results
-- **Check**: Residual plots, leverage statistics
-
-### Checking for Multicollinearity
+| Assumption | Check Method | Solution if Violated |
+|------------|--------------|---------------------|
+| **Linearity** | Scatter plots, residual vs fitted | Transform variables, use non-linear models |
+| **No Multicollinearity** | VIF < 10 | Remove/combine correlated predictors |
+| **Homoscedasticity** | Residuals vs fitted plot | Robust regression, transform variables |
+| **Independence of Errors** | Durbin-Watson test | Time-series models (ARIMA) |
+| **Normality of Residuals** | Q-Q plot, Shapiro-Wilk | Transform dependent variable |
+| **No Endogeneity** | Domain knowledge | Include all relevant variables |
 
 **Variance Inflation Factor (VIF):**
 ```
           1
-VIF = ----------
+VIF = ─────────
       1 - R²ⱼ
-
-Where R²ⱼ is from regressing Xⱼ on other predictors
 
 Interpretation:
 VIF = 1    : No multicollinearity
-VIF < 5    : Moderate (acceptable)
-VIF > 10   : High (problematic)
+VIF < 5    : Acceptable
+VIF > 10   : Problematic
 ```
 
 ---
 
-## 2.5 REGRESSION TOWARDS THE MEAN
+## 2.5 REGRESSION TO THE MEAN
 
 ### Definition
 
-**Regression to the Mean (RTM)** is the tendency for **extreme measurements to move closer to the average** on a subsequent measurement, due to **natural random variation** - NOT because of any real change.
+**Regression to the Mean (RTM)** is the statistical tendency for **extreme measurements** to move **closer to the average** on subsequent measurement, purely due to **random variation** — NOT because of any real change.
 
-### Why It Occurs
-
-**Key Concepts:**
-
-1. **Random Variation**
-   - Any measurement contains: **True Score + Random Error**
-   - Extreme scores have unusually large errors
-
-2. **Imperfect Correlation**
-   - Perfect correlation (r = 1) rarely exists
-   - Most measurements have r < 1
-
-3. **Not Causal!**
-   - Does NOT mean interventions caused the change
-   - Mixing RTM with causation is a common statistical error
-
-### Historical Context
-
-**Francis Galton (1886)**
-- First described RTM while studying heights of parents and children
-- Found: Tall parents have tall children - but **closer to average height** than the parents
-- Coined the term "regression"
-
-### Visualizing Regression to the Mean
+### Why It Happens
 
 ```
-Attempt 1 Scores vs Attempt 2 Scores
-
-High │  ●●                    ●
-     │    ●●                ●
-     │      ●●            ●
-     │        ●●        ●
-Mean │──────────●●────●─────────
-     │            ●●●
-     │              ●●●
-     │                ●●●
-Low  │                  ●●●●
-     └───────────────────────────
-       Low    Mean      High
-            Attempt 1
-
-← Extreme HIGH scorers in Attempt 1 tend to score LOWER in Attempt 2
-← Extreme LOW scorers in Attempt 1 tend to score HIGHER in Attempt 2
-← Average scorers stay near average
-← This happens purely due to random variation!
+┌─────────────────────────────────────────┐
+│         MEASUREMENT COMPOSITION         │
+├─────────────────────────────────────────┤
+│                                         │
+│  Observed Score = True Score + Error   │
+│                                         │
+│  Example:                              │
+│  Exam Score = Actual Knowledge + Luck  │
+│                                         │
+│  Extreme HIGH score:                   │
+│  → High knowledge + Unusually good luck│
+│                                         │
+│  Next attempt:                         │
+│  → High knowledge + Normal luck        │
+│  → Score moves closer to true ability  │
+└─────────────────────────────────────────┘
 ```
 
-### The Mathematics of Regression to the Mean
+### Mathematical Formula
 
-**Formula:**
 ```
-   E[Y₂ | Y₁] = μ + ρ × (Y₁ - μ)
+E[Y₂ | Y₁] = μ + ρ × (Y₁ - μ)
 
 Where:
 E[Y₂ | Y₁] = Expected 2nd measurement given 1st
@@ -2300,456 +980,424 @@ E[Y₂ | Y₁] = Expected 2nd measurement given 1st
 Y₁ - μ     = Deviation from mean
 ```
 
-**Interpretation:**
-
-```
-μ (Population Mean)
-└─ The true average of all scores
-   Both extreme and average scores drift toward this
-
-ρ (Correlation)
-└─ If ρ = 1: No RTM (perfect reliability)
-   If ρ = 0: Full RTM (complete randomness)
-   In practice: 0 < ρ < 1
-
-(Y₁ - μ) (Deviation from Mean)
-└─ How far the first score is from the mean
-   Larger deviation = more regression toward mean
-```
-
-**Key Insight:**
-The **further Y₁ is from the mean** AND the **weaker the correlation**, the **stronger the regression to the mean effect**.
+**Key Insight:** The further Y₁ is from the mean AND the weaker the correlation, the stronger the RTM effect.
 
 ### Real-World Examples
 
-**1. Sports - Sophomore Slump**
+| Domain | Scenario | RTM Explanation | Common Mistake |
+|--------|----------|----------------|----------------|
+| **Sports** | Record-breaking debut season | True ability + exceptional luck | Blame "sophomore slump" on pressure |
+| **Medicine** | High BP patients improve | Extreme reading + measurement error | Credit treatment without control group |
+| **Education** | Low-scoring students improve | True ability + bad luck/anxiety | Attribute all gain to tutoring |
+| **Finance** | Top funds underperform next year | Skill + exceptional luck | Assume strategy change needed |
 
-**Scenario:** A cricketer has a record-breaking debut season
+### Visualizing RTM
 
-**What Happens:**
-- Next season is less impressive
-- Was it a slump or just RTM?
-
-**Common Mistake:**
-- Analyst blames extra practice for "fixing the slump"
-- But the drop and recovery were statistical, not causal
-
-**2. Medicine - Patient Blood Pressure**
-
-**Scenario:** Patients with dangerously high BP enrolled in study
-
-**What Happens:**
-- After 2 weeks, BP drops - even in placebo group!
-
-**Common Mistake:**
-- Doctors credit the treatment
-- But patients with extreme readings tend to have more moderate readings on follow-up naturally
-
-**3. Education - Tutoring Studies**
-
-**Scenario:** Students who scored in bottom 10% enrolled in tutoring
-
-**What Happens:**
-- Scores improve
-
-**Common Mistake:**
-- Is it the tutoring? Maybe!
-- But part of the gain is RTM
-- Need a control group to isolate true tutoring effect
-
-**4. Finance - Fund Manager Performance**
-
-**Scenario:** Top-performing mutual funds in Year 1
-
-**What Happens:**
-- Often perform near-average in Year 2
-- The "curse of the top performer"
-
-**Common Mistake:**
-- Investors assume strategy shift is needed
-- But it could simply be RTM in action
-
-### The RTM Fallacy
-
-**Definition:** Attributing regression to the mean to an "intervention" or "treatment"
-
-**Example:**
 ```
-Scenario: Student scores 95% on first test
-          Scores 85% on second test
+Attempt 1 Scores          Attempt 2 Scores (regressed)
+● Extreme HIGH  →         ● Closer to mean
+│
+│
+●                     ●
+│
+│                     │
+─────┼───── Mean ──────────┼─────
+│                     │
+│
+●                     ●
+│
+│
+● Extreme LOW   →         ● Closer to mean
 
-Wrong Conclusion: "Tutoring made the student worse!"
-
-Correct Understanding: The first score was unusually high
-                       (luck + ability). Second score 
-                       regressed toward true ability.
+What's Happening:
+✓ Extreme HIGH scorers tend to score LOWER next time
+✓ Extreme LOW scorers tend to score HIGHER next time
+✓ Average scorers stay near average
+✓ Purely due to random variation - NOT improvement/decline!
 ```
 
-### How to Avoid RTM Mistakes
+### How to Avoid RTM Fallacy
+
+```
+┌─────────────────────────────────────────┐
+│         PROPER EXPERIMENTAL DESIGN      │
+├─────────────────────────────────────────┤
+│                                         │
+│  Treatment Group:                      │
+│  Low scorers → Tutoring → Test again  │
+│                                         │
+│  Control Group:                        │
+│  Low scorers → No tutoring → Test again│
+│                                         │
+│  Compare:                              │
+│  (Treatment improvement) -             │
+│  (Control improvement)                 │
+│  = TRUE tutoring effect                │
+│                                         │
+│  The control group accounts for RTM!   │
+└─────────────────────────────────────────┘
+```
 
 **Solutions:**
-
-1. **Use Control Groups**
-   - Compare treatment group to similar group without treatment
-   - Both groups will show RTM
-   - Difference shows true treatment effect
-
-2. **Multiple Measurements**
-   - Take baseline average of several measurements
-   - Reduces impact of random variation
-
-3. **Random Assignment**
-   - Randomly assign subjects to groups
-   - Ensures RTM affects all groups equally
-
-4. **Understand the Phenomenon**
-   - Be aware RTM exists
-   - Question extreme-to-moderate changes
+✅ Always include a **control group**
+✅ Use **randomized controlled trials**
+✅ Take **multiple baseline measurements**
+✅ Understand that RTM exists and question extreme-to-moderate changes
 
 ---
 
-## 2.6 BASICS OF NUMPY ARRAYS
+# 📖 MODULE 3: PYTHON LIBRARIES FOR DATA WRANGLING
 
-### What is a NumPy Array?
+## 3.1 NUMPY BASICS
 
-**Definition:** NumPy (Numerical Python) is the foundation of scientific Python computing.
+### Why NumPy Over Python Lists?
 
-**Key Characteristics:**
-- **ndarray**: N-dimensional array object
-- **Homogeneous data type** (dtype) - all elements same type
-- **Fixed size** at creation time
-- **Shape**: (rows, cols, ...)
-
-**Advantages over Python Lists:**
-- Faster operations
-- Less memory
-- Vectorized operations
-- Built-in mathematical functions
+| Feature | NumPy Array | Python List |
+|---------|-------------|-------------|
+| **Data Type** | Homogeneous (single type) | Heterogeneous (mixed) |
+| **Memory** | Compact, efficient | Extra overhead per element |
+| **Speed** | Orders of magnitude faster | Slower (Python loops) |
+| **Operations** | Vectorized (element-wise) | Requires explicit loops |
+| **Functionality** | Built-in math functions | Limited |
 
 ### Creating NumPy Arrays
 
-**Basic Creation:**
+```python
+import numpy as np
+
+# From a list
+arr1 = np.array([1, 2, 3, 4, 5])
+
+# 2D array (matrix)
+arr2 = np.array([[1, 2, 3],
+                 [4, 5, 6]])
+
+# Special arrays
+zeros = np.zeros((3, 4))           # 3×4 array of zeros
+ones = np.ones((2, 3))             # 2×3 array of ones
+range_arr = np.arange(0, 10, 2)    # [0, 2, 4, 6, 8]
+linspace_arr = np.linspace(0, 1, 5) # [0, 0.25, 0.5, 0.75, 1]
+random_arr = np.random.randn(3, 3)  # 3×3 normal distribution
+```
+
+### Array Attributes
+
+```python
+import numpy as np
+np.random.seed(0)
+
+x1 = np.random.randint(10, size=5)        # 1D array
+x2 = np.random.randint(10, size=(2, 4))   # 2D array
+x3 = np.random.randint(10, size=(3, 4, 5))# 3D array
+
+print("x3 ndim:", x3.ndim)      # → 3 (dimensions)
+print("x3 shape:", x3.shape)    # → (3, 4, 5) (size per dimension)
+print("x3 size:", x3.size)      # → 60 (total elements)
+print("x3 dtype:", x3.dtype)    # → int64 (data type)
+print("itemsize:", x3.itemsize) # → 8 bytes per element
+print("nbytes:", x3.nbytes)     # → 480 bytes total
+```
+
+**ASCII Visualization of Dimensions:**
+```
+1D Array          2D Array (Matrix)      3D Array (Depth)
++---+            +---+---+---+---+       /---+---+---+---+
+| 0 |            |0,0|0,1|0,2|0,3|      / / / / /
++---+            +---+---+---+---+     / / / / /
+| 1 |            |1,0|1,1|1,2|1,3|    / / / / /
++---+            +---+---+---+---+   / / / / /
+| 2 |                              / / / / /
++---+                             / / / / /
+/ / / / /
++---+---+---+---+
+```
+
+### Array Indexing - Accessing Single Elements
 
 ```python
 import numpy as np
 
-# 1D Array
-a = np.array([1, 2, 3, 4, 5])
-print(a)
-# Output: [1 2 3 4 5]
+# 1D indexing
+x1 = np.array([5, 0, 3, 3, 7, 9])
+x1[0]    # → 5 (first element)
+x1[-1]   # → 9 (last element, negative index)
+x1[-2]   # → 7 (second from last)
 
-# 2D Array
-b = np.array([[1, 2, 3],
-              [4, 5, 6]])
-print(b)
-# Output: [[1 2 3]
-#          [4 5 6]]
+# 2D indexing (comma-separated tuple)
+x2 = np.array([[3, 5, 2, 4],
+               [7, 6, 8, 8],
+               [1, 6, 7, 7]])
+x2[0, 0]   # → 3 (row 0, col 0)
+x2[2, 0]   # → 1 (row 2, col 0)
+x2[2, -1]  # → 7 (row 2, last col)
+
+# 3D indexing
+arr = np.array([[[1, 2, 3], [4, 5, 6]],
+                [[7, 8, 9], [10, 11, 12]]])
+print(arr[0, 1, 2])  # → 6
 ```
 
-**Special Arrays:**
+### Array Slicing - Accessing Subarrays
+
+**Syntax:** `x[start:stop:step]`
 
 ```python
-# All zeros
-np.zeros((3, 3))
-# Output: [[0. 0. 0.]
-#          [0. 0. 0.]
-#          [0. 0. 0.]]
+import numpy as np
+x = np.arange(10)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-# All ones
-np.ones((2, 4))
-# Output: [[1. 1. 1. 1.]
-#          [1. 1. 1. 1.]]
+x[:5]      # → [0, 1, 2, 3, 4] (first 5)
+x[5:]      # → [5, 6, 7, 8, 9] (from index 5)
+x[4:7]     # → [4, 5, 6] (middle subarray)
+x[::2]     # → [0, 2, 4, 6, 8] (every other element)
+x[1::2]    # → [1, 3, 5, 7, 9] (every other, starting from 1)
+x[::-1]    # → [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] (reversed)
 
-# Range with step
-np.arange(0, 10, 2)
-# Output: [0 2 4 6 8]
-
-# Evenly spaced values
-np.linspace(0, 1, 5)
-# Output: [0.   0.25 0.5  0.75 1.  ]
-
-# Random 3x3 array
-np.random.rand(3, 3)
-# Output: Random values between 0 and 1
+# Multi-dimensional slicing
+x2 = np.array([[20, 5, 2, 4],
+               [7, 6, 8, 8],
+               [1, 6, 7, 7]])
+x2[:2, :3]    # First 2 rows, first 3 cols
+x2[:3, ::2]   # All rows, every other column
+x2[:, 0]      # All rows, col 0 → [20, 7, 1]
+x2[0, :]      # Row 0, all cols → [20, 5, 2, 4]
 ```
 
-### Key Attributes
-
-```python
-arr = np.array([[1, 2, 3],
-                [4, 5, 6]])
-
-arr.shape   # (2, 3) - 2 rows, 3 columns
-arr.ndim    # 2 - number of dimensions
-arr.dtype   # int64 or int32 - data type
-arr.size    # 6 - total number of elements
-```
-
----
-
-## 2.7 AGGREGATIONS
-
-### What are Aggregations?
-
-**Definition:** Functions that summarize data by computing a single value from an array.
-
-### Common Aggregation Functions
-
-```
-Σ (Sum)           np.sum(a)      - Total of all elements
-μ (Mean)          np.mean(a)     - Average value
-σ (Std Dev)       np.std(a)      - Standard deviation
-min/max           np.min/max(a)  - Minimum/Maximum value
-Median            np.median(a)   - Middle value
-Cumulative Sum    np.cumsum(a)   - Running total
-```
-
-### Examples
-
-**Basic Aggregations:**
+### Reshaping, Concatenation, and Splitting
 
 ```python
 import numpy as np
 
-a = np.array([[1, 2, 3],
-              [4, 5, 6]])
+# RESHAPING
+grid = np.arange(1, 10).reshape((3, 3))
+# → [[1, 2, 3],
+#    [4, 5, 6],
+#    [7, 8, 9]]
 
-# Sum of all elements
-np.sum(a)  # Output: 21
+x = np.array([1, 2, 3])
+x.reshape((1, 3))  # row vector: [[1, 2, 3]]
+x.reshape((3, 1))  # column vector: [[1], [2], [3]]
 
-# Sum along axis 0 (column sums)
-np.sum(a, axis=0)  # Output: [5 7 9]
-# Column 0: 1+4=5
-# Column 1: 2+5=7
-# Column 2: 3+6=9
+# CONCATENATION
+y = np.array([3, 2, 1])
+np.concatenate([x, y])  # → [1, 2, 3, 3, 2, 1]
 
-# Sum along axis 1 (row sums)
-np.sum(a, axis=1)  # Output: [6 15]
-# Row 0: 1+2+3=6
-# Row 1: 4+5+6=15
+grid2 = np.array([[1, 2, 3],
+                  [4, 5, 6]])
+np.concatenate([grid2, grid2])        # Vertical (axis=0)
+np.concatenate([grid2, grid2], axis=1)  # Horizontal (axis=1)
 
-# Mean
-np.mean(a)  # Output: 3.5
+np.vstack([x, grid2])   # Vertical stack
+np.hstack([grid2, grid2])  # Horizontal stack
 
-# Standard Deviation
-np.std(a)  # Output: 1.708
+# SPLITTING
+arr = np.arange(8)  # [0, 1, 2, 3, 4, 5, 6, 7]
+x1, x2, x3 = np.split(arr, [3, 5])
+# x1 = [0, 1, 2], x2 = [3, 4], x3 = [5, 6, 7]
 
-# Minimum and Maximum
-np.min(a)  # Output: 1
-np.max(a)  # Output: 6
-
-# Median
-np.median(a)  # Output: 3.5
-```
-
-**Understanding Axis:**
-
-```
-2D Array:
-         Axis 1 →
-       ┌───────────┐
-Axis 0 │ 1   2   3 │
-  ↓    │ 4   5   6 │
-       └───────────┘
-
-axis=0: Operate down columns
-axis=1: Operate across rows
+np.vsplit(grid2, 2)  # Vertical split
+np.hsplit(grid2, 3)  # Horizontal split
 ```
 
 ---
 
-## 2.8 COMPUTATIONS ON ARRAYS
+## 3.2 NUMPY AGGREGATIONS & UNIVERSAL FUNCTIONS
 
-### Universal Functions (ufuncs)
+### Aggregation Functions
 
-**Definition:** Functions that operate element-wise on arrays.
+```python
+import numpy as np
+L = np.random.random(100)  # 100 random numbers
 
-**Common ufuncs:**
+# Basic aggregations
+np.sum(L)      # Sum of all elements
+np.min(L)      # Minimum value
+np.max(L)      # Maximum value
+np.mean(L)     # Mean (average)
+np.std(L)      # Standard deviation
+np.var(L)      # Variance
+np.median(L)   # Median
+
+# Other useful aggregations
+np.prod(L)              # Product of all elements
+np.argmin(L)            # Index of minimum value
+np.argmax(L)            # Index of maximum value
+np.percentile(L, 25)    # 25th percentile
+
+# Boolean aggregations
+np.any(L > 0.5)  # True if ANY element > 0.5
+np.all(L > 0)    # True if ALL elements > 0
+
+# Multi-dimensional aggregations
+M = np.random.random((3, 4))
+M.min(axis=0)  # Min of each column
+M.max(axis=1)  # Max of each row
+M.mean(axis=0) # Mean of each column
+```
+
+**Key Difference:**
+- **Aggregations** reduce dimensions (return fewer values)
+- **UFuncs** maintain same shape (element-wise operations)
+
+### Universal Functions (UFuncs)
+
+**Arithmetic UFuncs:**
+```python
+import numpy as np
+x = np.array([1, 2, 3, 4])
+
+x + 5          # np.add(x, 5)       → [6, 7, 8, 9]
+x - 2          # np.subtract(x, 2)  → [-1, 0, 1, 2]
+x * 3          # np.multiply(x, 3)  → [3, 6, 9, 12]
+x / 2          # np.divide(x, 2)    → [0.5, 1.0, 1.5, 2.0]
+x // 2         # np.floor_divide()  → [0, 1, 1, 2]
+x ** 2         # np.power(x, 2)     → [1, 4, 9, 16]
+x % 2          # np.mod(x, 2)       → [1, 0, 1, 0]
+-x             # np.negative(x)     → [-1, -2, -3, -4]
+```
+
+### Trigonometric Functions
+
+**⚠️ Important:** Angles must be in **RADIANS**!
 
 ```python
 import numpy as np
 
-a = np.array([1, 2, 3, 4])
+# Convert degrees to radians
+Arr = np.array([0, 30, 60, 90])
+arr = Arr * np.pi / 180  # Convert to radians
 
-# Square root
-np.sqrt(a)
-# Output: [1.   1.41 1.73 2.  ]
+# Basic trig
+np.sin(arr)   # → [0.0, 0.5, 0.866, 1.0]
+np.cos(arr)   # → [1.0, 0.866, 0.5, 0.0]
+np.tan(arr)   # → [0.0, 0.577, 1.732, ∞]
 
-# Natural logarithm
-np.log(a)
-# Output: [0.    0.69  1.1   1.39]
+# Inverse trig
+np.arcsin(arr)
+np.arccos(arr)
+np.arctan(arr)
 
-# Exponential (e^x)
-np.exp(a)
-# Output: [ 2.72  7.39 20.09 54.6 ]
+# Hyperbolic
+np.sinh(arr)
+np.cosh(arr)
+np.tanh(arr)
 
-# Trigonometric functions
-np.sin(a)
-np.cos(a)
-
-# Power
-np.power(a, 2)
-# Output: [ 1  4  9 16]
-
-# Absolute value
-np.abs(np.array([-1, -2, 3]))
-# Output: [1 2 3]
+# Conversion
+np.deg2rad(Arr)  # Degrees → Radians
+np.rad2deg(arr)  # Radians → Degrees
 ```
 
-### Element-wise Operations
+### Exponents and Logarithms
 
 ```python
-a = np.array([1, 2, 3])
-b = np.array([10, 20, 30])
+import numpy as np
+x = np.array([1, 2, 4, 10])
 
-# Addition
-a + b  # Output: [11 22 33]
+# Exponents
+np.exp(x)        # e^x
+np.exp2(x)       # 2^x
+np.power(3, x)   # 3^x
 
-# Multiplication
-a * b  # Output: [10 40 90]
-
-# Subtraction
-b - a  # Output: [ 9 18 27]
-
-# Division
-b / a  # Output: [10. 10. 10.]
-
-# Power
-a ** 2  # Output: [1 4 9]
+# Logarithms
+np.log(x)    # Natural log (ln)
+np.log2(x)   # Base-2 log
+np.log10(x)  # Base-10 log
 ```
 
-### Broadcasting
-
-**Definition:** Smaller arrays are automatically "stretched" to match larger array shapes for element-wise operations.
-
-**Example 1 - Array + Scalar:**
+### Other Mathematical Functions
 
 ```python
-a = np.array([1, 2, 3])
-a + 10
-# Output: [11 12 13]
-# 10 is "broadcast" to [10, 10, 10]
+import numpy as np
+
+# Rounding
+arr = np.array([3.14159, 2.71828])
+np.around(arr, 3)  # Round to 3 decimals → [3.142, 2.718]
+np.floor(arr)      # Round down → [3., 2.]
+np.ceil(arr)       # Round up → [4., 3.]
+
+# Absolute values
+np.abs(np.array([-2, -1, 0, 1, 2]))  # → [2, 1, 0, 1, 2]
 ```
-
-**Example 2 - 2D Array + 1D Array:**
-
-```python
-M = np.ones((3, 3))
-v = np.array([1, 2, 3])
-
-M + v
-# Output: [[2. 3. 4.]
-#          [2. 3. 4.]
-#          [2. 3. 4.]]
-# v is added to each row
-```
-
-**Broadcasting Rules:**
-1. Arrays are aligned right-to-left
-2. Dimensions must be equal or one must be 1
-3. Smaller array is "stretched" to match
 
 ---
 
-## 2.9 COMPARISONS, MASKS, BOOLEAN LOGIC
+## 3.3 COMPARISONS, MASKS & BOOLEAN LOGIC
 
 ### Comparison Operators
 
-```
-<   Less than
->   Greater than
-<=  Less than or equal
->=  Greater than or equal
-==  Equal to
-!=  Not equal
-```
-
-### Boolean Masks
-
-**Definition:** Arrays of True/False values used to filter data.
-
-**Example:**
+Comparison operators return **boolean arrays** (True/False per element).
 
 ```python
 import numpy as np
+a = np.reshape(np.arange(16), (4, 4))
+# → [[ 0,  1,  2,  3],
+#    [ 4,  5,  6,  7],
+#    [ 8,  9, 10, 11],
+#    [12, 13, 14, 15]]
 
-a = np.array([1, 2, 3, 4, 5, 6])
+# Comparison returns boolean array
+large_values = (a > 10)
+# → [[False, False, False, False],
+#    [False, False, False, False],
+#    [False, False, False,  True],
+#    [ True,  True,  True,  True]]
 
-# Comparison creates boolean mask
-a > 3
-# Output: [False False False  True  True  True]
-
-# Use mask to filter
-a[a > 3]
-# Output: [4 5 6]
-
-# Count True values
-np.sum(a > 3)  # Output: 3
-
-# Check if any True
-np.any(a > 5)  # Output: True
-
-# Check if all True
-np.all(a > 0)  # Output: True
+# Boolean operators
+np.equal(a, 5)        # == element-wise
+np.not_equal(a, 5)    # !=
+np.less(a, 5)         # <
+np.less_equal(a, 5)   # <=
+np.greater(a, 5)      # >
+np.greater_equal(a, 5)# >=
 ```
 
-### Combining Conditions
-
-**Logical Operators:**
-
-```
-&   AND
-|   OR
-~   NOT
-```
-
-**Example:**
+### Logical Operators on Boolean Arrays
 
 ```python
-a = np.array([1, 2, 3, 4, 5, 6])
+import numpy as np
+a = np.arange(16)
 
-# AND: Values between 2 and 5
-a[(a > 2) & (a < 5)]
-# Output: [3 4]
-# Note: Must use parentheses!
+# NOT (negation)
+~(a > 10)
 
-# OR: Values less than 2 OR greater than 5
-a[(a < 2) | (a > 5)]
-# Output: [1 6]
+# AND
+(a > 5) & (a < 12)
 
-# NOT: Values NOT equal to 3
-a[~(a == 3)]
-# Output: [1 2 4 5 6]
+# OR
+(a < 5) | (a > 12)
+
+# XOR
+(a < 5) ^ (a > 12)
 ```
 
-### Real-World Applications
+### Boolean Masking
 
-**1. Filter exam scores:**
+**Masking** means extracting, modifying, counting, or manipulating values based on some criterion.
 
 ```python
-scores = np.array([45, 67, 38, 82, 55, 91])
-passed = scores[scores >= 40]
-# Output: [45 67 82 55 91]
+import numpy as np
+data = np.array([15, 42, 8, 73, 29, 55, 3, 90])
+
+# Create a boolean mask
+mask = data > 30
+# mask → [False, True, False, True, False, True, False, True]
+
+# Apply the mask to filter values
+filtered = data[mask]
+# filtered → [42, 73, 55, 90]
+
+# Combined condition (values between 20 and 60)
+filtered2 = data[(data > 20) & (data < 60)]
+# filtered2 → [42, 29, 55]
+
+# Count elements meeting condition
+count = np.sum(data > 30)  # → 4
+
+# Extract all even elements
+even_values = (a % 2 == 0)
+print(a[even_values])  # All even elements
 ```
 
-**2. Find negative temperatures:**
-
-```python
-temps = np.array([5, -2, 8, -5, 12, -1])
-below_freezing = temps[temps < 0]
-# Output: [-2 -5 -1]
-```
-
-**3. Select high sales:**
-
-```python
-sales = np.array([500, 1200, 800, 1500, 300])
-high_sales = sales[sales > 1000]
-# Output: [1200 1500]
-```
-
-**💡 Important Tip:**
-Always wrap compound conditions in parentheses:
+**💡 Important Tip:** Always wrap compound conditions in parentheses:
 ```python
 # Correct:
 a[(a > 2) & (a < 5)]
@@ -2760,87 +1408,41 @@ a[a > 2 & a < 5]  # Error!
 
 ---
 
-## 2.10 FANCY INDEXING
+## 3.4 FANCY INDEXING & STRUCTURED ARRAYS
 
-### What is Fancy Indexing?
+### Fancy Indexing
 
-**Definition:** Accessing multiple elements using arrays of indices instead of single values or slices.
-
-**Key Difference:**
-- **Basic Indexing**: Returns a VIEW
-- **Fancy Indexing**: Returns a COPY
-
-### Types of Indexing
-
-```
-Basic Indexing:
-  a[2]        → Single element
-  a[1:4]      → Contiguous range
-
-Boolean Mask:
-  a[a > 2]    → Condition-based
-
-Fancy Indexing:
-  a[[1,3,0]]  → Any index list
-```
-
-### Examples
-
-**1D Array Indexing:**
+**Definition:** Indexing an array with another NumPy array, a Python list, or a sequence of integers whose values select elements.
 
 ```python
 import numpy as np
+A = np.linspace(0, 1, 11)
+# → [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 
-a = np.array([10, 20, 30, 40, 50])
+# Using another array to index
+print(A[np.array([0, 2, 4])])  # → [0.0, 0.2, 0.4]
 
-# Integer array indexing
-idx = [0, 2, 4]
-a[idx]
-# Output: [10 30 50]
+# Using a list to index
+print(A[[0, 2, 4]])  # → [0.0, 0.2, 0.4]
 
-# Direct indexing
-a[[1, 3]]
-# Output: [20 40]
+# More complex example
+arr = np.array([10, 20, 30, 40, 50, 60, 70, 80])
+# Select elements at indices 0, 3, and 6
+print(arr[[0, 3, 6]])  # → [10, 40, 70]
 
-# With repetition
-a[[0, 0, 2, 2]]
-# Output: [10 10 30 30]
+# Using a NumPy index array
+indices = np.array([1, 4, 7])
+print(arr[indices])  # → [20, 50, 80]
+
+# 2D fancy indexing
+B = np.array([[1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 9]])
+print(B[[0, 2], [1, 2]])  # → [2, 9]
+# (row 0 col 1, row 2 col 2)
 ```
 
-**2D Fancy Indexing:**
-
-```python
-X = np.arange(12).reshape(4, 3)
-# X = [[ 0  1  2]
-#      [ 3  4  5]
-#      [ 6  7  8]
-#      [ 9 10 11]]
-
-# Select specific elements
-rows = [0, 1, 3]
-cols = [2, 1, 0]
-
-X[rows, cols]
-# Output: [2 4 9]
-# X[0,2] = 2
-# X[1,1] = 4
-# X[3,0] = 9
-
-# Select entire rows
-X[[1, 3], :]
-# Output: [[ 3  4  5]
-#          [ 9 10 11]]
-
-# Select entire columns
-X[:, [0, 2]]
-# Output: [[ 0  2]
-#          [ 3  5]
-#          [ 6  8]
-#          [ 9 11]]
-```
-
-**Important Note:**
-
+**⚠️ Important Note:**
 ```python
 # Fancy indexing returns a COPY
 a = np.array([1, 2, 3, 4, 5])
@@ -2854,142 +1456,134 @@ c[0] = 99
 print(a)  # [99 2 3 4 5] - Original changed!
 ```
 
----
+### Structured Arrays
 
-## 2.11 STRUCTURED ARRAYS
+**Definition:** Unlike regular NumPy arrays (homogeneous), structured arrays allow **different data types in each column** using a dtype definition.
 
-### What are Structured Arrays?
-
-**Definition:** Arrays with **named fields** of **different data types** - like a lightweight table.
-
-**Use Cases:**
-- Tabular data with mixed types
-- Record arrays (like CSV rows)
-- Scientific data (particle data)
-- Memory-efficient vs Python dicts
-
-### Creating Structured Arrays
-
-**Example:**
-
+**Method 1: Dictionary**
 ```python
 import numpy as np
-
-# Define structure (dtype)
-dt = np.dtype([
-    ('name', 'U10'),   # Unicode 10 chars
-    ('age', 'i4'),     # 32-bit int
-    ('score', 'f8')    # 64-bit float
-])
-
-# Create array
-data = np.array([
-    ('Alice', 25, 92.5),
-    ('Bob',   30, 85.0),
-    ('Carol', 22, 97.3)
-], dtype=dt)
-
-print(data)
-# Output:
-# [('Alice', 25, 92.5) ('Bob', 30, 85. ) ('Carol', 22, 97.3)]
+dtype = np.dtype({
+    'names': ('name', 'age', 'weight'),
+    'formats': ('U10', 'i4', 'f8')
+})
+data = np.array([('Alice', 25, 55.0),
+                 ('Bob', 30, 75.5)], dtype=dtype)
+print(data['name'])   # → ['Alice' 'Bob']
+print(data['age'])    # → [25 30]
+print(data['weight']) # → [55.0 75.5]
 ```
 
-### Accessing Fields
-
+**Method 2: List of Tuples**
 ```python
-# Access by field name
-data['name']
-# Output: ['Alice' 'Bob' 'Carol']
-
-data['score']
-# Output: [92.5 85.  97.3]
-
-# Boolean filtering
-data['score'] > 90
-# Output: [ True False  True]
-
-data[data['age'] < 28]
-# Output: [('Alice', 25, 92.5) ('Carol', 22, 97.3)]
-
-# Access individual record
-data[0]
-# Output: ('Alice', 25, 92.5)
-
-data[0]['name']
-# Output: 'Alice'
+dtype2 = np.dtype([('name', 'U10'),
+                   ('age', 'i4'),
+                   ('weight', 'f8')])
+data2 = np.array([('Alice', 25, 55.0),
+                  ('Bob', 30, 75.5)], dtype=dtype2)
 ```
 
-**Field Type Codes:**
-
-```
-'U10'  - Unicode string, 10 characters
-'i4'   - 32-bit integer
-'i8'   - 64-bit integer
-'f4'   - 32-bit float
-'f8'   - 64-bit float
-'b1'   - Boolean
-```
+**NumPy Type Codes:**
+| Code | Type |
+|------|------|
+| **U** | Unicode string |
+| **i** | Signed integer |
+| **f** | Float |
+| **b** | Boolean |
+| **u** | Unsigned integer |
+| **c** | Complex |
+| **m** | Timedelta |
+| **M** | Datetime |
 
 ---
 
-## 2.12 DATA MANIPULATION WITH PANDAS
+## 3.5 PANDAS: SERIES & DATAFRAME
 
 ### Introduction to Pandas
 
-**Pandas** is a powerful data manipulation and analysis library built on NumPy.
+**Pandas** is a high-level data manipulation tool built on NumPy.
 
 **Key Data Structures:**
-1. **Series** - 1D labeled array
-2. **DataFrame** - 2D table (like Excel/SQL)
 
-### Series
+```
+Series (1D):              DataFrame (2D):
++-------+-------+         +-------+-------+-------+
+| Index | Value |         | Index | Col A | Col B |
++-------+-------+         +-------+-------+-------+
+|   0   | val_0 |         |   0   |   1   |   2   |
++-------+-------+         +-------+-------+-------+
+|   1   | val_1 |         |   1   |   3   |   4   |
++-------+-------+         +-------+-------+-------+
+|   2   | val_2 |         |   2   |   5   |   6   |
++-------+-------+         +-------+-------+-------+
+```
 
+### Pandas Series
+
+**Creating Series:**
+```python
+import pandas as pd
+import numpy as np
+
+# Method 1: From a list
+data = pd.Series([0.25, 0.5, 0.75])
+
+# Method 2: With explicit index
+data = pd.Series([0.25, 0.5, 0.75], index=['a', 'b', 'c'])
+print(data['b'])  # → 0.5
+
+# Method 3: From NumPy array
+arr = np.array([10, 20, 30])
+series = pd.Series(arr)
+
+# Method 4: From dictionary
+dict_data = {'one': 1, 'two': 2, 'three': 3}
+s = pd.Series(dict_data)
+```
+
+**Key Series Methods:**
+```python
+s.head(3)           # First 3 rows
+s.tail(3)           # Last 3 rows
+s.sort_values()     # Sort by values
+s.sort_index()      # Sort by index
+s.size              # Number of elements
+s.is_unique         # True if all values unique
+s.idxmax()          # Index of maximum value
+s.describe()        # Statistical summary
+```
+
+### Pandas DataFrame
+
+**Creating DataFrame:**
 ```python
 import pandas as pd
 
-# Create Series
-s = pd.Series([10, 20, 30], index=['a', 'b', 'c'])
+# Method 1: From dictionary of lists
+raw_data = {
+    'firstname': ['Rupa', 'Rakshita', 'Rupal'],
+    'lastname': ['deri', 'Mani', 'deri'],
+    'RNO': [12, 22, 12],
+    'Testscore': [12, 22, 12]
+}
+df = pd.DataFrame(raw_data)
 
-print(s)
-# Output:
-# a    10
-# b    20
-# c    30
-# dtype: int64
+# Method 2: Drop duplicates
+df.drop_duplicates()  # Removes duplicate rows
 
-# Access by label
-s['b']  # Output: 20
-
-# Access by position
-s.iloc[1]  # Output: 20
-```
-
-### DataFrame
-
-**Creation:**
-
-```python
-# Create DataFrame
-df = pd.DataFrame({
-    'Name': ['Alice', 'Bob', 'Carol'],
-    'Age': [25, 30, 35],
-    'Score': [92.5, 85.0, 88.5]
-})
-
-print(df)
-# Output:
-#     Name  Age  Score
-# 0  Alice   25   92.5
-# 1    Bob   30   85.0
-# 2  Carol   35   88.5
+# Method 3: From nested dictionary
+scottish_hills = {
+    'Ben Nevis': (1345, 5),
+    'Ben Macdui': (1405, 5)
+}
+dataframe = pd.DataFrame(scottish_hills)
 ```
 
 **Essential DataFrame Methods:**
-
 ```python
 df.head(n)        # First n rows
 df.tail(n)        # Last n rows
-df.info()         # Data types & nulls
+df.info()         # Column types & NaN count
 df.describe()     # Summary statistics
 df.shape          # (rows, columns)
 df.dtypes         # Column data types
@@ -2998,335 +1592,90 @@ df.columns        # Column names
 df.index          # Row indices
 ```
 
-### Selecting Data
-
-**Column Selection:**
-
-```python
-# Single column (returns Series)
-df['Age']
-
-# Multiple columns (returns DataFrame)
-df[['Name', 'Score']]
-```
-
-**Row Selection:**
-
-```python
-# By label
-df.loc[0]          # Row with label 0
-df.loc[0:2]        # Rows 0 to 2 (inclusive)
-
-# By position
-df.iloc[1]         # Row at position 1
-df.iloc[1:3]       # Rows 1 to 2 (position 3 exclusive)
-```
-
-**loc vs iloc:**
-
-```
-loc  - Label based indexing
-iloc - Position based indexing (0-indexed)
-```
-
-### Filtering Data
-
-```python
-# Single condition
-df[df['Age'] > 25]
-# Output:
-#     Name  Age  Score
-# 1    Bob   30   85.0
-# 2  Carol   35   88.5
-
-# Multiple conditions
-df[(df['Age'] > 25) & (df['Score'] > 85)]
-
-# Using between()
-df[df['Score'].between(85, 90)]
-
-# Using isin()
-df[df['Name'].isin(['Alice', 'Bob'])]
-```
-
-### Adding/Modifying Columns
-
-```python
-# Add new column
-df['Grade'] = df['Score'].apply(
-    lambda x: 'A' if x >= 90 else 'B'
-)
-
-# Output:
-#     Name  Age  Score Grade
-# 0  Alice   25   92.5     A
-# 1    Bob   30   85.0     B
-# 2  Carol   35   88.5     B
-
-# Modify existing column
-df['Age'] = df['Age'] + 1
-
-# Drop column
-df.drop('Grade', axis=1, inplace=True)
-```
-
-### Sorting
-
-```python
-# Sort by single column
-df.sort_values('Score')  # Ascending
-df.sort_values('Score', ascending=False)  # Descending
-
-# Sort by multiple columns
-df.sort_values(['Age', 'Score'])
-```
-
-### GroupBy Operations
-
-**Split-Apply-Combine Pattern:**
-
-```python
-df = pd.DataFrame({
-    'Dept': ['HR', 'IT', 'HR', 'IT', 'HR'],
-    'Emp': ['A', 'B', 'C', 'D', 'E'],
-    'Salary': [50, 80, 55, 90, 60],
-    'Yrs': [2, 5, 3, 7, 4]
-})
-
-# Group by and aggregate
-df.groupby('Dept')['Salary'].mean()
-# Output:
-# Dept
-# HR    55.0
-# IT    85.0
-# Name: Salary, dtype: float64
-
-# Multiple aggregations
-df.groupby('Dept').agg({
-    'Salary': ['mean', 'max', 'sum'],
-    'Yrs': 'mean'
-})
-
-# Named aggregations (pandas >= 0.25)
-df.groupby('Dept').agg(
-    avg_sal=('Salary', 'mean'),
-    max_sal=('Salary', 'max'),
-    headcount=('Emp', 'count')
-)
-```
-
-### Missing Values
-
-```python
-# Check for missing values
-df.isnull()
-df.isnull().sum()
-
-# Remove missing values
-df.dropna()  # Drop rows with any NaN
-df.dropna(axis=1)  # Drop columns with NaN
-
-# Fill missing values
-df.fillna(0)  # Replace with 0
-df.fillna(df.mean())  # Replace with mean
-df.fillna(method='ffill')  # Forward fill
-df.fillna(method='bfill')  # Backward fill
-```
-
-### Merging DataFrames
-
-```python
-df1 = pd.DataFrame({
-    'ID': [1, 2],
-    'Name': ['Alice', 'Bob']
-})
-
-df2 = pd.DataFrame({
-    'ID': [2, 3],
-    'Score': [90, 85]
-})
-
-# Inner join
-pd.merge(df1, df2, on='ID')
-# Output:
-#    ID   Name  Score
-# 0   2    Bob     90
-
-# Left join
-pd.merge(df1, df2, on='ID', how='left')
-
-# Outer join
-pd.merge(df1, df2, on='ID', how='outer')
-```
-
 ---
 
-# 📖 MODULE 3: DATA WRANGLING AND DATA VISUALIZATION
+## 3.6 DATA INDEXING AND SELECTION IN PANDAS
 
-## 3.1 DATA INDEXING AND SELECTION
+### Label-Based Indexing (.loc)
 
-### Pandas Indexing Methods
-
-Pandas provides multiple ways to access rows, columns, and specific data points.
-
-### 1. .loc[] - Label-based Selection
-
-**Purpose:** Select rows/columns by their **labels** (index names or column names).
-
-**Syntax:**
-```python
-df.loc[row_label, column_label]
-```
-
-**Examples:**
+**Accesses data by row and column labels.**
 
 ```python
 import pandas as pd
-
 df = pd.DataFrame({
-    'Name': ['Alice', 'Bob', 'Carol'],
-    'Age': [25, 30, 35],
-    'Score': [88, 92, 79]
+    'Name': ['Alice', 'Bob', 'Carol', 'David'],
+    'Dept': ['Sales', 'IT', 'Sales', 'IT'],
+    'Salary': [50000, 75000, 48000, 82000],
+    'Experience': [3, 7, 2, 9]
 })
 
-# Select single cell by label
-df.loc[0, 'Name']
-# Output: 'Alice'
+# Select single row by label
+print(df.loc[0])
 
-# Select multiple rows
-df.loc[0:1]
-# Output:
-#     Name  Age  Score
-# 0  Alice   25     88
-# 1    Bob   30     92
+# Select range of rows and columns
+print(df.loc[0:2, 'Name':'Salary'])
 
 # Select specific rows and columns
-df.loc[0:1, ['Name', 'Age']]
-# Output:
-#     Name  Age
-# 0  Alice   25
-# 1    Bob   30
-
-# Select all rows, specific column
-df.loc[:, 'Score']
-# Output:
-# 0    88
-# 1    92
-# 2    79
-# Name: Score, dtype: int64
-
-# Boolean indexing with loc
-df.loc[df['Age'] > 25]
-# Output:
-#     Name  Age  Score
-# 1    Bob   30     92
-# 2  Carol   35     79
+print(df.loc[[0, 2], ['Name', 'Salary']])
 ```
 
-### 2. .iloc[] - Position-based Selection
+### Position-Based Indexing (.iloc)
 
-**Purpose:** Select rows/columns by **integer position** (0-indexed).
-
-**Syntax:**
-```python
-df.iloc[row_position, column_position]
-```
-
-**Examples:**
+**Accesses data by integer position (0-based indexing).**
 
 ```python
-# Select single cell by position
-df.iloc[1, 2]
-# Output: 92 (Bob's score)
+# Select first row by position
+print(df.iloc[0])
 
-# Select first 2 rows, all columns
-df.iloc[:2, :]
-# Output:
-#     Name  Age  Score
-# 0  Alice   25     88
-# 1    Bob   30     92
-
-# Select specific positions
-df.iloc[[0, 2], [1, 2]]
-# Output:
-#    Age  Score
-# 0   25     88
-# 2   35     79
+# Select first 2 rows, first 3 columns
+print(df.iloc[0:2, 0:3])
 
 # Select last row
-df.iloc[-1]
-# Output:
-# Name     Carol
-# Age         35
-# Score       79
-# Name: 2, dtype: object
+print(df.iloc[-1])
+
+# Select specific positions
+print(df.iloc[[0, 3], [1, 3]])
 ```
 
-### 3. Boolean Masking
+### Boolean Indexing
 
-**Purpose:** Filter rows using True/False conditions.
-
-**Examples:**
+**Filter rows based on conditions.**
 
 ```python
-# Single condition
-df[df['Age'] > 25]
-# Output: Bob and Carol
+# Filter: Sales department with salary > 45000
+result = df[(df['Dept'] == 'Sales') & (df['Salary'] > 45000)]
 
-# Multiple conditions with AND
-df[(df['Age'] > 25) & (df['Score'] > 80)]
-# Output: Only Bob
+# Filter: Experience > 5 OR Salary > 70000
+result2 = df[(df['Experience'] > 5) | (df['Salary'] > 70000)]
 
-# Multiple conditions with OR
-df[(df['Age'] < 28) | (df['Score'] > 90)]
-# Output: Alice and Bob
-
-# Using isin()
-df[df['Name'].isin(['Alice', 'Carol'])]
-# Output: Alice and Carol
+# Filter: Salary between 50000 and 80000
+result3 = df[df['Salary'].between(50000, 80000)]
 ```
 
-### 4. .at[] and .iat[] - Fast Scalar Access
-
-**Purpose:** Fast access for **single cell** values.
-
-**Examples:**
+### Fast Scalar Access (.at and .iat)
 
 ```python
-# .at uses label
-df.at[0, 'Name']
-# Output: 'Alice'
+# .at uses label (faster for single value)
+df.at[0, 'Name']  # → 'Alice'
 
-# .iat uses position
-df.iat[2, 1]
-# Output: 35
+# .iat uses position (faster for single value)
+df.iat[2, 1]  # → 35
 
-# Faster than loc/iloc for single values
-# Use for performance-critical code
-```
-
-**Comparison:**
-
-```
-.loc  - Label based, can select multiple
-.iloc - Position based, can select multiple
-.at   - Label based, single value only (faster)
-.iat  - Position based, single value only (faster)
+# Comparison:
+# .loc/.iloc - Label/Position based, can select multiple
+# .at/.iat   - Label/Position based, single value only (faster)
 ```
 
 ---
 
-## 3.2 OPERATING ON DATA
+## 3.7 OPERATING ON DATA
 
 ### Vectorized Operations
 
-**Definition:** Arithmetic operates **element-wise**; no loops needed.
-
-**Examples:**
+**Perform operations on entire columns without loops.**
 
 ```python
 import pandas as pd
-import numpy as np
 
 df = pd.DataFrame({
     'Name': ['Alice', 'Bob', 'Carol'],
@@ -3348,62 +1697,44 @@ df['Age_Score_Ratio'] = df['Age'] / df['Score']
 
 ### apply() Function
 
-**Purpose:** Apply any function **row-wise or column-wise**.
-
-**Examples:**
+**Apply any function row-wise or column-wise.**
 
 ```python
 # Apply to Series
 df['Grade'] = df['Score'].apply(
     lambda x: 'A' if x >= 90 else 'B'
 )
-# Output:
-# Score  Grade
-#    88      B
-#    92      A
-#    79      B
 
 # Apply to DataFrame
 def normalize(col):
     return (col - col.mean()) / col.std()
 
 df[['Age', 'Score']].apply(normalize)
-# Returns standardized values
 
 # Apply row-wise
 df.apply(lambda row: row['Age'] + row['Score'], axis=1)
-# Output: [113, 122, 114]
 ```
 
 ### map() and applymap()
 
-**map() - Element-wise on Series:**
-
 ```python
-# Transform Series
-df['Name'] = df['Name'].map(str.upper)
-# Output: ['ALICE', 'BOB', 'CAROL']
+# map() - Element-wise on Series
+df['Name'] = df['Name'].map(str.upper)  # → ['ALICE', 'BOB', 'CAROL']
 
 # Using dictionary mapping
 grade_map = {'A': 4, 'B': 3, 'C': 2}
 df['Grade_Point'] = df['Grade'].map(grade_map)
-```
 
-**applymap() - Element-wise on DataFrame:**
-
-```python
-# Round all values
+# applymap() - Element-wise on DataFrame (deprecated in newer pandas)
 df[['Age', 'Score']].applymap(lambda x: round(x, 2))
-
-# Note: applymap() deprecated in newer pandas
-# Use DataFrame.map() instead
+# Use DataFrame.map() instead in newer versions
 ```
 
 ### NumPy ufuncs on DataFrames
 
-**Universal functions work directly:**
-
 ```python
+import numpy as np
+
 # Square root
 df['Sqrt_Score'] = np.sqrt(df['Score'])
 
@@ -3419,125 +1750,86 @@ df['Sin_Score'] = np.sin(df['Score'])
 
 ---
 
-## 3.3 MISSING DATA
+## 3.8 MISSING DATA HANDLING
 
-### Detecting Missing Data
+### Understanding Missing Data
 
-**Methods:**
+**Missing values in Pandas are marked as NaN (Not a Number).**
 
 ```python
+import pandas as pd
 import numpy as np
 
 df = pd.DataFrame({
-    'A': [1, np.nan, 3],
-    'B': [np.nan, 5, 6],
-    'C': [7, 8, np.nan]
+    'A': [1, 2, np.nan, 4],
+    'B': [5, np.nan, 7, 8],
+    'C': [10, 11, 12, 13]
 })
+```
 
-# Boolean mask
+### Detecting Missing Values
+
+```python
+# Check for missing values (returns boolean DataFrame)
 df.isnull()
-# Output:
-#        A      B      C
-# 0  False   True  False
-# 1   True  False  False
-# 2  False  False   True
 
-# Count missing per column
+# Count missing values per column
 df.isnull().sum()
 # Output:
 # A    1
 # B    1
-# C    1
-# dtype: int64
+# C    0
 
-# Check if any missing
-df.isnull().any().any()  # True
+# Total missing values
+df.isnull().sum().sum()  # → 2
 
-# Check if all values present
-df.notnull().all().all()  # False
-
-# Total missing
-df.isnull().sum().sum()  # 3
+# Check for non-null values
+df.notnull()
 ```
 
-### Removing Missing Data
+### Methods to Handle Missing Data
 
-**dropna() Method:**
+| Method | When to Use | Example |
+|--------|-------------|---------|
+| **Forward Fill (ffill)** | Time-series data | Stock prices, temperature |
+| **Backward Fill (bfill)** | Time-series with future data | Forecasting models |
+| **Mean/Median Fill** | Numerical continuous data | Age, income, test scores |
+| **Mode Fill** | Categorical data | Gender, city, product category |
+| **Drop Rows** | When missing data is minimal (<5%) | Small datasets |
+| **Drop Columns** | When column has too many missing (>50%) | Irrelevant features |
 
+**Code Examples:**
 ```python
-# Drop rows with ANY NaN
-df.dropna()
-# Output: Empty DataFrame (all rows have NaN)
-
-# Drop columns with ANY NaN
-df.dropna(axis=1)
-# Output: Empty DataFrame
-
-# Drop rows with ALL NaN
-df.dropna(how='all')
-# Output: Original df (no row has all NaN)
-
-# Keep rows with ≥2 valid values
-df.dropna(thresh=2)
-# Output: All rows (each has 2 valid values)
-
-# Drop only specific columns
-df.dropna(subset=['A', 'B'])
-```
-
-### Filling Missing Data
-
-**fillna() Method:**
-
-```python
-# Replace with scalar
+# Fill with constant value
 df.fillna(0)
-# Output: All NaN replaced with 0
 
-# Replace with mean
-df['A'].fillna(df['A'].mean())
-# Output: NaN replaced with mean of A
+# Forward fill
+df.fillna(method='ffill')  # or df.fillna(method='pad')
 
-# Replace with different values per column
-df.fillna({'A': 0, 'B': 1, 'C': 2})
+# Backward fill
+df.fillna(method='bfill')  # or df.fillna(method='backfill')
 
-# Forward fill (use previous value)
-df.fillna(method='ffill')
-# Output:
-#      A    B    C
-# 0  1.0  NaN  7.0
-# 1  1.0  5.0  8.0
-# 2  3.0  6.0  8.0
+# Fill with column mean/median
+df.fillna(df.mean())
+df.fillna(df.median())
 
-# Backward fill (use next value)
-df.fillna(method='bfill')
-# Output:
-#      A    B    C
-# 0  1.0  5.0  7.0
-# 1  3.0  5.0  8.0
-# 2  3.0  6.0  8.0
+# Drop rows with NaN
+df.dropna()                    # Drop any row with NaN
+df.dropna(how='all')           # Drop only if ALL values are NaN
+df.dropna(subset=['A'])        # Drop only if NaN in specific column
 
-# Limit filling
-df.fillna(method='ffill', limit=1)
+# Drop columns with NaN
+df.dropna(axis=1)
 ```
 
-### Interpolation
-
-**For numerical series:**
+### Interpolation (For Numerical Series)
 
 ```python
 # Linear interpolation
 df['B'].interpolate()
-# Output: [NaN, 5.0, 6.0]
-# NaN at start remains
 
 # Full interpolation
 df.interpolate()
-# Output:
-#      A    B    C
-# 0  1.0  NaN  7.0
-# 1  2.0  5.0  8.0
-# 2  3.0  6.0  8.0
 
 # Different methods
 df.interpolate(method='linear')
@@ -3547,154 +1839,139 @@ df.interpolate(method='time')
 
 ---
 
-## 3.4 HIERARCHICAL INDEXING (MULTIINDEX)
+## 3.9 HIERARCHICAL INDEXING (MULTIINDEX)
 
 ### What is MultiIndex?
 
-**Definition:** A MultiIndex allows you to have **multiple levels** in a row or column index, enabling storage and manipulation of higher-dimensional data in a 2D DataFrame.
+**Definition:** Enables storing and manipulating higher-dimensional data (3D, 4D) within standard 1D Series and 2D DataFrame structures.
 
-**Why Use It:**
-- Represent panel/grouped data naturally
-- Perform partial indexing on any level
-- Enable cross-section selection with .xs()
+**Purpose:**
+- Organize data with multiple levels of categories
+- Efficient grouping and aggregation
 - Reshape data easily
 
-### Creating MultiIndex
-
-**Method 1: From Tuples:**
+### MultiIndexed Series
 
 ```python
 import pandas as pd
+import numpy as np
 
-index = pd.MultiIndex.from_tuples([
-    ('2023', 'Q1'),
-    ('2023', 'Q2'),
-    ('2024', 'Q1'),
-    ('2024', 'Q2')
-], names=['Year', 'Quarter'])
+# Create MultiIndex Series
+index = [
+    ["Maths", "Maths", "Maths", "Science", "Science", "Science"],
+    ["Test1", "Test2", "Test3", "Test1", "Test2", "Test3"]
+]
+data = pd.Series([85, 90, 88, 78, 82, 80], index=index)
 
+print(data)
+# Output:
+# Maths    Test1    85
+#          Test2    90
+#          Test3    88
+# Science  Test1    78
+#          Test2    82
+#          Test3    80
+
+# Access data by outer index
+print(data["Maths"])
+
+# Access specific value
+print(data["Maths"]["Test1"])  # → 85
+
+# Partial slicing
+print(data["Maths":"Science"])
+```
+
+**ASCII Visualization:**
+```
+MultiIndex Series Structure:
+Outer Index (Subject) → Maths
+↓
+Inner Index (Test)   → Test1  Test2  Test3
+↓      ↓      ↓
+Values               →   85     90     88
+```
+
+### Unstack and Stack Operations
+
+```python
+# Unstack: Converts MultiIndex Series to 2D DataFrame
+df = data.unstack()
+print(df)
+# Output:
+#         Test1  Test2  Test3
+# Maths      85     90     88
+# Science    78     82     80
+
+# Stack back to Series
+df.stack()
+```
+
+### MultiIndexed DataFrame
+
+```python
+# Create MultiIndex DataFrame
+arrays = [
+    ['A', 'A', 'B', 'B'],
+    [1, 2, 1, 2]
+]
+index = pd.MultiIndex.from_arrays(arrays, names=['Class', 'Exam'])
 df = pd.DataFrame({
-    'Sales': [100, 120, 130, 150],
-    'Profit': [20, 25, 28, 35]
+    'Python': [85, 90, 78, 82],
+    'DS': [88, 92, 80, 85],
+    'CA': [90, 88, 85, 87]
 }, index=index)
 
 print(df)
 # Output:
-#               Sales  Profit
-# Year Quarter               
-# 2023 Q1          100      20
-#      Q2          120      25
-# 2024 Q1          130      28
-#      Q2          150      35
+#            Python   DS   CA
+# Class Exam
+# A     1        85   88   90
+#       2        90   92   88
+# B     1        78   80   85
+#       2        82   85   87
+
+# Sort by specific level
+df.sort_index(level='Exam')
+
+# Access by outer index
+df.loc['A']
+
+# Access by both indices
+df.loc[('A', 1)]
 ```
 
-**Method 2: From Arrays:**
+### Practical Use Case: Student Exam Scores
 
 ```python
-index = pd.MultiIndex.from_arrays([
-    ['A', 'A', 'B', 'B'],
-    [1, 2, 1, 2]
-], names=['Group', 'Num'])
-```
+# MultiIndex: Outer = Subject, Inner = Test Number
+index = [
+    ["Maths", "Maths", "Science", "Science", "English", "English"],
+    ["Test1", "Test2", "Test1", "Test2", "Test1", "Test2"]
+]
+scores = pd.Series([85, 90, 78, 88, 92, 87], index=index)
 
-**Method 3: From DataFrame:**
+# Access all Maths scores
+print(scores["Maths"])
 
-```python
-df2 = pd.DataFrame({
-    'Year': [2023, 2023, 2024, 2024],
-    'Quarter': ['Q1', 'Q2', 'Q1', 'Q2'],
-    'Sales': [100, 120, 130, 150]
-})
+# Access specific test
+print(scores["Science"]["Test2"])  # → 88
 
-df2.set_index(['Year', 'Quarter'])
-```
+# Convert to DataFrame for easier viewing
+scores_df = scores.unstack()
 
-### Partial Indexing
-
-**Select by first level:**
-
-```python
-# All 2023 rows
-df.loc['2023']
+# Calculate average per subject
+subject_avg = scores.groupby(level=0).mean()
+print(subject_avg)
 # Output:
-#         Sales  Profit
-# Quarter              
-# Q1          100      20
-# Q2          120      25
-```
-
-**Select by multiple levels:**
-
-```python
-# Specific year and quarter
-df.loc[('2023', 'Q1')]
-# Output:
-# Sales     100
-# Profit     20
-# Name: (2023, Q1), dtype: int64
-```
-
-### Cross-Section Selection
-
-**Using .xs() method:**
-
-```python
-# All Q1 rows (across all years)
-df.xs('Q1', level='Quarter')
-# Output:
-#       Sales  Profit
-# Year               
-# 2023    100      20
-# 2024    130      28
-
-# By level number
-df.xs('Q1', level=1)
-```
-
-### Reset and Set Index
-
-```python
-# Flatten MultiIndex to columns
-df.reset_index()
-# Output:
-#    Year Quarter  Sales  Profit
-# 0  2023      Q1    100      20
-# 1  2023      Q2    120      25
-# 2  2024      Q1    130      28
-# 3  2024      Q2    150      35
-
-# Set columns as index
-df2.set_index(['Year', 'Quarter'])
-```
-
-### Stack and Unstack
-
-**stack() - Move column level to row level:**
-
-```python
-df_stacked = df.stack()
-# Moves columns to index
-```
-
-**unstack() - Move row level to column level:**
-
-```python
-# Unstack Quarter level
-df.unstack('Quarter')
-# Output:
-#       Sales      Profit     
-# Quarter    Q1   Q2       Q1  Q2
-# Year                          
-# 2023      100  120       20  25
-# 2024      130  150       28  35
-
-# Unstack by level number
-df.unstack(level=1)
+# English    89.5
+# Maths      87.5
+# Science    83.0
 ```
 
 ---
 
-## 3.5 COMBINING DATASETS
+## 3.10 COMBINING DATASETS
 
 ### Three Ways to Unite DataFrames
 
@@ -3708,161 +1985,90 @@ df.unstack(level=1)
 
 **Purpose:** Stack DataFrames **vertically** (axis=0) or **side-by-side** (axis=1).
 
-**Examples:**
-
 ```python
-df1 = pd.DataFrame({
-    'ID': [1, 2],
-    'Name': ['Alice', 'Bob']
-})
+import pandas as pd
 
-df2 = pd.DataFrame({
-    'ID': [2, 3],
-    'Score': [90, 85]
-})
+# Concatenate Series
+ser1 = pd.Series(['A', 'B', 'C'], index=[1, 2, 3])
+ser2 = pd.Series(['X', 'Y', 'Z'], index=[4, 5, 6])
+result = pd.concat([ser1, ser2])
 
-df3 = pd.DataFrame({
-    'X': [10, 20]
-}, index=[1, 2])
+# Concatenate DataFrames (vertical - axis=0)
+df1 = pd.DataFrame({'Language': ['Python', 'NumPy', 'Pandas']})
+df2 = pd.DataFrame({'Language': ['C', 'C++', 'Java']})
+df = pd.concat([df1, df2])
 
-# Vertical stack (default)
-pd.concat([df1, df2])
-# Output:
-#    ID   Name  Score
-# 0   1  Alice    NaN
-# 1   2    Bob    NaN
-# 0   2    NaN   90.0
-# 1   3    NaN   85.0
-
-# Side-by-side (axis=1)
-pd.concat([df1, df3], axis=1)
-# Output:
-#    ID   Name     X
-# 0   1  Alice  10.0
-# 1   2    Bob  20.0
-
-# Reset index
-pd.concat([df1, df2], ignore_index=True)
-# Output: Index becomes 0,1,2,3
-
-# Add keys for identification
-pd.concat([df1, df2], keys=['First', 'Second'])
+# Concatenate horizontally (axis=1)
+df3 = pd.DataFrame({'A': [1, 2, 3]})
+df4 = pd.DataFrame({'B': [4, 5, 6]})
+df_horizontal = pd.concat([df3, df4], axis=1)
 ```
 
-**Parameters:**
-- `axis`: 0 (rows) or 1 (columns)
-- `ignore_index`: Reset index
-- `keys`: Add hierarchical index
-- `join`: 'outer' (default) or 'inner'
+**Key Parameters:**
+| Parameter | Description |
+|-----------|-------------|
+| `axis` | 0 (rows) or 1 (columns) |
+| `ignore_index` | Reset index |
+| `keys` | Add hierarchical index for identification |
+| `join` | 'outer' (default) or 'inner' |
 
-### 2. pd.merge()
+### 2. Append Method
 
-**Purpose:** SQL-style joins on key columns.
+```python
+# Append one DataFrame to another
+df1 = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})
+df2 = pd.DataFrame({'A': [5, 6], 'B': [7, 8]})
+result = df1.append(df2, ignore_index=True)
+# Output:
+#    A  B
+# 0  1  3
+# 1  2  4
+# 2  5  7
+# 3  6  8
 
-**Types of Joins:**
+# ⚠️ Note: append() is deprecated in newer pandas
+# Use pd.concat() instead
+```
+
+### 3. Merge/Join (SQL-style Joins)
 
 ```python
 df1 = pd.DataFrame({
-    'ID': [1, 2, 3],
-    'Name': ['Alice', 'Bob', 'Carol']
+    'key': ['A', 'B', 'C'],
+    'value1': [1, 2, 3]
 })
-
 df2 = pd.DataFrame({
-    'ID': [2, 3, 4],
-    'Score': [90, 85, 95]
+    'key': ['A', 'B', 'D'],
+    'value2': [4, 5, 6]
 })
 
-# Inner Join (default)
-# Only matching keys
-pd.merge(df1, df2, on='ID')
+# Inner Join (only matching keys)
+pd.merge(df1, df2, on='key', how='inner')
 # Output:
-#    ID   Name  Score
-# 0   2    Bob     90
-# 1   3  Carol     85
+#   key  value1  value2
+# 0   A       1       4
+# 1   B       2       5
 
-# Left Join
-# All from left, matching from right
-pd.merge(df1, df2, on='ID', how='left')
+# Left Join (all from left, matching from right)
+pd.merge(df1, df2, on='key', how='left')
 # Output:
-#    ID   Name  Score
-# 0   1  Alice    NaN
-# 1   2    Bob   90.0
-# 2   3  Carol   85.0
+#   key  value1  value2
+# 0   A       1     4.0
+# 1   B       2     5.0
+# 2   C       3     NaN
 
-# Right Join
-# All from right, matching from left
-pd.merge(df1, df2, on='ID', how='right')
-# Output:
-#    ID   Name  Score
-# 0   2    Bob     90
-# 1   3  Carol     85
-# 2   4    NaN     95
+# Right Join (all from right, matching from left)
+pd.merge(df1, df2, on='key', how='right')
 
-# Outer Join
-# All from both
-pd.merge(df1, df2, on='ID', how='outer')
-# Output:
-#    ID   Name  Score
-# 0   1  Alice    NaN
-# 1   2    Bob   90.0
-# 2   3  Carol   85.0
-# 3   4    NaN   95.0
+# Outer Join (all records from both)
+pd.merge(df1, df2, on='key', how='outer')
 
 # Different column names
-df3 = pd.DataFrame({
-    'EmpID': [2, 3],
-    'Score': [90, 85]
-})
-
-pd.merge(df1, df3, left_on='ID', right_on='EmpID')
-```
-
-**Parameters:**
-- `on`: Column name to join on
-- `left_on`, `right_on`: Different column names
-- `how`: 'inner', 'left', 'right', 'outer'
-- `suffixes`: For duplicate column names
-
-### 3. df.join()
-
-**Purpose:** Join on **index** (default) or column.
-
-**Examples:**
-
-```python
-df1 = pd.DataFrame({
-    'Name': ['Alice', 'Bob', 'Carol']
-}, index=[1, 2, 3])
-
-df2 = pd.DataFrame({
-    'Score': [90, 85, 95]
-}, index=[2, 3, 4])
-
-# Join on index (default)
-df1.join(df2)
-# Output:
-#     Name  Score
-# 1  Alice    NaN
-# 2    Bob   90.0
-# 3  Carol   85.0
-
-# Left join (default)
-df1.join(df2, how='left')
-
-# Inner join
-df1.join(df2, how='inner')
-# Output: Only indices 2, 3
-
-# Outer join
-df1.join(df2, how='outer')
-# Output: All indices 1, 2, 3, 4
-
-# Add suffixes for duplicate columns
-df1.join(df2, lsuffix='_left', rsuffix='_right')
+df3 = pd.DataFrame({'EmpID': [2, 3], 'Score': [90, 85]})
+pd.merge(df1, df3, left_on='key', right_on='EmpID')
 ```
 
 **Comparison:**
-
 ```
 merge()  - More flexible, SQL-like, join on columns
 join()   - Simpler, index-based, shorthand for merge
@@ -3871,11 +2077,9 @@ concat() - Stacking, not relational joining
 
 ---
 
-## 3.6 AGGREGATION AND GROUPING
+## 3.11 AGGREGATION AND GROUPBY
 
-### The GroupBy Pattern
-
-**Split-Apply-Combine:**
+### GroupBy: Split-Apply-Combine Strategy
 
 ```
 1. SPLIT:   Group rows by key
@@ -3883,117 +2087,69 @@ concat() - Stacking, not relational joining
 3. COMBINE: Merge results back
 ```
 
-### Basic GroupBy
+### Basic GroupBy Operations
 
 ```python
+import pandas as pd
+
 df = pd.DataFrame({
-    'Dept': ['HR', 'IT', 'HR', 'IT', 'HR'],
-    'Emp': ['A', 'B', 'C', 'D', 'E'],
-    'Salary': [50, 80, 55, 90, 60],
-    'Yrs': [2, 5, 3, 7, 4]
+    'Dept': ['Sales', 'IT', 'Sales', 'IT', 'HR', 'HR'],
+    'Salary': [50000, 75000, 48000, 82000, 52000, 55000],
+    'Experience': [3, 7, 2, 9, 4, 6]
 })
 
-# Group by single column
-df.groupby('Dept')
+# Group by Department
+grouped = df.groupby('Dept')
 
-# Aggregate single column
-df.groupby('Dept')['Salary'].mean()
+# Sum of salaries per department
+print(grouped['Salary'].sum())
 # Output:
 # Dept
-# HR    55.0
-# IT    85.0
-# Name: Salary, dtype: float64
+# HR     107000
+# IT     157000
+# Sales   98000
+
+# Mean salary per department
+print(grouped['Salary'].mean())
 
 # Multiple aggregations
-df.groupby('Dept')['Salary'].agg(['mean', 'max', 'sum'])
-# Output:
-#       mean  max  sum
-# Dept                
-# HR    55.0   60  165
-# IT    85.0   90  170
-```
-
-### Multiple Aggregations
-
-**Different functions per column:**
-
-```python
-df.groupby('Dept').agg({
-    'Salary': ['mean', 'max', 'sum'],
-    'Yrs': 'mean'
-})
-# Output:
-#       Salary            Yrs
-#         mean max sum  mean
-# Dept                      
-# HR      55.0  60 165   3.0
-# IT      85.0  90 170   6.0
-```
-
-**Named aggregations (pandas >= 0.25):**
-
-```python
-df.groupby('Dept').agg(
-    avg_sal=('Salary', 'mean'),
-    max_sal=('Salary', ' 'max'),
-    min_sal=('Salary', 'min'),
-    total_sal=('Salary', 'sum'),
-    headcount=('Emp', 'count'),
-    avg_yrs=('Yrs', 'mean')
-)
-# Output:
-#       avg_sal  max_sal  min_sal  total_sal  headcount  avg_yrs
-# Dept                                                          
-# HR       55.0       60       50        165          3      3.0
-# IT       85.0       90       80        170          2      6.0
-```
-
-### GroupBy with Multiple Keys
-
-```python
-df2 = pd.DataFrame({
-    'Region': ['North', 'North', 'South', 'South'],
-    'Year': [2023, 2024, 2023, 2024],
-    'Sales': [100, 120, 80, 90]
-})
+print(grouped['Salary'].agg(['mean', 'min', 'max', 'count']))
 
 # Group by multiple columns
-df2.groupby(['Region', 'Year'])['Sales'].sum()
-# Output:
-# Region  Year
-# North   2023    100
-#         2024    120
-# South   2023     80
-#         2024     90
-# Name: Sales, dtype: int64
+df2 = df.copy()
+df2['Year'] = [2022, 2022, 2023, 2023, 2022, 2023]
+print(df2.groupby(['Dept', 'Year'])['Salary'].sum())
 ```
+
+### Common Aggregation Functions
+
+| Function | Description | Example |
+|----------|-------------|---------|
+| `sum()` | Sum of values | `grouped['Salary'].sum()` |
+| `mean()` | Average | `grouped['Salary'].mean()` |
+| `min()` | Minimum value | `grouped['Salary'].min()` |
+| `max()` | Maximum value | `grouped['Salary'].max()` |
+| `count()` | Count non-null values | `grouped['Salary'].count()` |
+| `std()` | Standard deviation | `grouped['Salary'].std()` |
+| `var()` | Variance | `grouped['Salary'].var()` |
+| `first()` | First value in group | `grouped['Salary'].first()` |
+| `last()` | Last value in group | `grouped['Salary'].last()` |
+| `size()` | Total count (including NaN) | `grouped.size()` |
+| `describe()` | Statistical summary | `grouped['Salary'].describe()` |
 
 ### Transform and Filter
 
-**transform() - Return same shape:**
-
 ```python
-# Add group mean to each row
+# transform() - Return same shape
 df['Dept_Avg_Salary'] = df.groupby('Dept')['Salary'].transform('mean')
-# Output:
-#     Name  Salary  Dept_Avg_Salary
-# 0  Alice      50             55.0
-# 1    Bob      80             85.0
-# ...
 
 # Standardize within groups
 df['Salary_Z'] = df.groupby('Dept')['Salary'].transform(
     lambda x: (x - x.mean()) / x.std()
 )
-```
 
-**filter() - Keep/drop groups:**
-
-```python
-# Keep groups with more than 2 employees
+# filter() - Keep/drop groups
 df.groupby('Dept').filter(lambda x: len(x) > 2)
-
-# Keep groups with average salary > 60
 df.groupby('Dept').filter(lambda x: x['Salary'].mean() > 60)
 ```
 
@@ -4004,34 +2160,23 @@ for name, group in df.groupby('Dept'):
     print(f"Department: {name}")
     print(group)
     print()
-# Output:
-# Department: HR
-#   Dept Emp  Salary  Yrs
-# 0   HR   A      50    2
-# 2   HR   C      55    3
-# 4   HR   E      60    4
-#
-# Department: IT
-#   Dept Emp  Salary  Yrs
-# 1   IT   B      80    5
-# 3   IT   D      90    7
 ```
 
 ---
 
-## 3.7 PIVOT TABLES
+## 3.12 PIVOT TABLES
 
 ### What are Pivot Tables?
 
-**Definition:** Reshape and summarize data like Excel pivot tables.
+**Definition:** Reshape and summarize data from column-wise format into 2D tabular format for easy comparison across two dimensions.
 
-**Two Main Functions:**
-1. `pd.pivot_table()` - With aggregation
-2. `df.pivot()` - Without aggregation
+**Purpose:**
+- Cross-tabulation of data
+- Multi-dimensional analysis
+- Summarize large datasets
 
-### pd.pivot_table()
+### pd.pivot_table() - Basic Syntax
 
-**Basic Syntax:**
 ```python
 pd.pivot_table(df, 
                values='column_to_summarize',
@@ -4041,130 +2186,107 @@ pd.pivot_table(df,
 ```
 
 **Example:**
-
 ```python
-df = pd.DataFrame({
-    'Region': ['East', 'East', 'West', 'West', 'East'],
-    'Product': ['A', 'B', 'A', 'B', 'A'],
-    'Quarter': ['Q1', 'Q1', 'Q1', 'Q1', 'Q2'],
-    'Sales': [100, 200, 150, 250, 120]
+import pandas as pd
+
+sales_data = pd.DataFrame({
+    'Region': ['North', 'North', 'South', 'South', 'East', 'East'],
+    'Product': ['A', 'B', 'A', 'B', 'A', 'B'],
+    'Year': [2022, 2022, 2022, 2022, 2023, 2023],
+    'Sales': [100, 200, 150, 250, 180, 220]
 })
 
 # Basic pivot table
-pd.pivot_table(df,
-               values='Sales',
-               index='Region',
-               columns='Product',
-               aggfunc='sum')
+pivot = pd.pivot_table(
+    sales_data,
+    index='Region',           # Rows
+    columns='Product',        # Columns
+    values='Sales',           # Values to aggregate
+    aggfunc='sum'             # Aggregation function
+)
+print(pivot)
 # Output:
 # Product    A    B
-# Region           
-# East     220  200
-# West     150  250
+# Region
+# East     180  220
+# North    100  200
+# South    150  250
 ```
 
-**With Totals (Margins):**
+### Advanced Pivot Tables
 
+**With Totals (Margins):**
 ```python
-pd.pivot_table(df,
-               values='Sales',
-               index='Region',
-               columns='Product',
-               aggfunc='sum',
-               fill_value=0,
-               margins=True,
-               margins_name='Total')
-# Output:
-# Product    A    B  Total
-# Region                  
-# East     220  200    420
-# West     150  250    400
-# Total    370  450    820
+pivot_with_totals = pd.pivot_table(
+    sales_data,
+    index='Region',
+    columns='Product',
+    values='Sales',
+    aggfunc='sum',
+    margins=True,           # Add row/column totals
+    margins_name='Total'    # Name for totals
+)
 ```
 
 **Multiple Aggregations:**
-
 ```python
-pd.pivot_table(df,
+pd.pivot_table(sales_data,
+               index=['Region', 'Year'],
                values='Sales',
-               index=['Region', 'Quarter'],
-               columns='Product',
-               aggfunc=['mean', 'sum'])
-# Output: Multi-level columns
-#        mean       sum      
-# Product   A    B    A    B
-# Region Quarter            
-# East   Q1   100  200  100  200
-#        Q2   120    0  120    0
-# West   Q1   150  250  150  250
+               aggfunc=['sum', 'mean'])
 ```
 
 **Multiple Values:**
-
 ```python
-pd.pivot_table(df,
+pd.pivot_table(sales_data,
                values=['Sales', 'Quantity'],
                index='Region',
                columns='Product',
                aggfunc='sum')
 ```
 
-**Custom Aggregation:**
+### df.pivot() - Simple Reshape (No Aggregation)
 
 ```python
-pd.pivot_table(df,
-               values='Sales',
-               index='Region',
-               aggfunc=lambda x: x.max() - x.min())
-```
+# Purpose: Simple reshape WITHOUT aggregation
+# Requirements: Unique index-column combinations
 
-### df.pivot()
-
-**Purpose:** Simple reshape **without aggregation**.
-
-**Requirements:**
-- Unique index-column combinations
-- Raises error on duplicates
-
-**Example:**
-
-```python
 df.pivot(index='Region',
          columns='Product',
          values='Sales')
-# Output:
-# Product    A      B
-# Region             
-# East     100  200.0
-# West     150  250.0
-```
 
-**Error with duplicates:**
-
-```python
-# If East-A appears twice, this fails:
+# ⚠️ Error with duplicates:
 # ValueError: Index contains duplicate entries
-# Use pivot_table instead!
+# → Use pivot_table instead!
 ```
 
 ### Pivot Table Parameters
 
-```
-values     - Column(s) to aggregate
-index      - Row grouping
-columns    - Column grouping
-aggfunc    - Aggregation function(s)
-           - 'mean', 'sum', 'count', 'min', 'max'
-           - List: ['mean', 'sum']
-           - Dict: {'Sales': 'sum', 'Qty': 'mean'}
-fill_value - Replace NaN with value
-margins    - Add row/column totals (True/False)
-margins_name - Label for totals ('All', 'Total')
-```
+| Parameter | Description |
+|-----------|-------------|
+| `values` | Column(s) to aggregate |
+| `index` | Row grouping |
+| `columns` | Column grouping |
+| `aggfunc` | Aggregation function(s): 'mean', 'sum', 'count', etc. |
+| `fill_value` | Replace NaN with value |
+| `margins` | Add row/column totals (True/False) |
+| `margins_name` | Label for totals ('All', 'Total') |
+
+### Comparison: GroupBy vs Pivot Table
+
+| Feature | GroupBy | Pivot Table |
+|---------|---------|-------------|
+| **Output Shape** | 1D Series or DataFrame | 2D cross-tabular format |
+| **Best For** | Single-dimension grouping | Multi-dimensional comparison |
+| **Flexibility** | More flexible aggregations | Easier visualization |
+| **Syntax** | `df.groupby('col').agg()` | `pd.pivot_table()` |
+| **Example** | Sales by Region | Sales by Region × Product |
 
 ---
 
-## 3.8 IMPORTING MATPLOTLIB
+# 📖 MODULE 4: DATA VISUALIZATION
+
+## 4.1 IMPORTING MATPLOTLIB
 
 ### Introduction to Matplotlib
 
@@ -4188,11 +2310,11 @@ plt.style.use('seaborn-v0_8')
 plt.style.use('ggplot')
 plt.style.use('fivethirtyeight')
 
-# Available styles
+# View available styles
 print(plt.style.available)
 ```
 
-**Basic Plot Structure:**
+### Basic Plot Structure
 
 ```python
 # Create figure and axes
@@ -4210,8 +2332,7 @@ ax.set_title('Title')
 plt.show()
 ```
 
-**Figure and Axes:**
-
+**Figure and Axes Hierarchy:**
 ```
 Figure
 └── The entire window/figure
@@ -4224,16 +2345,16 @@ Figure
 
 ---
 
-## 3.9 LINE PLOTS
+## 4.2 LINE PLOTS
 
 ### What is a Line Plot?
 
 **Definition:** A line plot connects data points with straight lines.
 
 **Best For:**
-- Showing trends over time
-- Continuous variables
-- Time series data
+- ✅ Showing trends over time
+- ✅ Continuous variables
+- ✅ Time series data
 
 ### Basic Line Plot
 
@@ -4268,7 +2389,6 @@ plt.plot(x, y,
 ```
 
 **Line Styles:**
-
 ```
 '-'   - Solid (default)
 '--'  - Dashed
@@ -4277,16 +2397,10 @@ plt.plot(x, y,
 ```
 
 **Marker Styles:**
-
 ```
-'o'   - Circle
-'s'   - Square
-'^'   - Triangle up
-'v'   - Triangle down
-'D'   - Diamond
-'*'   - Star
-'+'   - Plus
-'x'   - X
+'o'   - Circle    's'   - Square    '^'   - Triangle up
+'v'   - Triangle down  'D'   - Diamond   '*'   - Star
+'+'   - Plus     'x'   - X
 ```
 
 ### Multiple Lines
@@ -4298,22 +2412,13 @@ plt.figure(figsize=(8, 4))
 
 # Plot multiple lines
 plt.plot(x, np.sin(x),
-         color='blue',
-         linestyle='-',
-         linewidth=2,
-         label='sin(x)')
+         color='blue', linestyle='-', linewidth=2, label='sin(x)')
 
 plt.plot(x, np.cos(x),
-         color='red',
-         linestyle='--',
-         linewidth=2,
-         label='cos(x)')
+         color='red', linestyle='--', linewidth=2, label='cos(x)')
 
 plt.plot(x, np.sin(x)*np.exp(-x/10),
-         color='green',
-         linewidth=2,
-         linestyle=':',
-         label='damped sin')
+         color='green', linewidth=2, linestyle=':', label='damped sin')
 
 # Add labels and legend
 plt.title('Line Plot Example')
@@ -4325,46 +2430,28 @@ plt.tight_layout()
 plt.show()
 ```
 
-### Customizing Appearance
+### Saving Figures
 
 ```python
-# Set figure size
-plt.figure(figsize=(10, 6))
-
-# Plot with custom style
-plt.plot(x, y,
-         color='#2563EB',     # Hex color
-         linestyle='-',
-         linewidth=2.5,
-         marker='o',
-         markersize=6,
-         markerfacecolor='red',
-         markeredgecolor='black',
-         markeredgewidth=1,
-         alpha=0.8)           # Transparency
-
-# Customize grid
-plt.grid(True,
-         linestyle='--',
-         alpha=0.5)
-
-# Tight layout
-plt.tight_layout()
+plt.savefig('myplot.png',
+            dpi=300,              # High resolution
+            transparent=True,     # Transparent background
+            bbox_inches='tight')  # Remove extra whitespace
 ```
 
 ---
 
-## 3.10 SCATTER PLOTS
+## 4.3 SCATTER PLOTS
 
 ### What is a Scatter Plot?
 
 **Definition:** Shows correlation between two numerical variables.
 
 **Characteristics:**
-- Each point = one observation
-- X-axis = Independent variable
-- Y-axis = Dependent variable
-- Reveals relationships, clusters, outliers
+- ✅ Each point = one observation
+- ✅ X-axis = Independent variable
+- ✅ Y-axis = Dependent variable
+- ✅ Reveals relationships, clusters, outliers
 
 ### Basic Scatter Plot
 
@@ -4412,12 +2499,8 @@ for i, (grp, col) in enumerate(zip(groups, colors)):
     y = np.random.randn(60) + i
     
     ax.scatter(x, y,
-               alpha=0.75,
-               s=50,
-               color=col,
-               label=grp,
-               edgecolors='white',
-               lw=0.5)
+               alpha=0.75, s=50, color=col,
+               label=grp, edgecolors='white', lw=0.5)
 
 ax.set_title('Scatter Plot — Groups')
 ax.legend()
@@ -4437,10 +2520,8 @@ colors = np.random.rand(100)
 sizes = 1000 * np.random.rand(100)
 
 plt.scatter(x, y,
-            c=colors,
-            s=sizes,
-            alpha=0.5,
-            cmap='viridis')
+            c=colors, s=sizes,
+            alpha=0.5, cmap='viridis')
 
 plt.colorbar()  # Show color scale
 plt.show()
@@ -4469,21 +2550,19 @@ plt.show()
 
 ---
 
-## 3.11 VISUALIZING ERRORS
+## 4.4 VISUALIZING ERRORS
 
 ### Why Show Errors?
 
 **Purpose:** Display uncertainty in measurements or predictions.
 
 **Common Uses:**
-- Experimental error bars
-- Confidence intervals
-- Standard deviation
-- Standard error
+- ✅ Experimental error bars
+- ✅ Confidence intervals
+- ✅ Standard deviation
+- ✅ Standard error
 
 ### plt.errorbar()
-
-**Basic Usage:**
 
 ```python
 import matplotlib.pyplot as plt
@@ -4532,16 +2611,7 @@ plt.errorbar(x, y,
              fmt='-o')
 ```
 
-### fill_between()
-
-**Purpose:** Shade region between two y-curves.
-
-**Perfect for:**
-- Confidence intervals
-- Prediction bands
-- Uncertainty regions
-
-**Example:**
+### fill_between() - Confidence Bands
 
 ```python
 x = np.linspace(0, 2*np.pi, 100)
@@ -4562,42 +2632,18 @@ plt.legend()
 plt.show()
 ```
 
-### Multiple Bands
-
-```python
-x = np.linspace(0, 10, 100)
-y = np.exp(-x/10) * np.sin(x)
-
-plt.plot(x, y, 'k-', linewidth=2)
-
-# 68% confidence
-plt.fill_between(x, y-0.1, y+0.1,
-                 alpha=0.3, color='blue',
-                 label='68% CI')
-
-# 95% confidence
-plt.fill_between(x, y-0.2, y+0.2,
-                 alpha=0.2, color='blue',
-                 label='95% CI')
-
-plt.legend()
-plt.show()
-```
-
 ---
 
-## 3.12 DENSITY AND CONTOUR PLOTS
+## 4.5 DENSITY AND CONTOUR PLOTS
 
 ### Kernel Density Estimation (KDE)
 
 **Definition:** Smoothed probability density estimate.
 
 **Purpose:**
-- Show distribution shape
-- Better than histogram for continuous data
-- No binning artifacts
-
-**Example:**
+- ✅ Show distribution shape
+- ✅ Better than histogram for continuous data
+- ✅ No binning artifacts
 
 ```python
 from scipy.stats import gaussian_kde
@@ -4612,15 +2658,8 @@ kde = gaussian_kde(data)
 x = np.linspace(-4, 4, 200)
 
 # Plot histogram and KDE
-plt.hist(data,
-         bins=25,
-         density=True,
-         alpha=0.4,
-         label='Histogram')
-
-plt.plot(x, kde(x),
-         lw=2.5,
-         label='KDE')
+plt.hist(data, bins=25, density=True, alpha=0.4, label='Histogram')
+plt.plot(x, kde(x), lw=2.5, label='KDE')
 
 plt.legend()
 plt.title('Density Estimation')
@@ -4645,30 +2684,41 @@ plt.legend()
 
 **Purpose:** Show 3D data in 2D using contour lines.
 
-**Types:**
-- `contour()` - Line-only contours
-- `contourf()` - Filled contours
-
-**Example:**
-
 ```python
-# Create grid
-xx = yy = np.linspace(-3, 3, 80)
-X, Y = np.meshgrid(xx, yy)
-Z = np.exp(-(X**2 + Y**2)/2)
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x, y):
+    return np.sin(x)**10 + np.cos(10 + y * x) * np.cos(x)
+
+x = np.linspace(0, 5, 50)
+y = np.linspace(0, 5, 40)
+X, Y = np.meshgrid(x, y)  # creates 2D coordinate arrays
+Z = f(X, Y)
+
+plt.style.use('seaborn-white')
 
 # Line contour
-plt.contour(X, Y, Z, levels=14)
-plt.title('Contour Plot')
-plt.show()
+plt.contour(X, Y, Z, colors='black')
 
 # Filled contour
-plt.contourf(X, Y, Z,
-             levels=14,
-             cmap='viridis')
-plt.colorbar()
-plt.title('Filled Contour')
+plt.contourf(X, Y, Z)
+
 plt.show()
+```
+
+**ASCII Visualization:**
+```
+Contour Plot (Topographic Map):
+Y
+↑
+┌───┼───┐
+│ ╱ ╱ ╱ │  ← Contour lines
+│╱ ╱ ╱ ╱│     (equal values)
+│╲ ╲ ╲ ╲│
+│ ╲ ╲ ╲ │
+└───┼───┘
+→ X
 ```
 
 ### Parameters
@@ -4687,34 +2737,18 @@ plt.contour(X, Y, Z,
             alpha=0.5)
 ```
 
-### 2D Density Plot
-
-```python
-# Generate correlated data
-x = np.random.randn(1000)
-y = x * 0.5 + np.random.randn(1000) * 0.5
-
-# Create 2D histogram
-plt.hist2d(x, y,
-           bins=30,
-           cmap='Blues')
-plt.colorbar()
-plt.title('2D Density')
-plt.show()
-```
-
 ---
 
-## 3.13 HISTOGRAMS
+## 4.6 HISTOGRAMS
 
 ### What is a Histogram?
 
 **Definition:** Shows frequency distribution of a single variable.
 
 **Characteristics:**
-- Contiguous (touching) bars
-- X-axis = Value ranges (bins)
-- Y-axis = Frequency or density
+- ✅ Contiguous (touching) bars
+- ✅ X-axis = Value ranges (bins)
+- ✅ Y-axis = Frequency or density
 
 ### Basic Histogram
 
@@ -4758,18 +2792,12 @@ scores_A = np.random.normal(60, 10, 300)
 scores_B = np.random.normal(75, 8, 300)
 
 plt.hist(scores_A,
-         bins=20,
-         alpha=0.65,
-         color='blue',
-         label='Class A',
-         edgecolor='white')
+         bins=20, alpha=0.65, color='blue',
+         label='Class A', edgecolor='white')
 
 plt.hist(scores_B,
-         bins=20,
-         alpha=0.65,
-         color='red',
-         label='Class B',
-         edgecolor='white')
+         bins=20, alpha=0.65, color='red',
+         label='Class B', edgecolor='white')
 
 plt.xlabel('Score')
 plt.ylabel('Frequency')
@@ -4785,9 +2813,7 @@ plt.show()
 x = np.random.randn(1000)
 y = np.random.randn(1000)
 
-plt.hist2d(x, y,
-           bins=30,
-           cmap='Blues')
+plt.hist2d(x, y, bins=30, cmap='Blues')
 
 plt.colorbar(label='Count')
 plt.xlabel('X')
@@ -4802,10 +2828,7 @@ plt.show()
 # Define custom bin edges
 bins = [0, 10, 20, 30, 50, 100]
 
-plt.hist(data,
-         bins=bins,
-         edgecolor='black')
-
+plt.hist(data, bins=bins, edgecolor='black')
 plt.xticks(bins)
 plt.show()
 ```
@@ -4813,10 +2836,7 @@ plt.show()
 ### Normalized Histogram
 
 ```python
-plt.hist(data,
-         bins=20,
-         density=True,    # Area = 1
-         alpha=0.6)
+plt.hist(data, bins=20, density=True, alpha=0.6)
 
 # Overlay normal distribution
 from scipy.stats import norm
@@ -4827,24 +2847,17 @@ plt.plot(x, norm.pdf(x, np.mean(data), np.std(data)),
 
 ---
 
-## 3.14 LEGENDS
+## 4.7 LEGENDS, COLORS & CUSTOMIZATION
 
-### What are Legends?
-
-**Purpose:** Identify different elements in a plot.
-
-### Basic Legend
+### Legends
 
 ```python
+# Basic legend
 plt.plot(x, y1, label='Line 1')
 plt.plot(x, y2, label='Line 2')
 plt.legend()
-plt.show()
-```
 
-### Legend Parameters
-
-```python
+# Legend parameters
 plt.legend(loc='best',        # Location
            fontsize=12,       # Font size
            framealpha=0.9,    # Frame transparency
@@ -4855,179 +2868,78 @@ plt.legend(loc='best',        # Location
            frameon=True)     # Show frame
 ```
 
-### Location Options
-
+**Location Options:**
 ```
-'best'          - 0 (automatic)
-'upper right'   - 1
-'upper left'    - 2
-'lower left'    - 3
-'lower right'   - 4
-'right'         - 5
-'center left'   - 6
-'center right'  - 7
-'lower center'  - 8
-'upper center'  - 9
-'center'        - 10
+'best'=0, 'upper right'=1, 'upper left'=2, 'lower left'=3,
+'lower right'=4, 'right'=5, 'center left'=6, 'center right'=7,
+'lower center'=8, 'upper center'=9, 'center'=10
 ```
-
-### Custom Legend
-
-```python
-import matplotlib.patches as mpatches
-
-# Create custom patches
-patch1 = mpatches.Patch(color='blue', label='Category A')
-patch2 = mpatches.Patch(color='red', label='Category B')
-patch3 = mpatches.Patch(color='green', label='Category C')
-
-plt.legend(handles=[patch1, patch2, patch3],
-           loc='upper right',
-           fancybox=True,
-           shadow=True)
-```
-
-### Legend Outside Plot
-
-```python
-plt.plot(x, y, label='Data')
-
-# Place legend outside
-plt.legend(bbox_to_anchor=(1.05, 1),
-           loc='upper left',
-           borderaxespad=0)
-
-plt.tight_layout()
-plt.show()
-```
-
-### Multiple Legends
-
-```python
-line1, = plt.plot(x, y1, 'b-', label='Line 1')
-line2, = plt.plot(x, y2, 'r-', label='Line 2')
-
-# First legend
-leg1 = plt.legend([line1, line2],
-                  ['Line 1', 'Line 2'],
-                  loc='upper left')
-
-# Add second legend
-plt.gca().add_artist(leg1)
-
-plt.legend([line1], ['Special'], loc='lower right')
-```
-
----
-
-## 3.15 COLORS
 
 ### Color Specifications
 
 **Named Colors:**
-
 ```python
 plt.plot(x, y, color='red')
 plt.plot(x, y, color='blue')
 plt.plot(x, y, color='green')
-plt.plot(x, y, color='orange')
-plt.plot(x, y, color='purple')
-```
-
-**Common Color Names:**
-```
-'red', 'blue', 'green', 'yellow', 'orange', 'purple'
-'pink', 'brown', 'black', 'white', 'gray', 'cyan'
-'magenta', 'lime', 'navy', 'maroon', 'olive', 'teal'
 ```
 
 **Hex Colors:**
-
 ```python
 plt.plot(x, y, color='#2563EB')   # Blue
 plt.plot(x, y, color='#DC2626')   # Red
-plt.plot(x, y, color='#059669')   # Green
 ```
 
 **RGB/RGBA:**
-
 ```python
-# RGB (0-1)
-plt.plot(x, y, color=(0.3, 0.6, 0.9))
-
-# RGBA (with alpha)
-plt.plot(x, y, color=(0.3, 0.6, 0.9, 0.7))
+plt.plot(x, y, color=(0.3, 0.6, 0.9))      # RGB (0-1)
+plt.plot(x, y, color=(0.3, 0.6, 0.9, 0.7)) # RGBA (with alpha)
 ```
 
 ### Colormaps
 
-**Sequential (light to dark):**
-
-```python
-'viridis'    - Default, perceptually uniform
-'plasma'     - Purple to yellow
-'inferno'    - Black to yellow
-'magma'      - Black to pink
-'Blues'      - White to blue
-'Greens'     - White to green
-'Reds'       - White to red
-```
-
-**Diverging (two colors):**
-
-```python
-'coolwarm'   - Blue to red
-'Seismic'    - Blue to red (earthquake)
-'RdBu'       - Red to blue
-'PiYG'       - Pink to green
-```
-
-**Qualitative (distinct):**
-
-```python
-'Set1'       - 9 distinct colors
-'Set2'       - 8 distinct colors
-'Set3'       - 12 distinct colors
-'tab10'      - 10 colors
-'tab20'      - 20 colors
-```
-
-### Using Colormaps
+| Type | Examples | Use Case |
+|------|----------|----------|
+| **Sequential** | 'viridis', 'plasma', 'inferno', 'Blues' | Light to dark progression |
+| **Diverging** | 'coolwarm', 'Seismic', 'RdBu' | Two-color comparison |
+| **Qualitative** | 'Set1', 'Set2', 'tab10', 'tab20' | Distinct categories |
 
 ```python
 # Scatter plot with colormap
-plt.scatter(x, y,
-            c=values,
-            cmap='viridis')
-
+plt.scatter(x, y, c=values, cmap='viridis')
 plt.colorbar(label='Value')
 
 # Heatmap
-plt.imshow(data,
-           cmap='plasma',
-           aspect='auto')
-
+plt.imshow(data, cmap='plasma', aspect='auto')
 plt.colorbar()
 ```
 
-### Custom Color Cycle
+### Customization
 
 ```python
-# Set custom colors for all plots
-plt.rcParams['axes.prop_cycle'] = plt.cycler(
-    color=['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']
-)
+# rcParams - Global Settings
+import matplotlib as mpl
+plt.rcParams['font.size'] = 14
+plt.rcParams['axes.facecolor'] = 'white'
+plt.rcParams['figure.figsize'] = (10, 6)
+
+# Spines Customization
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['bottom'].set_position('zero')
+
+# Ticks Customization
+plt.xticks([0, 2, 4, 6, 8, 10])
+plt.xticks([0, 1, 2], ['A', 'B', 'C'])
+ax.tick_params(labelsize=12, length=6, width=2)
+plt.xticks(rotation=45, ha='right')
 ```
 
 ---
 
-## 3.16 SUBPLOTS
+## 4.8 SUBPLOTS & ANNOTATIONS
 
-### What are Subplots?
-
-**Purpose:** Multiple plots in one figure.
-
-### Basic Subplots
+### Multiple Subplots
 
 ```python
 # Create 2x2 grid
@@ -5050,6 +2962,16 @@ plt.tight_layout()
 plt.show()
 ```
 
+**ASCII Visualization:**
+```
+Subplot Grid (2 rows × 3 cols):
+┌─────┬─────┬─────┐
+│  1  │  2  │  3  │
+├──────────┼─────┤
+│  4  │  5  │  6  │
+└─────┴─────┴─────┘
+```
+
 ### Parameters
 
 ```python
@@ -5061,111 +2983,16 @@ plt.subplots(nrows=2,
              squeeze=False)    # Keep 2D array
 ```
 
-### Sharing Axes
+### Text and Annotation
 
 ```python
-# Share x-axis
-fig, axes = plt.subplots(2, 1, sharex=True)
+# ax.text() - Place text at coordinates
+ax.text(0.2, -0.9, 'sin(x) function',
+        fontsize=9, style='italic',
+        bbox=dict(boxstyle='round', facecolor='lightyellow'))
 
-axes[0].plot(x, y1)
-axes[1].plot(x, y2)
-# Both have same x-range
-```
-
-### GridSpec - Flexible Layouts
-
-```python
-from matplotlib.gridspec import GridSpec
-
-fig = plt.figure(figsize=(10, 6))
-
-# Create gridspec
-gs = GridSpec(2, 3, figure=fig,
-              hspace=0.4,
-              wspace=0.3)
-
-# Add subplots with different sizes
-ax1 = fig.add_subplot(gs[0, :2])  # Wide plot
-ax2 = fig.add_subplot(gs[0, 2])   # Narrow
-ax3 = fig.add_subplot(gs[1, :])   # Full width
-
-ax1.plot(x, y)
-ax2.scatter(x, y)
-ax3.hist(data)
-
-plt.show()
-```
-
-### Complex Layout
-
-```python
-fig = plt.figure(figsize=(12, 8))
-gs = fig.add_gridspec(3, 3, hspace=0.3, wspace=0.3)
-
-# Large plot on left
-ax_main = fig.add_subplot(gs[:, 0:2])
-
-# Small plots on right
-ax_top = fig.add_subplot(gs[0, 2])
-ax_mid = fig.add_subplot(gs[1, 2])
-ax_bot = fig.add_subplot(gs[2, 2])
-
-ax_main.plot(x, y)
-ax_top.hist(data1)
-ax_mid.hist(data2)
-ax_bot.scatter(x, y)
-```
-
----
-
-## 3.17 TEXT AND ANNOTATION
-
-### Adding Text
-
-**ax.text() - Place text at coordinates:**
-
-```python
-fig, ax = plt.subplots()
-ax.plot(x, y)
-
-# Add text
-ax.text(0.2, -0.9,
-        'sin(x) function',
-        fontsize=9,
-        style='italic',
-        bbox=dict(boxstyle='round',
-                  facecolor='lightyellow'))
-
-plt.show()
-```
-
-### Parameters
-
-```python
-ax.text(x, y,
-        'Text content',
-        fontsize=12,
-        fontweight='bold',
-        color='red',
-        ha='center',      # Horizontal alignment
-        va='center',      # Vertical alignment
-        rotation=45,      # Rotation degrees
-        bbox=dict(        # Text box
-            boxstyle='round',
-            facecolor='wheat',
-            alpha=0.5))
-```
-
-### ax.annotate() - Text with Arrow
-
-```python
-fig, ax = plt.subplots()
-ax.plot(x, np.sin(x))
-
-# Find maximum
+# ax.annotate() - Text with Arrow
 idx = np.argmax(np.sin(x))
-
-# Annotate
 ax.annotate('Maximum',
             xy=(x[idx], np.sin(x[idx])),    # Point to annotate
             xytext=(x[idx]+0.8, 0.6),       # Text position
@@ -5174,148 +3001,20 @@ ax.annotate('Maximum',
                 shrink=0.05,
                 width=2,
                 headwidth=8))
-
-plt.show()
-```
-
-### Arrow Styles
-
-```python
-arrowprops=dict(
-    arrowstyle='->',        # Arrow type
-    connectionstyle='arc3', # Connection style
-    color='red',
-    lw=2)
 ```
 
 **Arrow Styles:**
 ```
-'-'   - Simple line
-'->'  - Simple arrow
-'-['  - Bracket
-'-|>' - Filled arrow
+'-'   - Simple line    '->'  - Simple arrow
+'-['  - Bracket        '-|>' - Filled arrow
 'fancy' - Fancy arrow
 ```
 
-### Multiple Annotations
-
-```python
-fig, ax = plt.subplots()
-ax.plot(x, y)
-
-# Add multiple annotations
-annotations = [
-    (x[10], y[10], 'Point A'),
-    (x[50], y[50], 'Point B'),
-    (x[90], y[90], 'Point C')
-]
-
-for x_val, y_val, label in annotations:
-    ax.annotate(label,
-                xy=(x_val, y_val),
-                xytext=(x_val+0.5, y_val+0.1),
-                arrowprops=dict(arrowstyle='->'))
-```
-
 ---
 
-## 3.18 CUSTOMIZATION
-
-### plt.style
-
-**Predefined Styles:**
-
-```python
-plt.style.use('seaborn-v0_8')
-plt.style.use('ggplot')
-plt.style.use('fivethirtyeight')
-plt.style.use('dark_background')
-plt.style.use('classic')
-
-# View available styles
-print(plt.style.available)
-```
-
-### rcParams - Global Settings
-
-```python
-import matplotlib as mpl
-
-# Set global parameters
-plt.rcParams['font.size'] = 14
-plt.rcParams['axes.facecolor'] = 'white'
-plt.rcParams['figure.figsize'] = (10, 6)
-plt.rcParams['lines.linewidth'] = 2
-plt.rcParams['axes.grid'] = True
-plt.rcParams['legend.fontsize'] = 12
-
-# Save settings
-mpl.rcParams.update(mpl.rcParamsDefault)  # Reset
-```
-
-### Spines Customization
-
-```python
-fig, ax = plt.subplots()
-ax.plot(x, y)
-
-# Remove top and right spines
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-
-# Move bottom and left to center
-ax.spines['bottom'].set_position('zero')
-ax.spines['left'].set_position('zero')
-
-# Change color
-ax.spines['left'].set_color('gray')
-ax.spines['bottom'].set_color('gray')
-```
-
-### Ticks Customization
-
-```python
-# Set tick locations
-plt.xticks([0, 2, 4, 6, 8, 10])
-plt.yticks([-1, -0.5, 0, 0.5, 1])
-
-# Set tick labels
-plt.xticks([0, 1, 2], ['A', 'B', 'C'])
-
-# Customize appearance
-ax.tick_params(labelsize=12,
-               length=6,
-               width=2,
-               color='red',
-               labelcolor='blue')
-
-# Rotate labels
-plt.xticks(rotation=45, ha='right')
-```
-
-### Figure Customization
-
-```python
-fig, ax = plt.subplots()
-
-# Set figure properties
-fig.patch.set_facecolor('lightgray')
-fig.patch.set_alpha(0.5)
-
-# Set axes properties
-ax.set_facecolor('white')
-ax.set_xlim(0, 10)
-ax.set_ylim(-1, 1)
-ax.set_aspect('equal')  # Equal scaling
-```
-
----
-
-## 3.19 THREE-DIMENSIONAL PLOTTING
+## 4.9 THREE-DIMENSIONAL PLOTTING
 
 ### Introduction to 3D Plots
-
-**Module:**
 
 ```python
 from mpl_toolkits.mplot3d import Axes3D
@@ -5356,21 +3055,6 @@ ax.plot_surface(X, Y, Z,
                 antialiased=True)  # Smoothing
 ```
 
-### 3D Wireframe
-
-```python
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-
-ax.plot_wireframe(X, Y, Z,
-                  rstride=2,
-                  cstride=2,
-                  color='blue',
-                  linewidth=0.5)
-
-plt.show()
-```
-
 ### 3D Scatter Plot
 
 ```python
@@ -5384,11 +3068,8 @@ zs = np.random.rand(100)
 colors = np.random.rand(100)
 
 ax.scatter(xs, ys, zs,
-           c=colors,
-           cmap='viridis',
-           marker='o',
-           s=50,
-           alpha=0.6)
+           c=colors, cmap='viridis',
+           marker='o', s=50, alpha=0.6)
 
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
@@ -5407,33 +3088,31 @@ ax.view_init(elev=30,    # Elevation
 # Click and drag in interactive mode
 ```
 
-### Multiple 3D Plots
-
-```python
-fig = plt.figure(figsize=(12, 4))
-
-# Plot 1
-ax1 = fig.add_subplot(131, projection='3d')
-ax1.plot_surface(X, Y, Z, cmap='viridis')
-
-# Plot 2
-ax2 = fig.add_subplot(132, projection='3d')
-ax2.plot_wireframe(X, Y, Z, color='red')
-
-# Plot 3
-ax3 = fig.add_subplot(133, projection='3d')
-ax3.scatter(xs, ys, zs, c=zs, cmap='plasma')
-
-plt.tight_layout()
+**ASCII Visualization:**
+```
+3D Scatter Plot:
+Z
+↑
+/|\
+/ | \
+/  |  \
+/   |   \
+/    ●    \
+/   ●   ●   \
+/ ●         ● \
+└───────────────→ Y
+/
+/
+X
 ```
 
 ---
 
-## 3.20 GEOGRAPHIC DATA WITH BASEMAP
+## 4.10 GEOGRAPHIC DATA WITH BASEMAP
 
 ### Introduction to Basemap
 
-**Note:** Basemap is deprecated. Use Cartopy for new projects.
+**⚠️ Note:** Basemap is deprecated. Use Cartopy for new projects.
 
 **Installation:**
 ```bash
@@ -5451,16 +3130,13 @@ fig = plt.figure(figsize=(10, 6))
 
 # Setup Basemap
 m = Basemap(projection='mill',
-            llcrnrlat=-60,
-            urcrnrlat=80,
-            llcrnrlon=-180,
-            urcrnrlon=180)
+            llcrnrlat=-60, urcrnrlat=80,
+            llcrnrlon=-180, urcrnrlon=180)
 
 # Draw features
 m.drawcoastlines(linewidth=0.8)
 m.drawcountries(linewidth=0.5)
-m.fillcontinents(color='lightgreen',
-                 lake_color='lightblue')
+m.fillcontinents(color='lightgreen', lake_color='lightblue')
 m.drawmapboundary(fill_color='lightblue')
 
 # Draw grid
@@ -5494,7 +3170,6 @@ m.plot(x, y, 'ro', markersize=5)
 # Multiple points
 lats = [40.7, 51.5, 35.7]  # NYC, London, Tokyo
 lons = [-74.0, -0.1, 139.7]
-
 x, y = m(lons, lats)
 m.plot(x, y, 'ro')
 ```
@@ -5509,17 +3184,18 @@ m.drawgreatcircle(-74, 40.7,    # NYC
                   color='red')
 ```
 
-### Filled Continents
+### Basemap Methods
 
-```python
-m.fillcontinents(color='coral',
-                 lake_color='aqua',
-                 resolution='h')  # 'c', 'l', 'i', 'h', 'f'
-```
+| Method | Purpose |
+|--------|---------|
+| `contour()` / `contourf()` | Draw contour lines / filled contours |
+| `imshow()` / `pcolor()` | Draw image / pseudo-color plot |
+| `plot()` / `scatter()` | Draw lines / points |
+| `quiver()` / `barbs()` | Draw vectors / wind barbs |
 
 ---
 
-## 3.21 VISUALIZATION WITH SEABORN
+## 4.11 VISUALIZATION WITH SEABORN
 
 ### Introduction to Seaborn
 
@@ -5536,133 +3212,52 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 
-### Violin Plot
+### Matplotlib vs Seaborn
 
-**Purpose:** Shows full distribution shape (combines box plot + KDE).
+| Feature | Matplotlib | Seaborn |
+|---------|------------|---------|
+| **Use Case** | Base library. Works with arrays. | Enhanced. Uses Matplotlib+NumPy+Pandas. |
+| **Syntax** | Comparatively lengthy & complex | Comparatively simple & elegant |
+| **Multiple Figs** | Can open multiple at a time | Automatically manages multiple figures |
+| **Flexibility** | Highly customizable & powerful | Provides default production themes |
 
-```python
-# Load dataset
-tips = sns.load_dataset('tips')
-
-# Basic violin plot
-sns.violinplot(data=tips,
-               x='day',
-               y='total_bill',
-               palette='Set2')
-
-plt.title('Total Bill by Day')
-plt.show()
-```
-
-### Box Plot
-
-**Purpose:** Shows IQR, median, outliers.
+### Seaborn Examples
 
 ```python
-# Basic box plot
-sns.boxplot(data=tips,
-            x='smoker',
-            y='total_bill',
-            hue='time',
-            palette='coolwarm')
+import seaborn as sns
+import pandas as pd
 
-plt.title('Bill by Smoker and Time')
-plt.show()
+df = pd.read_csv("WorldHappiness2016.csv")
+
+# Scatter plot
+sns.scatterplot(data=df, x="Economy", y="Happiness")
+
+# Line plot
+sns.lineplot(data=df, x='x', y='y')
+
+# Bar plot
+sns.barplot(data=df, x='cat', y='val')
+
+# Histogram
+sns.histplot(data=df, x='col', bins=20)
+
+# Box plot
+sns.boxplot(data=df, x='cat', y='val')
+
+# Heatmap (correlation matrix)
+sns.heatmap(df.corr(), annot=True)
+
+# Pair plot (all pairwise relationships)
+sns.pairplot(df)
+
+# Violin plot
+sns.violinplot(data=df, x='cat', y='val')
+
+# Set style
+sns.set_style("whitegrid")  # darkgrid, dark, white, ticks
 ```
 
-### Regplot (Regression Plot)
-
-**Purpose:** Scatter plot + regression line.
-
-```python
-sns.regplot(data=tips,
-            x='total_bill',
-            y='tip',
-            ci=95,           # Confidence interval
-            scatter_kws={'alpha': 0.5},
-            line_kws={'color': 'red'})
-
-plt.title('Tip vs Total Bill')
-plt.show()
-```
-
-### Heatmap
-
-**Purpose:** Great for correlation matrices.
-
-```python
-# Calculate correlation
-corr = tips[['total_bill', 'tip', 'size']].corr()
-
-# Create heatmap
-sns.heatmap(corr,
-            annot=True,      # Show values
-            cmap='Blues',
-            fmt='.2f',       # Decimal places
-            linewidths=0.5,
-            square=True)
-
-plt.title('Correlation Matrix')
-plt.show()
-```
-
-### Count Plot
-
-**Purpose:** Bar chart for categorical data.
-
-```python
-sns.countplot(data=tips,
-              x='day',
-              hue='sex',
-              palette='pastel')
-
-plt.title('Count by Day and Sex')
-plt.show()
-```
-
-### Pairplot
-
-**Purpose:** Scatter matrix - all pairwise relationships.
-
-```python
-# Basic pairplot
-sns.pairplot(tips)
-plt.show()
-
-# With hue
-sns.pairplot(tips,
-             hue='sex',
-             palette='viridis',
-             markers=['o', 's'])
-
-plt.show()
-
-# Specific variables
-sns.pairplot(tips,
-             vars=['total_bill', 'tip', 'size'],
-             hue='smoker')
-```
-
-### Distribution Plot
-
-```python
-# Histogram + KDE
-sns.histplot(data=tips,
-             x='total_bill',
-             kde=True,
-             bins=20)
-
-plt.show()
-
-# Multiple distributions
-sns.histplot(data=tips,
-             x='total_bill',
-             hue='time',
-             kde=True,
-             element='step')
-```
-
-### Styling
+### Styling Options
 
 ```python
 # Set style
@@ -5686,149 +3281,144 @@ sns.set_palette('bright')
 
 # 📚 QUICK REFERENCE CHEATSHEET
 
-## PANDAS
-
-**Indexing:**
-```
-df.loc[r,c]      - Label based
-df.iloc[r,c]     - Position based
-df[mask]         - Boolean filtering
-df.at/i          - Fast scalar access
-```
-
-**Operations:**
-```
-df * scalar      - Vectorized ops
-.apply(fn)       - Apply function
-.map()           - Element-wise Series
-.applymap()      - Element-wise DataFrame
-np.ufunc(df)     - NumPy functions
-```
-
-**Missing Data:**
-```
-.isnull()        - Boolean mask
-.dropna()        - Remove NaN
-.fillna()        - Fill NaN
-.interpolate()   - Interpolate
-```
-
-**MultiIndex:**
-```
-pd.MultiIndex.from_tuples()
-.xs()            - Cross-section
-.stack()         - Column to row
-.unstack()       - Row to column
-```
-
-**Combining:**
-```
-pd.concat()      - Stack DataFrames
-pd.merge(how=...) - SQL joins
-df.join()        - Index join
-```
-
-**Grouping:**
-```
-.groupby(key).agg({})
-.transform()
-.filter()
-```
-
-**Pivot:**
-```
-pd.pivot_table(values, index, columns, aggfunc)
-margins=True     - Add totals
-```
-
 ## NUMPY
 
-**Arrays:**
-```
-np.array()       - Create array
-np.zeros()       - Zeros array
-np.ones()        - Ones array
-np.arange()      - Range array
-np.linspace()    - Evenly spaced
-np.random.rand() - Random array
+```python
+# Array Creation
+np.array([1,2,3])              # Create 1D array
+np.zeros((3,4))                # Array of zeros (3x4)
+np.ones((2,3))                 # Array of ones
+np.arange(0,10,2)              # 0, 2, 4, 6, 8
+np.linspace(0,1,5)             # 5 evenly spaced in [0,1]
+np.random.randn(3,3)           # 3x3 random normal array
+
+# Array Operations
+arr.reshape(2,3)               # Reshape to 2 rows 3 cols
+arr.T                          # Transpose
+np.concatenate([a,b])          # Join arrays
+np.split(arr,[3,5])            # Split at indices 3 & 5
+
+# Aggregations
+np.sum/np.min/np.max/np.mean/np.std  # Basic aggregations
+np.argmin/np.argmax            # Index of min/max
+np.percentile(L, 25)           # 25th percentile
+
+# Indexing
+a[a > 5]                       # Boolean mask
+a[[1,3,5]]                     # Fancy indexing
+a[rows, cols]                  # 2D indexing
+
+# Universal Functions
+np.sqrt(a)                     # Square root
+np.exp(a)                      # Exponential
+np.log(a)                      # Natural log
+np.sin(a)/np.cos(a)/np.tan(a)  # Trigonometric
 ```
 
-**Aggregations:**
-```
-np.sum()         - Sum
-np.mean()        - Mean
-np.std()         - Standard deviation
-np.min/max()     - Min/Max
-np.median()      - Median
-```
+## PANDAS
 
-**Operations:**
-```
-a + b            - Element-wise add
-a * b            - Element-wise multiply
-np.sqrt(a)       - Square root
-np.exp(a)        - Exponential
-```
+```python
+# Creation
+pd.Series([1,2,3])             # Create Series
+pd.DataFrame(data)             # Create DataFrame
 
-**Indexing:**
-```
-a[a > 5]         - Boolean mask
-a[[1,3,5]]       - Fancy indexing
-a[rows, cols]    - 2D indexing
+# Inspection
+df.head(5)/df.tail(5)          # First 5 rows/Last 5 rows
+df.info()                      # Column types & NaN count
+df.describe()                  # Statistical summary
+df.shape                       # (rows, columns)
+
+# Missing Data
+df.isnull().sum()              # Count missing per column
+df.fillna(0)                   # Fill NaN with 0
+df.dropna()                    # Drop rows with NaN
+df.drop_duplicates()           # Remove duplicate rows
+
+# Indexing & Selection
+df.loc[r,c]                    # Label based
+df.iloc[r,c]                   # Position based
+df[mask]                       # Boolean filtering
+df.at/i                        # Fast scalar access
+
+# Operations
+df * scalar                    # Vectorized ops
+.apply(fn)                     # Apply function
+.map()                         # Element-wise Series
+.applymap()                    # Element-wise DataFrame
+
+# Grouping & Aggregation
+df.groupby("col").sum()        # GroupBy and sum
+.transform()                   # Return same shape
+.filter()                      # Keep/drop groups
+
+# Combining Data
+pd.concat([df1,df2])           # Concatenate DataFrames
+pd.merge(df1,df2,on='key')     # Merge (SQL join)
+df.join()                      # Index-based join
+
+# Pivot Tables
+pd.pivot_table(df, index=["a"], aggfunc="mean")  # Pivot table
 ```
 
 ## MATPLOTLIB
 
-**Basic Plots:**
-```
-plt.plot()       - Line plot
-plt.scatter()    - Scatter plot
-plt.hist()       - Histogram
-plt.bar()        - Bar chart
-plt.errorbar()   - Error bars
-```
+```python
+# Import & Setup
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-v0_8')  # Set style
 
-**Customization:**
-```
-plt.figure(figsize=(w,h))
-plt.xlabel/ylabel/title()
-plt.legend(loc=...)
-plt.grid(True)
-plt.style.use('style')
-```
+# Basic Plots
+plt.plot(x,y)                  # Line plot
+plt.scatter(x,y)               # Scatter plot
+plt.hist(x,bins=20)            # Histogram
+plt.bar(x,height)              # Bar chart
+plt.errorbar(x, y, yerr=e)     # Error bar
+plt.contour(X,Y,Z)             # Contour lines
+plt.contourf(X,Y,Z)            # Filled contour
 
-**Subplots:**
-```
-plt.subplots(r,c)
-fig.add_subplot()
-GridSpec()
-```
+# Customization
+plt.xlabel("x"); plt.ylabel("y")  # Axis labels
+plt.title("Title")             # Set title
+plt.legend(loc='best')         # Show legend
+plt.grid(True)                 # Enable grid
+plt.xticks(rotation=45)        # Rotate labels
 
-**3D:**
-```
+# Display & Save
+plt.show()                     # Display plot
+plt.savefig("out.png",dpi=300) # Save figure
+
+# Subplots
+plt.subplot(rows,cols,pos)     # Create subplot
+fig, axes = plt.subplots(2,2)  # Multiple subplots
+
+# Annotations
+plt.annotate("text", xy, xytext, arrowprops)  # Annotation
+
+# 3D Support
 from mpl_toolkits.mplot3d import Axes3D
-ax.plot_surface(X,Y,Z)
-ax.scatter(xs,ys,zs)
+ax = fig.add_subplot(111, projection='3d')
 ```
 
 ## SEABORN
 
-**Statistical Plots:**
-```
-sns.violinplot()
-sns.boxplot()
-sns.regplot()
-sns.heatmap()
-sns.pairplot()
-sns.countplot()
-sns.histplot()
-```
+```python
+# Import
+import seaborn as sns
 
-**Styling:**
-```
-sns.set_style()
-sns.set_context()
-sns.set_palette()
+# Statistical Plots
+sns.scatterplot(data=df, x="x", y="y")  # Scatter
+sns.lineplot(data=df, x="x", y="y")     # Line
+sns.histplot(data=df, x="col")          # Histogram
+sns.boxplot(data=df, x="cat", y="val")  # Box plot
+sns.violinplot(data=df, x="cat", y="val")  # Violin
+sns.heatmap(df.corr(), annot=True)      # Heatmap
+sns.pairplot(df)                        # Pair plot
+sns.regplot(data=df, x="x", y="y")      # Regression
+
+# Styling
+sns.set_style("whitegrid")              # Set style
+sns.set_context("talk")                 # Set context
+sns.set_palette("husl")                 # Set palette
 ```
 
 ---
@@ -5837,65 +3427,53 @@ sns.set_palette()
 
 ### Statistics
 
-**Mean:**
 ```
-      Σx
-μ = -----
-       n
+Mean:           μ = Σx / n
+
+Variance:       σ² = Σ(x - μ)² / n
+
+Standard Dev:   σ = √σ²
+
+Z-Score:        Z = (X - μ) / σ
+
+Range:          Range = Max - Min
+
+CV:             CV = (σ / μ) × 100%
 ```
 
-**Variance:**
-```
-       Σ(x - μ)²
-σ² = -----------
-          n
-```
+### Correlation & Regression
 
-**Standard Deviation:**
 ```
-σ = √σ²
-```
-
-**Z-Score:**
-```
-      X - μ
-Z = --------
-       σ
-```
-
-**Correlation:**
-```
+Pearson r:
         n(Σxy) - (Σx)(Σy)
-r = ----------------------------
-    √[nΣx² - (Σx)²][nΣy² - (Σy)²]
+r = ─────────────────────────────────────
+    √{[nΣx² - (Σx)²] × [nΣy² - (Σy)²]}
+
+Coefficient of Determination: R² = r²
+
+Regression Line: Ŷ = a + bX
+
+Slope:          b = [n(ΣXY) - (ΣX)(ΣY)] / [nΣX² - (ΣX)²]
+
+Intercept:      a = Ȳ - bX̄
+
+Standard Error: SEE = √[Σ(Y - Ŷ)² / (n - 2)]
 ```
 
-**Regression:**
+### Empirical Rule
+
 ```
-Ŷ = a + bX
-
-        n(ΣXY) - (ΣX)(ΣY)
-b = -----------------------
-        nΣX² - (ΣX)²
-
-a = ȳ - b(x̄)
+μ ± 1σ → 68% of data
+μ ± 2σ → 95% of data
+μ ± 3σ → 99.7% of data
 ```
 
-**Coefficient of Determination:**
-```
-R² = r²
-```
+### Multiple Regression
 
-**Standard Error:**
 ```
-         Σ(Y - Ŷ)²
-SEE = √-----------
-           n - 2
+Ŷ = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ
+
+VIF = 1 / (1 - R²ⱼ)  [Check multicollinearity]
 ```
 
 ---
-
-
----
-
-*This comprehensive guide covers all concepts from your course materials with detailed explanations, step-by-step examples, and practical code. Master these topics and you're on your way to scoring 100/100!*
